@@ -5,6 +5,13 @@
 * What is Python?
 * REPL
 * Data type, variable
+* Input, Print
+* Type Casting / Type Conversion
+* Function
+* Basic Math Functions
+Examples/Lab:
+* hello.py
+* 
 
 #### Week 2: 
 ### Week 6-8: HTML/CSS
