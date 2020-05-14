@@ -7,12 +7,16 @@
 * Data type
 * Variable
 * Input
+```
+    name = input("What is your name? ")
+    print(name)
+```
 * Print
-* Function
+* Function (Defining/Calling)
+* Main function
+* Comment
 * String Concatenation
-* Example
-* Lab
-* Assignment
+* Lab/Assignment
 
 #### Week 2: Math
 * Type Casting / Type Conversion
