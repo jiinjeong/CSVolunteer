@@ -1,4 +1,4 @@
-# CS4All
+# CS4All - Summer Curriculum
 ## Created by: Jiin Jeong
 ### Week 1-5: Python
 #### Week 1: Introduction to CS
