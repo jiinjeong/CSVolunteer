@@ -10,6 +10,9 @@
 * Print
 * Function
 * String Concatenation
+* Example
+* Lab
+* Assignment
 
 #### Week 2: Math
 * Type Casting / Type Conversion
