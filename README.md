@@ -16,7 +16,7 @@
 * Main function
 * Comment
 * String Concatenation
-* [Potential Projects](https://www.google.com)(Lab/Assignment)
+* [Potential Projects](https://www.google.com) (Lab/Assignment)
 
 #### Week 2: Math
 * Type Casting / Type Conversion
