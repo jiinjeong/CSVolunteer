@@ -1,6 +1,6 @@
 import random
 
-# Dice roll
+# @jjeong: Dice roll
 def dice_roll():
     """ Rolls a dice."""
     dice_markings = [1, 2, 3, 4, 5, 6]
@@ -10,7 +10,7 @@ def dice_roll():
     else:
         print("oh ok. ")
 
-# Rock paper scissor
+# @jjeong: Rock paper scissor
 def rock_paper_scissors():
     """ Plays a rock paper scissor game. """
     rps = ["rock", "paper", "scissors"]
