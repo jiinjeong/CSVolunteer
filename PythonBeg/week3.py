@@ -1,6 +1,6 @@
 # Fancy greeting
 
-# Odd-even
+# @jjeong: Odd-even
 def odd_or_even():
     """ Tells user whether # is odd/even. """
     number = int(input("what number do you want me to examine? "))
@@ -9,7 +9,7 @@ def odd_or_even():
     else:
         print("that number is odd. ")
 
-# Grade Calculator
+# @jjeong: Grade Calculator
 def grade_calculator():
     """ Converts numberic grades to letter grades."""
     percentage = int(input("what percent did the student get on the test? "))
