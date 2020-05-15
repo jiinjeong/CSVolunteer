@@ -1,4 +1,4 @@
-# Temperature Converter
+# @jjeong: Temperature Converter
 def ctof():
     """ Changes Celsius to Fahrenheit. """
     c = input("How many degrees celsius? ")
@@ -6,7 +6,7 @@ def ctof():
 
     print(c + " degrees celsius is " + str(f) + " degrees fahrenheit! ")
 
-# Height Converter
+# @jjeong: Height Converter
 def height_converter():
     """ Changes height in cm to height in ft and inches. """
     cm = int(input("How tall are you in cm? "))
@@ -15,7 +15,7 @@ def height_converter():
     rem_inches = inches % 12
     p	rint("You are " + str(int(ft)) + "ft and " + str(round(rem_inches)) + "in.")
 
-# Average
+# @jjeong: Average
 def average():
     """ Gets the average of three numbers. """
     num1 = int(input("Enter num1: "))
