@@ -54,3 +54,12 @@
 * Additional skills that students may need to finish their independent project
 
 ### Week 6-8: HTML/CSS
+#### Week 6
+* What is HTML/CSS?
+* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
+
+#### Week 7
+* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week2.html)
+
+#### Week 8
+* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week3.html)
