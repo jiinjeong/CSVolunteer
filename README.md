@@ -107,12 +107,16 @@ if __name__ == "__main__":
 * Conditions
 * and, or, not, in
 * If-elif-else
+* String methods
+    * string.upper(), string.lower()
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week3.py) (Lab/Assignment)
 
 #### Week 4: List, Indexing, and Random Library
-* String Indexing
+* List
 * List Indexing
+* String Indexing
 * Import
+* Random
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week4.py) (Lab/Assignment)
 
 #### Week 5: Git and Markdown
