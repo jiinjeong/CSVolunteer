@@ -97,9 +97,16 @@ Created by: Jiin Jeong
 
 ### Week 1-5: Python Intermediate
 #### Week 1: Loop 1: For-loop
+* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week1.py)
 #### Week 2: Loop 2: While-loop
+* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week2.py)
 #### Week 3: Loop 3: Nested loop, break/continue/pass
+* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week3.py)
 #### Week 4: Classes and Objects
-#### Week 5: Errors and CLI
-
+* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week4.py)
+#### Week 5: Errors, API, Additional Python
+* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week5.py)
+### Extra
+#### Command Line Interface (CLI)
 ### Student Projects
+To be updated.
