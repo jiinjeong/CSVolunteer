@@ -2,14 +2,14 @@
 Created by: Jiin Jeong
 Note to collaborators: Add your ID (@) for the curriculum/projects that you created.
 ### Week 1-5: Python Beginner
-#### Week 1: Introduction to CS (@github/jiinjeong)
+#### Week 1: Introduction to CS (@jiinjeong)
 * **What is Python?**: A programming language is a set of instructions for a computer to perform specific tasks. There are many programming languages including Java, C, C++, Ruby, etc. Python is an interpreted, high-level, general-purpose programming language created in 1991 by the Dutch programmer Guido van Rossum. The current stable release is version 3.8, so we typically say we are using Python3.
 * **REPL**: [REPL](repl.it) is an online-based text editor. Advantage is that it supports many programming languages and that you don't need to download anything to run the program.
 * **Print**: Prints a message to the screen.
 ```python
     print("Hello world")
 ```
-* **Data types**: There are four primitive data types in Python: string (str), integer (int), floating-point numbers (float), and booleans (bool).
+* **Data types**: Tells the computer how the programmer intends to use the data. There are four primitive data types in Python: string (str), integer (int), floating-point numbers (float), and booleans (bool).
   * Strings are sequences of characters. They are in single-quotes ('') or double-quotes (""). For example, "Hello", "123", and "abc."
   * Integers are numeric values without decimals, such as 0, 2, 10.
   * Floats are more complex numeric values with decimals, such as 0.001, 0.5, 0.2.
@@ -25,10 +25,12 @@ Note to collaborators: Add your ID (@) for the curriculum/projects that you crea
   * Name --> String
   * Address --> String
   * License Plate --> String (although it contains numeric values)
-  * Household size --> Integer (you can't have 2.2 humans)
-  * Number of pets --> Integer
+  * Number of pets --> Integer (you can't have 2.2 dogs)
+  * Zipcode --> Integer
   * Bank balance --> Float
+  * Height/Weight --> Float
   * Marital status --> Bool (True/False)
+  * Shipment status --> Bool (True/False)
 * **Comment**: To make single-line comments, you use a hashtag (#). Multiline comments are in three double-quotes (""" """). Computer will not execute comments. They are useful as they can explain to you/other programmers what your code does. 
 ```python
    # This is a single-line comment.
@@ -38,18 +40,21 @@ Note to collaborators: Add your ID (@) for the curriculum/projects that you crea
      multiple lines.
    """
 ```
-* **Variable**: Stores a value that can be changed (contrast with constant).
+* **Variable**: Stores a value; can be changed (contrast with constant).
 ```python
     var_name = value    # The value can be of any data type (str/int/float/bool)
     # 1. Use a descriptive name
     something = "USA"   # X
     country = "USA"     # O
     # 2. Instead of spaces, use underscore (_)
-    first name = "Jiin"  # X
-    first_name = "Jiin"  # O
+    first name = "Jiin" # X
+    first_name = "Jiin" # O
     # 3. Can't start with a number
-    1lesson = "intro"    # X
-    lesson1 = "intro"    # O
+    1score = 100        # X
+    score1 = 100        # O
+    # 4. Variable names are case-sensitive (Name and name are different). Usually, we should start with a lowercase.
+    Is_student = False  # O
+    is_student = False  # O
 ```
 * **Input**: Allows user input, adding interactivity to your program.
 * **String Concatenation**: Strings can be added with +.
@@ -57,15 +62,43 @@ Note to collaborators: Add your ID (@) for the curriculum/projects that you crea
     name = input("What is your name? ")
     print("Hello " + name)
 ```
-* Function (Defining/Calling)
-* Main function
-* Comment
+* **Function**: Block of code that is only run when called. Functions are useful for code organization and reusability. Analogy: You can think of a function as a "file" for your code. You create a file with content that serve a purpose. To access a file, you have to open the file (=call the file).
+```python
+# Defining a function
+def func_name():
+    print("Hello)"  # Anything inside the function, indent with four spaces.
+# Calling a function
+func_name()
+```
+Actual example:
+```python
+# Defining a function
+def greet():
+    print("Hello)"  # Anything inside the function, indent with four spaces.
+# Calling a function
+greet()
+```
+* **Main function**: Acts as the starting point of execution for the code.
+```python
+def main():
+    greet()
+
+if __name__ == "__main__":
+    main()
+```
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week1.py) (Lab/Assignment)
 
 #### Week 2: Math
-* Type Casting / Type Conversion
-* String Interpolation
-* Math
+* **Math**
+    * Addition (+)
+    * Subtraction (-)
+    * Multiplication (*)
+    * Division (/)
+    * Integer division (//)
+    * Modulus (%)
+    * Exponent (**)
+* **Type Casting / Type Conversion**
+* **String Interpolation**
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week2.py) (Lab/Assignment)
 
 #### Week 3: Conditions and If Statement
