@@ -6,7 +6,8 @@ def drawing():
     print("     *****     ")
     print("       *     ")
 
-# @jjeong: Make a function that asks for a pet's name and greets it.
+# @jjeong: Make a function that asks for a name and a pet's name and greets them.
 def pet():
+    name = input("What is your name? ")
     pet_name = input("What is your pet's name? ")
-    print("Hello, " + pet_name)
+    print("Hello, " + user_name + ". Your pet name is " + pet_name + ".")
