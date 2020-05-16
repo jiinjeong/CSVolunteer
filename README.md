@@ -1,6 +1,6 @@
 # CS4All - Summer Curriculum
-Created by: Jiin Jeong
-Note to collaborators: Add your ID (@) for the curriculum/projects that you created.
+Created by: Jiin Jeong<br/>
+Note to collaborators: Add your ID (@) for the curriculum/projects that you created or helped create.
 ### Week 1-5: Python Beginner
 #### Week 1: Introduction to CS (@jiinjeong)
 * **What is Python?**: A programming language is a set of instructions for a computer to perform specific tasks. There are many programming languages including Java, C, C++, Ruby, etc. Python is an interpreted, high-level, general-purpose programming language created in 1991 by the Dutch programmer Guido van Rossum. The current stable release is version 3.8, so we typically say we are using Python3.
@@ -97,6 +97,8 @@ if __name__ == "__main__":
     * Integer division (//)
     * Modulus (%)
     * Exponent (**)
+    * Order of operations
+    * round()
 * **Type Casting / Type Conversion**
 * **String Interpolation**
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week2.py) (Lab/Assignment)
