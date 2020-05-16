@@ -79,7 +79,8 @@
 * Import
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week4.py) (Lab/Assignment)
 
-#### Week 5: Independent Project
+#### Week 5: Git and Markdown
+* Basic Git
 * Additional skills that students may need to finish their independent project
 
 ### Week 6-8: HTML/CSS
