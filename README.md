@@ -1,6 +1,6 @@
 # CS4All - Summer Curriculum
 ## Created by: Jiin Jeong
-### Week 1-5: Python
+### Week 1-5: Python Beginner
 #### Week 1: Introduction to CS
 * **What is Python?**: A programming language is a set of instructions for a computer to perform specific tasks. There are many programming languages including Java, C, C++, Ruby, etc. Python is an interpreted, high-level, general-purpose programming language created in 1991 by the Dutch programmer Guido van Rossum. The current stable release is version 3.8, so we typically say we are using Python3.
 * **REPL**: [REPL](repl.it) is an online-based text editor. Advantage is that it supports many programming languages and that you don't need to download anything to run the program.
@@ -93,3 +93,11 @@
 
 #### Week 8
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week3.html)
+
+### Week 1-5: Python Intermediate
+#### Week 1: Loop 1: For-loop
+#### Week 2: Loop 2: While-loop
+#### Week 3: Loop 3: Nested loop, break/continue/pass
+#### Week 4: Classes and Objects
+#### Week 5: Errors and CLI
+
