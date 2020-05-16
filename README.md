@@ -1,5 +1,5 @@
 # CS4All - Summer Curriculum
-## Created by: Jiin Jeong
+Created by: Jiin Jeong
 ### Week 1-5: Python Beginner
 #### Week 1: Introduction to CS
 * **What is Python?**: A programming language is a set of instructions for a computer to perform specific tasks. There are many programming languages including Java, C, C++, Ruby, etc. Python is an interpreted, high-level, general-purpose programming language created in 1991 by the Dutch programmer Guido van Rossum. The current stable release is version 3.8, so we typically say we are using Python3.
@@ -102,3 +102,4 @@
 #### Week 4: Classes and Objects
 #### Week 5: Errors and CLI
 
+### Student Projects
