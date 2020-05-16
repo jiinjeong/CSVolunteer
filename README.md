@@ -119,6 +119,12 @@ if __name__ == "__main__":
 * Basic Git
 * Additional skills that students may need to finish their independent project
 
+#### Independent Project Ideas
+Make sure that they are simple enough to pursue!
+* Easy Hangman (Text-based)
+* Mad Libs
+* Mini Calculator
+
 ### Week 6-8: HTML/CSS
 #### Week 6
 * What is HTML/CSS?
