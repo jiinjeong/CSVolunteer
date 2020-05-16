@@ -132,7 +132,6 @@ Make sure that they are simple enough to pursue!
 ### Week 6-8: HTML/CSS
 #### Week 6
 * What is HTML/CSS?
-* Tags: <h1> </h1>
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
