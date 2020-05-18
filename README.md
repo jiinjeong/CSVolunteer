@@ -31,10 +31,10 @@ Note to collaborators: Add your ID (@) for the curriculum/projects that you crea
   * Height/Weight --> Float
   * Marital status --> Bool (True/False)
   * Shipment status --> Bool (True/False)
-* **Comment**: To make single-line comments, you use a hashtag (#). Multiline comments are in three double-quotes (""" """). Computer will not execute comments. They are useful as they can explain to you/other programmers what your code does. 
+* **Comment**: To make single-line comments, you use a hashtag (#). Multiline comments are in three double-quotes (""" """). Computer will not execute comments. They are useful as they can explain to you/other programmers what your code does.
 ```python
    # This is a single-line comment.
-   """ 
+   """
      This is a multi-line
      comment that can span over
      multiple lines.
@@ -141,7 +141,61 @@ Make sure that they are simple enough to pursue!
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week3.html)
 
 ### Week 1-5: Python Intermediate
-#### Week 1: Loop 1: For-loop
+#### Week 1: Loop 1: "For" loop
+* **What is a `for` loop?**: `for` loops are used to iterate over sequences. Sequences that we have seen are lists and strings. Other iterable sequences include dictionaries, sets, and tuples. `for` loops execute a set of statements for each element in the sequence.
+```python
+  for var in sequence:
+    print("Do something.")
+```
+* **The Range Function**: The `range(start, end, step)` function returns a sequence of numbers. `for` loops utilize the `range()` function to generate a new iterable sequence in the given range.
+```python
+  # 1. Prints values from 0 to 6 (not including 6)
+  for i in range(6): # range(6) = (0 1 2 3 4 5)
+    print(i)
+  # 2. Prints values from 2 to 6 (not including 6)
+  for i in range(2, 6): # range(2, 5) = (2 3 4 5)
+    print(i)
+  # 3. Prints values from 0 to 6, stepping by 2 (not including 6)
+  for i in range(0, 6, 2): # range(0, 6, 2) = (0 2 4)
+    print(i)
+```
+* **Looping Through a List**: With a `for` loop, you can execute a set of statements for each element of the list.
+```python
+  # prints each string color in the list colors
+  colors = ['red', 'blue', 'green', 'yellow']
+  for color in colors:
+    print(color)
+```
+* **Looping Over a String**: Looping over a string behaves similarly to a looping on a list, you can execute a set of statements for each character in the string.
+```python
+  # prints each character in "Hello!"
+  greeting = "Hello!"
+  for character in greeting:
+    print(character)
+```
+
+* **Applications for Loops**:
+```python
+  # 1. Calculate the sum of the number in the range(1, 6)
+  sum = 0
+  for i in range(1, 6):
+    sum += i  # sum += i is equivalent to sum = sum + i
+  # 2. Generates a list of lengths of each string in words
+  words = ["computer", "science", "is", "fun"]
+  word_lengths = []
+  for word in words:
+    length_word = length(word)
+    word_lengths.append(length_word)
+  # 3. Generates new phrase with '!' instead of '.'
+  phrase = "Hello. My name is Ruby. What's yours?"
+  happy_phrase = ""
+  for character in phrase:
+    if character == '.':
+      happy_phrase += '!'
+    else:
+      happy_phrase += character
+```
+
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week1.py)
 #### Week 2: Loop 2: While-loop
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week2.py)
