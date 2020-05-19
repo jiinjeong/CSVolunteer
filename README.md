@@ -197,7 +197,39 @@ Make sure that they are simple enough to pursue!
 ```
 
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week1.py)
-#### Week 2: Loop 2: While-loop
+#### Week 2: Loop 2: While loop
+* **What is a `while` loop?**: `while` loops repeatedly execute a set of statements as long as a condition is true. Recall that a condition is a statement that evaluates to boolean type.
+```python
+  while condition:
+    print("Do something.")
+```
+* **Examples**:
+Before the body of the `while` loop executes, the condition is reevaluated. In the example below, the condition is `counter < 10`. If the condition evaluates to true, the body is executed. Otherwise, `counter = 10` and the body does not execute.
+```python
+  # prints values 0 to 9
+  counter = 0
+  while counter < 10:
+    print(counter)
+    counter += 1
+```
+`while` loops are indefinetly iterable. In the example below, the `while` loop executes an indefinte number of times, until the user inputs the the terminating word and the 'while' condition evaluates to false.
+```python
+  # echos user input until terminator keyword 'exit' is entered
+  terminator = "exit"
+  word = input("What is your word? (type 'exit' to end): ")
+  while word != terminator:
+    print("Did you say " + word + "?")
+    word = input("What is your word? (type 'exit' to end): ")
+```
+Warning! `while` loops can be infinite if the condition never evaluates to false. In the example below, `i` is never modified and therefore the loop never exits. In the next section, you will learn to how to break a loop without the condition evaluating to false.
+```python
+  # prints forever and ever and ever ... forever
+  print("I will go on forever... ")
+  i = 0
+  while i == 0:
+    print("and ever... ")
+```
+
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week2.py)
 #### Week 3: Loop 3: Nested loop, break/continue/pass
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonMed/week3.py)
