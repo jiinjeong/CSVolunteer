@@ -203,8 +203,7 @@ Make sure that they are simple enough to pursue!
   while condition:
     print("Do something.")
 ```
-* **Examples**:
-Before the body of the `while` loop executes, the condition is reevaluated. In the example below, the condition is `counter < 10`. If the condition evaluates to true, the body is executed. Otherwise, `counter = 10` and the body does not execute.
+* **Example**: Before the body of the `while` loop executes, the condition is re-evaluated. In the example below, the condition is `counter < 10`. If the condition evaluates to true, the body is executed. Otherwise, `counter = 10` and the body does not execute.
 ```python
   # prints values 0 to 9
   counter = 0
@@ -212,7 +211,7 @@ Before the body of the `while` loop executes, the condition is reevaluated. In t
     print(counter)
     counter += 1
 ```
-`while` loops are indefinetly iterable. In the example below, the `while` loop executes an indefinte number of times, until the user inputs the the terminating word and the 'while' condition evaluates to false.
+* **Indefinite `while` Loops**: `while` loops are indefinetly iterable. In the example below, the `while` loop executes an indefinte number of times, until the user inputs the the terminating word and the 'while' condition evaluates to false.
 ```python
   # echos user input until terminator keyword 'exit' is entered
   terminator = "exit"
@@ -221,7 +220,7 @@ Before the body of the `while` loop executes, the condition is reevaluated. In t
     print("Did you say " + word + "?")
     word = input("What is your word? (type 'exit' to end): ")
 ```
-Warning! `while` loops can be infinite if the condition never evaluates to false. In the example below, `i` is never modified and therefore the loop never exits. In the next section, you will learn to how to break a loop without the condition evaluating to false.
+* **Infinite `while` Loops**: Warning! `while` loops can be infinite if the condition never evaluates to false. In the example below, `i` is never modified and therefore the loop never exits. In the next section, you will learn to how to break a loop without the condition evaluating to false.
 ```python
   # prints forever and ever and ever ... forever
   print("I will go on forever... ")
