@@ -99,6 +99,10 @@ if __name__ == "__main__":
     * Exponent (**)
     * Order of operations
     * round()
+```python3
+print(3 + 5)  # Addition
+print(3 - 5)  # Subtraction
+```
 * **Type Casting / Type Conversion**
 * **String Interpolation**
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week2.py) (Lab/Assignment)
