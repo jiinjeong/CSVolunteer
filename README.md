@@ -116,9 +116,58 @@ print(3 - 5)  # Subtraction
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week3.py) (Lab/Assignment)
 
 #### Week 4: List, Indexing, and Random Library
-* List
-* List Indexing
-* String Indexing
+* **What is a list?**
+    * A list of objects— can be strings, integers, Booleans, floats, anything. Elements of a list can even be lists themselves.
+    * A list is surrounded by square brackets, and objects are separated by a comma
+    * Can be changed/modified
+```python3
+newList = [7, ‘a’, False, 4.2]
+pyList = list(‘python’)		# pyList = [‘p’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’]
+```    
+* Lists are their own type, just like str or int:
+```python3
+print(type(newList))	# Prints: <class ‘list’>
+```
+* **Indexing**
+* Each element in a list is assigned an index, starting at 0 (not 1!). Each element can be accessed through its index:
+```python3
+newList = [7, ‘a’, False, 4.2, 13]
+print(newList[0])	# Prints: 7
+print(newList[1])	# Prints: a
+print(newList[5])	# IndexError: list index out of range
+```
+* Each element can also be accessed through reverse indexing, where the last element in the list has the index -1, the second-to-last has index -2, and so on:
+```python3
+newList = [7, ‘a’, False, 4.2, 13]
+print(newList[-1])	# Prints: 13
+print(newList[-3])	# Prints: False
+```
+* List indexing can also be used to slice certain pieces of lists. In square brackets, the first number is the starting point of the slice (inclusive) and the second number is the ending point of the slice (exclusive). If there is a third number, it is the number to skip-count by (for example, 2 means every other, 3 means every third, and -1 means every element working backwards). See examples below:
+```python3
+numList = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+a = numList[3:8]	# a = [6, 7, 8, 9, 10]
+b = numList[1:9:2]	# b = [4, 6, 8, 10]
+```
+* If no start point is specified, the slice starts from the beginning, and if no endpoint is specified, the slice goes to the end.
+```python3
+numList = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = numList[5:]	# c = [8, 9, 10, 11, 12, 13]
+d = numList[::-1]	# d = [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3]
+```
+* All of these indexing rules can be used with strings, as well.
+```python3
+string = ‘Hello, world!’
+e = string[5]		# e = ‘,’
+f = string[1:11:2]	# f = ‘el,wr’
+```
+* The list class comes with many different methods that are useful for changing or finding out characteristics of lists. There are too many to list here, but these are a few of the most useful. The rest can be found with a google search.
+    * len(list name)	—returns number of elements in list
+	* list name.append(single element to add to end of list)
+	* list name.extend(list to add to end of list)
+	* list name.sort(key to sort by—if no key is specified, sorts numerically/alphabetically)
+	* Other methods can filter, add/remove specific elements at specific indices, count number of times an element appears in a list, etc. Just google Python List Methods!
+
+
 * Import
 * Random
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week4.py) (Lab/Assignment)
