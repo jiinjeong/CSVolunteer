@@ -185,9 +185,10 @@ Make sure that they are simple enough to pursue!
 ### Week 6-8: HTML/CSS
 #### Week 6
 * What is HTML/CSS?
-* Making headers / body
+* Making headers / paragraphs
 ```html
-<h1> Hello
+<h1> An example </h1>
+<p> Feel free to change me </p>
 ```
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
