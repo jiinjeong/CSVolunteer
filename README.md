@@ -88,7 +88,7 @@ if __name__ == "__main__":
 ```
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week1.py) (Lab/Assignment)
 
-#### Week 2: Math
+#### Week 2: Math (@Ian)
 * **Math**
     * Addition (+)
     ```python3
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     >>> 36 ** 0.5  # can even do a square root
     6.0
     ```
-    * Order of operations: Python operations conform to the normal order of operations.
+    * Order of operations: Math operations in Python conform to the normal order of operations.
     ```python3
     >>> 2 + 4 - 7 * 18 / 2
     -57.0
@@ -176,7 +176,7 @@ if __name__ == "__main__":
     		int("m")
 	ValueError: invalid literal for int() with base 10: 'm'
     ```
-  * How is this useful? An example would be if you receive numbers as strings and need to do some math, type conversion will help.
+  * How is this useful? Many ways! An example would be if you receive numbers as strings and need to do some math with the numbers, type conversion will help.
 
 * **String Interpolation**
   * String interpolation is having placeholders in a string into which you can substitute a variable value. Also known as string formatting
