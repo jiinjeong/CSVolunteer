@@ -91,20 +91,119 @@ if __name__ == "__main__":
 #### Week 2: Math
 * **Math**
     * Addition (+)
+    ```python3
+    >>> 10 + 7
+    17
+    ```
     * Subtraction (-)
+    ```python3
+    >>> 5 + 47
+    52
+    >>> 4 - 12
+    -8
+    ```
     * Multiplication (*)
+    ```python3
+    >>> 4 * 12
+    48
+    >>> 2 * -9
+    -18
+    ```
     * Division (/)
-    * Integer division (//)
-    * Modulus (%)
-    * Exponent (**)
-    * Order of operations
-    * round()
-```python3
-print(3 + 5)  # Addition
-print(3 - 5)  # Subtraction
-```
+    ```python3
+    >>> 140 / 5
+    28
+    ```
+    * Integer division (//): Division with truncation - rounding down
+    ```python3
+    >>> 25 // 5
+    5
+    >>> 26 // 5
+    5
+    >>> 9 // 2
+    4
+    ```
+    * Modulus (%): Remainder after division.
+    ```python3
+    >>> 27 % 5  # 27 divided by 5 is 5 remainder 2
+    2
+    >>> 24 % 12 # 24 divided by 12 is 2 remainder 0
+    0
+    ```
+    * Exponent (**): Operand for raising a number to a power 
+    ```python3
+    >>> 2 ** 4  # 2 raised to power 4
+    16
+    >>> 36 ** 0.5  # can even do a square root
+    6.0
+    ```
+    * Order of operations: Python operations conform to the normal order of operations.
+    ```python3
+    >>> 2 + 4 - 7 * 18 / 2
+    -57.0
+    >>> (32 - 7) + 48 / 4
+    37.0
+    ```
+    * round(): Can pass optional arguments to make your rounding more specific
+    ```python3
+    >>> round(45.234141312)
+    45
+    >>> round(34562.9233232)
+    34563
+    >>> round(475.789, 2)
+    475.79
+    >>> round(47589.54789, -3)
+    48000
+    ```
 * **Type Casting / Type Conversion**
+  * Type casting/conversion is changing a value's type to the desired type (as long as it is compatible)
+    ```python3
+	>>> 45 / 5  # gives you a float type as the answer
+	9.0
+	>>> int(45/5) # type casting ensures you get an integer as your answer
+	9
+	>>> float(7)
+	7.0
+	>>> str(float(7))
+	'7.0'
+	>>> int("567")
+	567
+	>>> str(541)
+	"541"
+	>>> int("m")  # has to be compatible, can't convert such a string to int
+	Traceback (most recent call last):
+  	    File "<pyshell#14>", line 1, in <module>
+    		int("m")
+	ValueError: invalid literal for int() with base 10: 'm'
+    ```
+  * How is this useful? An example would be if you receive numbers as strings and need to do some math, type conversion will help.
+
 * **String Interpolation**
+  * String interpolation is having placeholders in a string into which you can substitute a variable value. Also known as string formatting
+  * The two most common methods are %-formatting and str.format()
+  * %-formatting example
+  ```python3
+  >>> name = "Ian"
+  >>> print("Hello %s" %name)  # s is for string
+  Hello Ian
+  >>> age = 47
+  >>> print("%s is %i years old" %(name, age))  # i is for integer
+  ```
+  * str.format() example
+  ``` python3
+  >>> average_time = 4  
+  >>> avg_distance = 325
+  >>> print("His average speed was {} kilometers per hour".format(avg_distance / average_time))
+  His average speed was 81.25 kilometers per hour
+  >>> print("His average speed with one decimal place was {:.1f} kilometers per hour".format(avg_distance / average_time))
+  His average speed with one decimal place was 81.2 kilometers per hour
+  >>> hour_hand = 4
+  >>> minute_hand = 9
+  >>> print("The time now is {:02d}:{:02d} pm".format(hour_hand, minute_hand))
+  The time now is 04:09 pm
+  ```
+  * Other string interpolation methods that can be explored are f-strings and template strings
+	
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week2.py) (Lab/Assignment)
 
 #### Week 3: Conditions and If Statement
