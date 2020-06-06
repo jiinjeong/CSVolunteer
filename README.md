@@ -214,7 +214,7 @@ if __name__ == "__main__":
     * string.upper(), string.lower()
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week3.py) (Lab/Assignment)
 
-#### Week 4: List, Indexing, and Random Library
+#### Week 4: List, Indexing, and Random Library (@evaborton)
 * **What is a list?**
     * A list of objects— can be strings, integers, Booleans, floats, anything. Elements of a list can even be lists themselves.
     * A list is surrounded by square brackets, and objects are separated by a comma
@@ -253,23 +253,41 @@ numList = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 c = numList[5:]	# c = [8, 9, 10, 11, 12, 13]
 d = numList[::-1]	# d = [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3]
 ```
-* All of these indexing rules can be used with strings, as well.
+* All of these indexing rules can be used with strings, as well. Each character in the string is treated like each element of a list.
 ```python3
 string = ‘Hello, world!’
 e = string[5]		# e = ‘,’
 f = string[1:11:2]	# f = ‘el,wr’
 ```
 * The list class comes with many different methods that are useful for changing or finding out characteristics of lists. There are too many to list here, but these are a few of the most useful. The rest can be found with a google search.
-    * len(list name)	—returns number of elements in list
+	* len(list name)—returns number of elements in list
 	* list name.append(single element to add to end of list)
 	* list name.extend(list to add to end of list)
 	* list name.sort(key to sort by—if no key is specified, sorts numerically/alphabetically)
 	* Other methods can filter, add/remove specific elements at specific indices, count number of times an element appears in a list, etc. Just google Python List Methods!
 
+* **Libraries**
+	* Libraries are packages of functions useful for some specific purpose. For example, the arcade library is useful for designing video games, the turtle library can be used to draw graphics, and the random library contains functions that can do things like selecting random numbers or random items from a list.
+	* Python has hundreds of libraries!
+	* Some libraries need to be installed to your device with an installer called pip before you can use them, but since we're using REPL, an online text editor, we don't need to worry about that.
+	* Libraries can be easily accessed by typing the word import followed by the name of the library at the top of your program.
+	* Once the library is imported, all functions in the library can be used by typing the library name, a dot, and the name of the function. See examples from the random library below:
 
-* Import
-* Random
+* **Random Library**
+```python3
+import random
+```
+* Once the above line of code is typed, all functions in the random library can be used in the program. Here are a few examples of those functions:
+```python3
+random.randrange(6, 19) # Chooses a random number between 6 (inclusive) and 19 (exclusive).
+random.choice([2, 9, 'a', False]) # Chooses a random element from the list
+random.shuffle([2, 9, 'a', False]) # Shuffles the list into a random order
+```
+These are three functions you will probably find the most useful, but there are many more that you can easily find out what they are and how to use them by googling python random library functions. Some of these other functions can select from uneven distributions, weight certain choices over others, and generate random numbers that are not integers.
+	
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week4.py) (Lab/Assignment)
+	* create a simple rock-paper-scissors game (credit to @jiinjeong)
+	* create a guessing game where the computer selects a number and two people (or one person vs. the computer) try to guess it, and whoever guesses the closest wins
 
 #### Week 5: Git and Markdown
 * Basic Git
