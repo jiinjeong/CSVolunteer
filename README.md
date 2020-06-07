@@ -391,10 +391,27 @@ Make sure that they are simple enough to pursue!
 	* To see this in an actual HTML document, please see [Lesson 1](./HTMLCSS/Lessons/HTML_1_Getting_Started.html) or [Lesson 1 with Explanations](./HTMLCSS/Lessons/HTML_1_Getting_Started_With_Explanations.html).
 
 * **Headings**
-```html
-<h1> An example </h1>
-<p> Feel free to change me </p>
-```
+  * There are various ways to display text on your webpage. One such way is displaying the text as a heading, or header.
+  * To make a heading, wrap the text in an "h" tag, as such: `<h1>Your Content</h1>`.
+  * There are six different types of headings: h1, h2, h3, h4, h5, and h6. By default, h1 is the largest and the rest are progressively smaller.
+    * Therefore, the title of your webpage is usually an h1 or h2 heading, whereas section titles and subtitles are usually h3 or h4 headings.
+* **Paragraphs**
+  * Paragraphs are another way to display text on your webpage.
+  * To make a paragraph, wrap the text in a "p" tag, as such: `<p>Your Content</p>`.
+  * To start a new paragraph, start a new paragraph tag. The two paragraphs will be separated by a space.
+    * Close the first paragraph tag, go onto a new line (by pressing enter), and open a new paragraph tag.
+	* For example:
+			```html
+<p>This is my first paragraph.</p>
+<p>This is my second paragraph.</p>
+			```
+	* You *cannot* start a new paragraph by simply pressing enter within a paragraph tag. This will make your code go onto a new line, but it will have no effect on your webpage.
+	  * For example:
+	  		```html
+<p>This is my first paragraph.
+	This is still part of the first paragraph.</p>
+       		```
+
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
