@@ -360,11 +360,11 @@ Make sure that they are simple enough to pursue!
   * At the top of the document, we need to state the code is in HTML, so that computer knows how to run it. This is done with a self-contained "document type" tag: `<!Doctype HTML>`.
      * Note: The capitalization is arbitrary.
   * Furthermore, we need to wrap all of our code in an HTML tag:
-		```
-		<html>
-			Your code will go here.
-		</html>
-		```
+	```html
+	<html>
+		Your code will go here.
+	</html>
+	```
   * Within the HTML code, there are two main sections: the head and the body.
   	* The head section contains information about your webpage. It is wrapped in a head tag:
 		```html
@@ -379,15 +379,15 @@ Make sure that they are simple enough to pursue!
 		</head>
 		```
  * When we put it all together, it looks like this:
-		```
-		<!Doctype HTML>
-		<html>  
-			<head>
-			</head>
-			<body>
-			</body>
-		</html>
-		```
+	```html
+	<!Doctype HTML>
+	<html>  
+		<head>
+		</head>
+		<body>
+		</body>
+	</html>
+	```
 	* To see this in an actual HTML document, please see [Lesson 1](./HTMLCSS/Lessons/HTML_1_Getting_Started.html) or [Lesson 1 with Explanations](./HTMLCSS/Lessons/HTML_1_Getting_Started_With_Explanations.html).
 
 * **Headings**
