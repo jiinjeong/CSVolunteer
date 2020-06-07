@@ -381,10 +381,14 @@ Make sure that they are simple enough to pursue!
  * When we put it all together, it looks like this:
 	```html
 	<!Doctype HTML>
+	
 	<html>  
 		<head>
+			
 		</head>
+		
 		<body>
+		
 		</body>
 	</html>
 	```
