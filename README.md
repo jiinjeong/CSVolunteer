@@ -401,16 +401,16 @@ Make sure that they are simple enough to pursue!
   * To start a new paragraph, start a new paragraph tag. The two paragraphs will be separated by a space.
     * Close the first paragraph tag, go onto a new line (by pressing enter), and open a new paragraph tag.
 	* For example:
-			```html
-			<p>This is my first paragraph.</p>
-			<p>This is my second paragraph.</p>
-			```
+	```html
+	<p>This is my first paragraph.</p>
+	<p>This is my second paragraph.</p>
+	```
 	* You *cannot* start a new paragraph by simply pressing enter within a paragraph tag. This will make your code go onto a new line, but it will have no effect on your webpage.
 	  * For example:
-	  		```html
-			<p>This is my first paragraph.
-				This is still part of the first paragraph.</p>
-       			```
+	```html
+	<p>This is my first paragraph.
+		This is still part of the first paragraph.</p>
+       	```
 
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
