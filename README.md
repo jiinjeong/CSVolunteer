@@ -301,7 +301,27 @@ Make sure that they are simple enough to pursue!
 
 ### Week 6-8: HTML/CSS
 #### Week 6
-* What is HTML/CSS?
+* **What is HTML/CSS?**
+  * HTML and CSS are two different coding languages. Together, they are used to design webpages and websites.
+    * HTML is used to add content, such as words and images, to your webpage.
+      * HTML stands for "hypertext markup language."
+    * CSS is used to add style, such as colors and fancy fonts, to your webpage.
+      * CSS stands for "cascading style sheets."
+  * What is the difference between a webpage and a website?
+    * A webpage is a single page with a single URL. A website is usually a collection of multiple webpages.
+      * For example, the website hamilton.edu contains many webpages, including a [Contact Us](https://www.hamilton.edu/about/contact) page and an [Areas of Study](https://www.hamilton.edu/academics/areas-of-study) page.
+    * We will start by creating webpages with HTML. Later, we can encorporate CSS and create more complex websites.
+* **Tags**
+  * In HTML, tags are used to label content so that the computer know what to do with it.
+    * For example, without tags, the computer would not be able to tell the title of your webpage from the heading that you want to display from the name of the image that you want to embed.
+    * Most tags come in pairs: an opening tag and a closing tag. Your content goes in between the two tags. 
+      * The opening tag consists of a less than sign, the tag type, and a greater than sign, as such: `<tag_type>`.
+      * The closing tag consists of a less than sign, a forward-slash, the tag type, and a greater than sign, as such: `</tag_type>`.
+      * For example: `<h1>Your Content</h1>`
+      * Content is said to "wrapped" in the tags.
+    * Some tags are self-contained; they come individually. Your content is contained within the tag itself.
+      * The tag opens with a less than sign, `<`, and closes with a greater than sign, `>`.
+      * For example: `<!Doctype HTML>`
 * Making headers / paragraphs
 ```html
 <h1> An example </h1>
