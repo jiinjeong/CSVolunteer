@@ -322,6 +322,34 @@ Make sure that they are simple enough to pursue!
     * Some tags are self-contained; they come individually. Your content is contained within the tag itself.
       * The tag opens with a less than sign, `<`, and closes with a greater than sign, `>`.
       * For example: `<!Doctype HTML>`
+* **Nesting Tags**
+  * A nested tag is a tag inside of another tag.
+    * How do you think this is done? Perhaps like this: `<outer_tag> <nested_tag> Your Content </nested_tag> </outer_tag>`.
+    * In some cases, we do nest tags just like that! But if you have too many layers of nested tags (i.e. tags nested inside tags nested inside tags nested inside tags...), it can get messy.
+      * In this example, it is hard to keep track of the tags and make sure that we close them all: `<html> <body> <div> <ul> <li>Content</li> <li>More Content</li> </ul> </div> </body> </html>`
+    * There is a convention for visually organizing your code:
+      * When you nest a tag in another, go onto a new line (by pressing enter), and indent one space.
+      * To close the outer tag, go onto a new line again, and delete one indent so that the opening and closing tags of the outer tag line up vertically.
+      * For example:
+        ```html
+        <body>
+	    	<h1>Your Content</h1>
+        </body>
+        ```
+      * Here is the example from above, now much less messy!
+		```html
+		<html>
+			<body>
+				<div>
+					<ul>
+						<li>Content</li>
+						<li>More Content</li>
+					</ul>
+				</div>
+			</body>
+		</html>
+		```
+
 * Making headers / paragraphs
 ```html
 <h1> An example </h1>
