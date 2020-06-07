@@ -379,7 +379,7 @@ Make sure that they are simple enough to pursue!
 		</head>
 		```
  * When we put it all together, it looks like this:
- 		```html
+		```html
 		<!Doctype HTML>
 		<html>  
 			<head>
@@ -387,7 +387,7 @@ Make sure that they are simple enough to pursue!
 			<body>
 			</body>
 		</html>
-		```
+		```html
 	* To see this in an actual HTML document, please see [Lesson 1](./HTMLCSS/Lessons/HTML_1_Getting_Started.html) or [Lesson 1 with Explanations](./HTMLCSS/Lessons/HTML_1_Getting_Started_With_Explanations.html).
 
 * **Headings**
