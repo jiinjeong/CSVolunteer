@@ -410,8 +410,7 @@ Make sure that they are simple enough to pursue!
 	```html
 	<p>This is my first paragraph.
 		This is still part of the first paragraph.</p>
-       	```
-
+	```
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
