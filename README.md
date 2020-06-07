@@ -311,6 +311,7 @@ Make sure that they are simple enough to pursue!
     * A webpage is a single page with a single URL. A website is usually a collection of multiple webpages.
       * For example, the website hamilton.edu contains many webpages, including a [Contact Us](https://www.hamilton.edu/about/contact) page and an [Areas of Study](https://www.hamilton.edu/academics/areas-of-study) page.
     * We will start by creating webpages with HTML. Later, we can encorporate CSS and create more complex websites.
+
 * **Tags**
   * In HTML, tags are used to label content so that the computer know what to do with it.
     * For example, without tags, the computer would not be able to tell the title of your webpage from the heading that you want to display from the name of the image that you want to embed.
@@ -322,12 +323,14 @@ Make sure that they are simple enough to pursue!
     * Some tags are self-contained; they come individually. Your content is contained within the tag itself.
       * The tag opens with a less than sign, `<`, and closes with a greater than sign, `>`.
       * For example: `<!Doctype HTML>`
+
 * **Nesting Tags**
-  * A nested tag is a tag inside of another tag.
-    * How do you think this is done? Perhaps like this: `<outer_tag> <nested_tag> Your Content </nested_tag> </outer_tag>`.
+  * "Nesting tags" means writing tags inside of other tags.
+    * The inner tag is called the nested tag, and the outer tag is called the parent tag.
+    * How do you think that nested tags are written? Perhaps like this: `<parent_tag> <nested_tag> Your Content </nested_tag> </parent_tag>`.
     * In some cases, we do nest tags just like that! But if you have too many layers of nested tags (i.e. tags nested inside tags nested inside tags nested inside tags...), it can get messy.
       * In this example, it is hard to keep track of the tags and make sure that we close them all: `<html> <body> <div> <ul> <li>Content</li> <li>More Content</li> </ul> </div> </body> </html>`
-    * There is a convention for visually organizing your code:
+    * There is a convention for visually organizing your code (that applies to most types of nested tags):
       * When you nest a tag in another, go onto a new line (by pressing enter), and indent one space.
       * To close the outer tag, go onto a new line again, and delete one indent so that the opening and closing tags of the outer tag line up vertically.
       * For example:
@@ -342,7 +345,7 @@ Make sure that they are simple enough to pursue!
 			<body>
 				<div>
 					<ul>
-						<li>Content</li>
+						<li>Your Content</li>
 						<li>More Content</li>
 					</ul>
 				</div>
@@ -350,7 +353,50 @@ Make sure that they are simple enough to pursue!
 		</html>
 		```
 
-* Making headers / paragraphs
+* **Brackets and REPL**
+
+* **Getting Started with HTML**
+  * Now that we have opened an HTML document, it is time to start coding!
+  * At the top of the document, we need to state the code is in HTML, so that computer knows how to run it. This is done with a self-contained "document type" tag: `<!Doctype HTML>`.
+     * Note: The capitalization is arbitrary.
+  * Furthermore, we need to wrap all of our code in an HTML tag:
+		```html
+		<html>
+			Your code will go here.
+		</html>
+		```
+  * Within the HTML code, there are two main sections: the head and the body.
+  	* The head section contains information about your webpage. It is wrapped in a head tag:
+		```html
+		<head>
+			Your head code will go here.
+		</head>
+		```
+    * The body section contains the content displayed on your webpage. It is wrapped in a body tag:
+		```html
+		<head>
+			Your body code will go here.
+		</head>
+		```
+ * When we put it all together, it looks like this:
+		```html
+		<!Doctype HTML>
+
+		<html>  
+			
+    		<head>
+				
+        	</head>
+			
+    		<body>
+				
+			</body>
+			
+		</html>
+		```
+	* To see this in an actual HTML document, please see [Lesson 1](./HTMLCSS/Lessons/HTML_1_Getting_Started.html) or [Lesson 1 with Explanations](./HTMLCSS/Lessons/HTML_1_Getting_Started_With_Explanations.html).
+
+* **Headings**
 ```html
 <h1> An example </h1>
 <p> Feel free to change me </p>
