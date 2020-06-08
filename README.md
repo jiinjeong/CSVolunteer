@@ -472,6 +472,33 @@ Make sure that they are simple enough to pursue!
      <p>My webpage will display a horizontal line between the headings and this paragraph.</p>
      ```
   * To see a horizontal rule on a webpage, please see [Lesson 4](./HTMLCSS/Lessons/HTML_4_Horizontal_Rules.html).
+
+* **Lists**
+  * Let's learn how to display a list on our webpage.
+  * There are two types of lists:
+    * Unordered lists (bullet points)
+      * Uses "ul" tags, as such: `<ul> </ul>`
+        * "ul" stands for unordered list.
+    * Ordered lists (numbered points)
+      * Uses "ol" tags, as such: `<ol> </ol>`
+        * "ol" stands for ordered list.
+  * Within the list tag, wrap each list item in an "li" tag, as such: `<li>Your list item</li>`
+    * "li" stands for list item.
+  * For example:
+     ```html
+     <p>This is an unordered list.</p>
+     <ul>
+     	<li>This is a list item.</li>
+        <li>Another list item.</li>
+     </ul>
+        
+     <p>This is an ordered list.</p>
+     <ol>
+        <li>This is a list item.</li>
+        <li>Another list item.</li>
+     </ol>
+     ```
+
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
