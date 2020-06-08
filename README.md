@@ -526,7 +526,37 @@ Make sure that they are simple enough to pursue!
 	    <dd>Comes with bread and butter.</dd>
     </dl>
     ```
-* **Subpoints in Lists**
+   * To practice creating definition lists, please see [Challenge Problem 6](./HTMLCSS/Challenge Problems/HTML_6_Definition_Lists_Challenge_Problem).
+* **Nesting Lists and Creating Subpoints**
+  * Do you think that a list item can itself be a list? The answer is yes!
+    * A list inside of a list is called a *nested list*.
+    * For example:
+    ```html
+    <p>The teams, in order from the highest scorer to the lowest scorer, are:</p>
+    <ol>
+	<li>
+            <ul>
+	        <li>Jane</li>
+		<li>Nick</li>
+		<li>Yousef</li>
+	    </ul>
+	</li>
+	<br>
+	
+	<li>
+	    <ul>
+		<li>Juan</li>
+		<li>Masha</li>
+		<li>Caroline</li>
+	    </ul>
+	</li>
+    </ol>
+     ```
+    * If you have not yet completed [Challenge Problem 5](./HTMLCSS/ChallengeProblems/HTML_5_Lists_Challenge_Problem.html), give it a try now!
+  * Nested lists can be used to create points and subpoints. 
+
+    
+
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
