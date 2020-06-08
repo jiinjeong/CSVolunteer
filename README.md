@@ -456,7 +456,7 @@ Make sure that they are simple enough to pursue!
      <h3>Sub<br>heading</h3>
      <p>In my code, I put a break right here<br>so that the paragraph continues on a new line.</p>
      ```
-    * To see the difference more clearly, please see [Lesson 3](./HTMLCSS/Lessons/HTML_3_Breaks_and_HRs.html).
+    * To see the difference more clearly, please see [Lesson 3](./HTMLCSS/Lessons/HTML_3_Breaks.html).
 
 * **Horizontal Rules**
   * Breaks are a useful tool for separating sections of a webpage. But are there any other ways to do so? Yes, with a tag called a "horizontal rule"!
@@ -470,7 +470,7 @@ Make sure that they are simple enough to pursue!
      <hr>
      <p>My webpage will display a horizontal line between the headings and this paragraph.</p>
      ```
-
+ * To see a horizontal rule on a webpage, please see [Lesson 4](./HTMLCSS/Lessons/HTML_4_Horizontal_Rules.html).
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
