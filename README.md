@@ -300,6 +300,7 @@ Make sure that they are simple enough to pursue!
 * Mini Calculator
 
 ### Week 6-8: HTML/CSS
+@19riverak
 #### Week 6
 * **What is HTML/CSS?**
   * HTML and CSS are two different coding languages. Together, they are used to design webpages and websites.
@@ -473,9 +474,9 @@ Make sure that they are simple enough to pursue!
      ```
   * To see a horizontal rule on a webpage, please see [Lesson 4](./HTMLCSS/Lessons/HTML_4_Horizontal_Rules.html).
 
-* **Lists**
+* **Ordered and Unordered Lists**
   * Let's learn how to display a list on our webpage.
-  * There are two types of lists:
+  * There are two common types of lists:
     * Unordered lists (bullet points)
       * Uses "ul" tags, as such: `<ul> </ul>`
         * "ul" stands for unordered list.
@@ -488,7 +489,7 @@ Make sure that they are simple enough to pursue!
      ```html
      <p>This is an unordered list.</p>
      <ul>
-     	<li>This is a list item.</li>
+        <li>This is a list item.</li>
         <li>Another list item.</li>
      </ul>
         
@@ -498,7 +499,34 @@ Make sure that they are simple enough to pursue!
         <li>Another list item.</li>
      </ol>
      ```
-
+  * To see a similar example in an HTML document, please see [Lesson 5](./HTMLCSS/Lessons/HTML_5_Lists.html).
+* **Definition Lists** *(Optional)*
+  * There is a third type of list, called a definition list.
+    * These are often used to list terms and their descriptions, like a dictionary.
+  * On a webpage, a definition list appears like this:
+	Term 1
+	    Description 1
+	Term 2
+	    Description 2A
+	    Description 2B
+  * To create a definition list:
+    * Use the "dl" tag, as such: `<dl> </dl>`
+      * "dl" stands for definition list.
+    * Within the dl tag:
+      * Wrap terms in the "dt" tag, as such: `<dt>Your Term</dt>`.
+      * Wrap descriptions in the "dd" tag, as such: `<dd>Your Description</dd>`.
+    * For example:
+    ```html
+    <dl>
+	    <dt>Portobello Sandwich</dt>
+	    <dd>A grilled portobello on a whole-grain bun with roasted red pepper.</dd>
+	    
+	    <dt>Garden Salad</dt>
+	    <dd>A fresh blend of spinach, arugula, and romaine, topped with cherry tomatoes and our homemade dressing.</dd>
+	    <dd>Comes with bread and butter.</dd>
+    </dl>
+    ```
+* **Subpoints in Lists**
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
