@@ -471,7 +471,7 @@ Make sure that they are simple enough to pursue!
      <hr>
      <p>My webpage will display a horizontal line between the headings and this paragraph.</p>
      ```
- * To see a horizontal rule on a webpage, please see [Lesson 4](./HTMLCSS/Lessons/HTML_4_Horizontal_Rules.html).
+  * To see a horizontal rule on a webpage, please see [Lesson 4](./HTMLCSS/Lessons/HTML_4_Horizontal_Rules.html).
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
