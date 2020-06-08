@@ -463,6 +463,7 @@ Make sure that they are simple enough to pursue!
     * By default, a horizontal rule is simply a horizontal line.
       * It creates a visual division on our webpage.
     * The horizontal rule tag is self-contained, as such: `<hr>`.
+      * The tag should be placed between elements. It cannot be placed within an element.
       * For example:
      ```html
      <h2>Main Heading</h2>
