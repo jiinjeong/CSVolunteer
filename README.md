@@ -374,10 +374,11 @@ Make sure that they are simple enough to pursue!
 		```
     * The body section contains the content displayed on your webpage. It is wrapped in a body tag:
 		```html
-		<head>
+		<body>
 			Your body code will go here.
-		</head>
+		</body>
 		```
+      * Content at the top of your body section will be displayed at the top of your webpage, and content at the bottom of your webpage will be displayed at the bottom of your webpage.
  * When we put it all together, it looks like this:
 	```html
 	<!Doctype HTML>
@@ -427,6 +428,48 @@ Make sure that they are simple enough to pursue!
 * To see headings, paragraphs, and blockquotes in action, please see [Lesson 2](./HTMLCSS/Lessons/HTML_2_Headings_and_Paragraphs.html).
 
 * **Breaks**
+  * You may have noticed by now that we can put spaces in between lines of code (by pressing enter) without affecting the webpage.
+    * This helps us to visually organize our code.
+    * For example:
+     ```html
+     <h2>Main Heading</h2>
+     <h3>Subheading</h3>
+
+     <p>In my code, I put a space between the headings and this paragraph.</p>
+     ```
+  * This raises the question: If we want to put a space between elements *on our webpage*, perhaps to separate sections of the webpage, how can we do so? With a tag called a "break"!
+    * The break tag is self-contained, as such: `<br>`.
+    * If placed in between elements, such as headings and paragraphs, it increases the space that already exists between them on the webpage.
+      * For example:
+     ```html
+     <h2>Main Heading</h2>
+     <br>
+     <h3>Subheading</h3>
+     <br>
+     <p>In my code, I put breaks between elements.</p>
+     ```
+    * If placed within a text element-- between a pair of paragraph tags, for example-- it causes the text to go onto a new line in the webpage, but it does not put any space between the two lines.
+      * In contrast, opening a new tag will create a new element, which entails putting a space between the elements.
+      * For example:
+     ```html
+     <h2>Main<br>Heading</h2>
+     <h3>Sub<br>heading</h3>
+     <p>In my code, I put a break right here<br>so that the paragraph continues on a new line.</p>
+     ```
+    * To see the difference more clearly, please see [Lesson 3](./HTMLCSS/Lessons/HTML_3_Breaks_and_HRs.html).
+
+* **Horizontal Rules**
+  * Breaks are a useful tool for separating sections of a webpage. But are there any other ways to do so? Yes, with a tag called a "horizontal rule"!
+    * By default, a horizontal rule is simply a horizontal line.
+      * It creates a visual division on our webpage.
+    * The horizontal rule tag is self-contained, as such: `<hr>`.
+      * For example:
+     ```html
+     <h2>Main Heading</h2>
+     <h3>Subheading</h3>
+     <hr>
+     <p>My webpage will display a horizontal line between the headings and this paragraph.</p>
+     ```
 
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
