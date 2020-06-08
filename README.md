@@ -415,6 +415,19 @@ Make sure that they are simple enough to pursue!
 	<p>This is my first paragraph.
 		This is still part of the first paragraph.</p>
 	```
+* **Blockquotes**
+  * Blockquotes are another way to display text on your webpage.
+  * To make a blockquote, wrap the text in a blockquote tag, as such: `<blockquote>Your Content</blockquote>`.
+  * By default, a blockquote is just like a paragraph, but with wider margins on both sides. It is often used for long quotations.
+    * For example:
+        ```html
+	<p>In the words of Abraham Lincoln:</p>
+        <blockquote>A house divided against itself cannot stand.</blockquote>
+        ```
+* To see headings, paragraphs, and blockquotes in action, please see [Lesson 2](./HTMLCSS/Lessons/HTML_2_Headings_and_Paragraphs.html).
+
+* **Breaks**
+
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
