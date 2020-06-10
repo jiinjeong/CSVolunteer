@@ -204,12 +204,10 @@ if __name__ == "__main__":
 	
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week2.py) (Lab/Assignment)
 
-#### Week 3: Conditions and If Statement
-* Conditions
-* and, or, not, in
-* If-elif-else
-* String methods
-    * string.upper(), string.lower()
+
+#### Week 3: Conditions and If Statementt
+I don't know how to format Github, have a start here.
+https://docs.google.com/document/d/11L-Ah5z6BAZWCaVEs3t1Ejd2yfX-drkQ6_AMbMsDkao/edit
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/PythonBeg/week3.py) (Lab/Assignment)
 
 #### Week 4: List, Indexing, and Random Library (@evaborton)
