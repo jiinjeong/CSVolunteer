@@ -526,10 +526,11 @@ Make sure that they are simple enough to pursue!
 	    <dd>Comes with bread and butter.</dd>
     </dl>
     ```
-   * To practice creating definition lists, please see [Challenge Problem 6](./HTMLCSS/Challenge Problems/HTML_6_Definition_Lists_Challenge_Problem).
+   * To practice creating definition lists, please see [Challenge Problem 6](./HTMLCSS/ChallengeProblems/HTML_6_Definition_Lists_Challenge_Problem).
 * **Nesting Lists and Creating Subpoints**
   * Do you think that a list item can itself be a list? The answer is yes!
     * A list inside of a list is called a *nested list*.
+      * The nested list can be the same type (unordered, ordered, or definition) as the list than contains it, or it can be a different type.
     * For example:
     ```html
     <p>The teams, in order from the highest scorer to the lowest scorer, are:</p>
@@ -553,10 +554,27 @@ Make sure that they are simple enough to pursue!
     </ol>
      ```
     * If you have not yet completed [Challenge Problem 5](./HTMLCSS/ChallengeProblems/HTML_5_Lists_Challenge_Problem.html), give it a try now!
-  * Nested lists can be used to create points and subpoints. 
-
-    
-
+  * Nested lists can be used to create points and subpoints.
+    * Within a list item, first add your main point as plain text. Then, within the same list item, add a list of the subpoints.
+      * Note: If an unordered list is nested, its bullet points are styled differently (in order to distinguish subpoints and sub-subpoints).
+    * For example:
+    ```html
+    <ol>
+	    <li>Point One
+		    <ol>
+			    <li>Point One A</li>
+			    <li>Point One B</li>
+		    </ol>
+	    </li>
+	    
+	    <li>Point Two
+		    <ul>
+			    <li>Point Two A</li>
+			    </li>Point Two B</li>
+	    	    </ul>
+	    </li>
+     </ol>  
+     ```
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
