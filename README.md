@@ -574,6 +574,64 @@ Make sure that they are simple enough to pursue!
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
 
 #### Week 7
+* **Styling Text in HTML**
+  * In HTML, tags can be used to add certain styles, such as bold, italicized, and highlighted, to text.
+    * These tags are nested within the text element tag (paragraph tag, heading tag, etc.).
+    * However, by convention, when nesting these tags, we do not go onto a new, indented line.
+      * Rather, we open and close these tags without "interrupting" the text.
+      * For example:
+      ```html
+      <p>We don't want <em>this styling tag</em> to interrupt this sentence.</p>
+      ```
+  * Bold
+    * To make text bold, use the `<strong> </strong>` tag.
+    * For example: `<p>The following is bold: <strong>Bold Text</strong></p>`
+    * Note: If the "strong" tag is nested in an "h" tag, the "strong" tag will have no effect because headings are already bold. 
+  * Italics
+    * To make text italicized, use the `<em> </em>` tag.
+      * "em" stands for "emphasis."
+    * For example: `<p>The following is italicized: <em>Italicized Text</em></p>`
+  * Highlight
+    * To make text highlighted, use the `<mark> </mark>` tag.
+    * For example: `<p>The following is highlighted: <mark>Highlighted Text</mark></p>`
+  * To apply multiple styles to text, we can nest style tags inside of each other.
+    * For example: `<p><mark>This whole sentence is highlighted and <strong>this part of it is also bold.</strong></mark></p>`
+
+* **Preformatted Text**
+  * Preformatted text will be displayed on your webpage almost exacty as it is in your HTML document.
+    * Indents, line breaks, and extra spaces in your code will  appear on your webpage if and only if they appear in preformatted text.
+    * By default, preformatted text is displayed in the font Monospace, which is used by most basic text editors.
+    * If your preformatted text is longer than the width of the screen displaying your webpage, it will not go onto a new line on your webpage. Rather, a scroll bar will appear at the bottom of your webpage so that you can scroll to the right and view the text that has been cut off.
+    * However, when you open a "pre" tag, the text will be displayed on a new line on your webpage, whether or not the "pre" tag is on a new line in your code.
+  * To make text preformatted, use the `<pre> </pre>` tag.
+  *  * For example:
+  ```html
+  <pre>This is a preformatted paragraph. Your webpage will display any		indents,
+  line breaks, and     extra spaces that you include in your code.</pre>
+  ```
+  * Can the "pre" tag be a nested tag and/or a parent tag?
+    * The "pre" tag can be nested in an "h" tag or a "blockquote tag. However,"The "pre tag" *cannot* be nested in a "p" tag because preformatted text already has paragraph properties.
+    * Other text styling tags, such as "strong" and "em," can be nested in a "pre" tag. The exception is the "mark" tag, which will have no effect if nested in a "pre" tag.
+  ```html
+  <h3><pre>This is a preformatted heading.</pre></h3>
+  <pre>This is a preformatted sentence that contains an <em>italisized</em> word.</pre>
+  ```
+ 
+* **More Styling Text in HTML** *(Optional)* 
+  * Smaller
+    * To decrease the font size of text, use the `<small> </small>` tag.
+    * For example: `<p>The following is smaller: <small>Smaller Text</small></p>`
+  * Subscript
+    * To make text subscripted, use the `<sub> </sub>` tag.
+    * For example: `<p>The following is subscripted: <sub>Subscripted Text</sub></p>`
+    * Subscript is ofen used to identify mathematical variables.
+      * For example: `<p>P<sub>1</sub>V<sub>1</sub> = P<sub>2</sub>V<sub>2</sub></p>`
+  * Superscript
+    * To make text superscriped, use the `<sup> </sup>` tag.
+    * For example: `<p>The following is superscripted: <sup>Superscripted Text</sup></p>`
+    * Subscript is ofen used to express exponents.
+      * For example: `<p>9<sup>5</sup> = 3<sup>10</sup></p>`
+
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week2.html)
 
 #### Week 8
