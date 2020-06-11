@@ -577,9 +577,6 @@ Make sure that they are simple enough to pursue!
 	    </li>
      </ol>  
      ```
-* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week1.html)
-
-#### Week 7
 * **Styling Text in HTML**
   * In HTML, tags can be used to add certain styles, such as bold, italicized, and highlighted, to text.
     * These tags are nested within the text element tag (paragraph tag, heading tag, etc.).
@@ -602,6 +599,7 @@ Make sure that they are simple enough to pursue!
     * For example: `<p>The following is highlighted: <mark>Highlighted Text</mark></p>`
   * To apply multiple styles to text, we can nest style tags inside of each other.
     * For example: `<p><mark>This whole sentence is highlighted and <strong>this part of it is also bold.</strong></mark></p>`
+  * To see bold, italicized, and highlighted text in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
 
 * **Preformatted Text**
   * Preformatted text will be displayed on your webpage almost exacty as it is in your HTML document.
@@ -622,7 +620,7 @@ Make sure that they are simple enough to pursue!
   <h3><pre>This is a preformatted heading.</pre></h3>
   <pre>This is a preformatted sentence that contains an <em>italisized</em> word.</pre>
   ```
- 
+   * To see preformatted text in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
 * **More Styling Text in HTML** *(Optional)* 
   * Smaller
     * To decrease the font size of text, use the `<small> </small>` tag.
@@ -637,8 +635,38 @@ Make sure that they are simple enough to pursue!
     * For example: `<p>The following is superscripted: <sup>Superscripted Text</sup></p>`
     * Subscript is ofen used to express exponents.
       * For example: `<p>9<sup>5</sup> = 3<sup>10</sup></p>`
-
-* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week2.html)
+  * To see smaller text, subscript, and superscript in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
+  
+#### Week 7
+* **Website Structure**
+  * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
+  * All of the files for a website should be contained in a single folder.
+    * Within the website folder, you might want to create separate folders for HTML documents (webpages), CSS documents, images, and video or audio files.
+  * By convention, the home page of a website is titled `index.html`.
+* **Relative file paths**
+  * In the next few lessons, we will be adding images and videos to our webpages, and we will be linking our webpages to other webpages in order to create a website. When we do so, we will have to tell the computer how to get to the image file, video file, or HTML document that we want.
+  * In other words, when we reference a given file within our HTML document, we need to provide a relative file path. A relative file path is a path to get from the location of our HTML document to the location of the given file.
+  * If both the given file and our HTML document are in the same folder, the relative file path is simply the name of the given file.
+    * This is because the relative file path always starts in the location of our HTML document.
+    * For example, if a folder called `MyWebsite` contains `index.html` and `image.png`, then the relative file path from `index.html` to `image.png` is `image.png`.
+  * If the given file is in a folder that is in the folder of the HTML document, the relative file path is the name of the inner folder, a forward slash, and the name of the given document.
+    * This is because a foward slash means to go into the folder or file written after it.
+    * For example, if a folder called `MyWebsite` contains `index.html` and a folder called `Images`, and `Images` contains `image.png`, then the relative file path from `index.html` to `image.png` is `Images/image.png`.
+      * In this example, the file path starts in the folder `MyWebsite` (because it is the location of `index.html`), goes into the folder `MyWebsite/Images`, and selects the file `MyWebsite/Images/image.png`.
+  * If the given file is in a folder that contains the folder of the HTML document, then the relative file path is two periods (`..`), a forward slash, and the name of the given document.
+    * This is because `..` means go out of the current folder and into the folder than contains it.
+  * For example, if a folder called `MyWebsite` contains `index.html` and a folder called `Pages`, and `Pages` contains `page1.html`, then the relative file path from `page1.html` to `index.html` is `../index.html`.
+    * In this example, the file path starts in `MyWebsite/Pages` (because it is the location of `page1.html`), goes up out of `MyWebsite/Pages` and into `MyWebsite`, and selects `MyWebsite/index.html`.
+    * You can go up multiple directories by repeating the `../`
+      * For example: `../../index.html`
+* **Attributes**
+  * Some tags are used with attributes. We can assign a value to an attribute in order to provide information about the tag or its contents.
+  * Here is the basic syntax:
+    * For a tag that includes an opening and closing tag: `<tag_type attribute_name=attribute_value> </tag_type>`
+    * For a self-contained tag: `<tag_type attribute_name=attribute_value>`
+  * Some tags can have multiple attributes.
+* **Images**
+  * 
 
 #### Week 8
 * [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week3.html)
