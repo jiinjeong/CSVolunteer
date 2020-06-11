@@ -422,7 +422,13 @@ Make sure that they are simple enough to pursue!
      <p>In the words of Abraham Lincoln:</p>
      <blockquote>A house divided against itself cannot stand.</blockquote>
      ```
-* To see headings, paragraphs, and blockquotes in action, please see [Lesson 2](./HTMLCSS/Lessons/HTML_2_Headings_and_Paragraphs.html).
+* **Comments**
+  * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
+    * They are often used to explain your code so that other programmer, and your future self, can understand it.
+    * You can place a comment anywhere in your code.
+  * To write a comment, use the self-contained tag `<!__Your Comment__>`.
+    * Notice that each of the lines is two underscores.
+* To see headings, paragraphs, blockquotes, and comments in action, please see [Lesson 2](./HTMLCSS/Lessons/HTML_2_Headings_and_Paragraphs.html).
 
 * **Breaks**
   * You may have noticed by now that we can put spaces in between lines of code (by pressing enter) without affecting the webpage.
