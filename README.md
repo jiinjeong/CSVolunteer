@@ -638,6 +638,8 @@ Make sure that they are simple enough to pursue!
   * To see smaller text, subscript, and superscript in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
   
 #### Week 7
+
+#### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
   * All of the files for a website should be contained in a single folder.
@@ -654,7 +656,7 @@ Make sure that they are simple enough to pursue!
     * For example, if a folder called `MyWebsite` contains `index.html` and a folder called `Images`, and `Images` contains `image.png`, then the relative file path from `index.html` to `image.png` is `Images/image.png`.
       * In this example, the file path starts in the folder `MyWebsite` (because it is the location of `index.html`), goes into the folder `MyWebsite/Images`, and selects the file `MyWebsite/Images/image.png`.
   * If the given file is in a folder that contains the folder of the HTML document, then the relative file path is two periods (`..`), a forward slash, and the name of the given document.
-    * This is because `..` means go out of the current folder and into the folder than contains it.
+    * This is because `..` means to go out of the current folder and into the folder than contains it.
   * For example, if a folder called `MyWebsite` contains `index.html` and a folder called `Pages`, and `Pages` contains `page1.html`, then the relative file path from `page1.html` to `index.html` is `../index.html`.
     * In this example, the file path starts in `MyWebsite/Pages` (because it is the location of `page1.html`), goes up out of `MyWebsite/Pages` and into `MyWebsite`, and selects `MyWebsite/index.html`.
     * You can go up multiple directories by repeating the `../`
@@ -667,9 +669,6 @@ Make sure that they are simple enough to pursue!
   * Some tags can have multiple attributes.
 * **Images**
   * 
-
-#### Week 8
-* [Potential Projects](https://github.com/jiinjeong/CS4All/blob/master/HTMLCSS/week3.html)
 
 ### Week 1-5: Python Intermediate
 #### Week 1: Loop 1: "For" loop
