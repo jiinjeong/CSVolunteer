@@ -375,7 +375,7 @@ Make sure that they are simple enough to pursue!
 			Your body code will go here.
 		</body>
 		```
-      * Content at the top of your body section will be displayed at the top of your webpage, and content at the bottom of your webpage will be displayed at the bottom of your webpage.
+      * Generally, content at the top of your body section will be displayed at the top of your webpage, and content at the bottom of your webpage will be displayed at the bottom of your webpage.
  * When we put it all together, it looks like this:
 	```html
 	<!Doctype HTML>
@@ -393,14 +393,14 @@ Make sure that they are simple enough to pursue!
 	* To see this in an actual HTML document, please see [Lesson 1](./HTMLCSS/Lessons/HTML_1_Getting_Started.html) or [Lesson 1 with Explanations](./HTMLCSS/Lessons/HTML_1_Getting_Started_With_Explanations.html).
 
 * **Headings**
-  * There are various ways to display text on your webpage. One such way is displaying the text as a heading, or header.
+  * There are various ways to display text on your webpage. One such way is displaying the text as a heading, also called a header.
   * To make a heading, wrap the text in an "h" tag, as such: `<h1>Your Content</h1>`.
   * There are six different types of headings: h1, h2, h3, h4, h5, and h6. By default, h1 is the largest and the rest are progressively smaller.
     * Therefore, the title of your webpage is usually an h1 or h2 heading, whereas section titles and subtitles are usually h3 or h4 headings.
 * **Paragraphs**
   * Paragraphs are another way to display text on your webpage.
   * To make a paragraph, wrap the text in a "p" tag, as such: `<p>Your Content</p>`.
-  * To start a new paragraph, start a new paragraph tag. The two paragraphs will be separated by a space.
+  * To start a new paragraph, start a new paragraph tag. By default, the two paragraphs will be separated by a space.
     * Close the first paragraph tag, go onto a new line (by pressing enter), and open a new paragraph tag.
 	* For example:
 	```html
@@ -424,7 +424,7 @@ Make sure that they are simple enough to pursue!
      ```
 * **Comments**
   * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
-    * They are often used to explain your code so that other programmer, and your future self, can understand it.
+    * They are often used to explain your code so that other programmers, and your future self, can understand it.
     * You can place a comment anywhere in your code.
   * To write a comment, use the self-contained tag `<!__Your Comment__>`.
     * Notice that each of the lines is two underscores.
@@ -440,7 +440,7 @@ Make sure that they are simple enough to pursue!
 
      <p>In my code, I put a space between the headings and this paragraph.</p>
      ```
-  * This raises the question: If we want to put a space between elements *on our webpage*, perhaps to separate sections of the webpage, how can we do so? With a tag called a "break"!
+  * This raises the question: If we want to put a space between elements *on our webpage* (without using CSS), perhaps to separate sections of the webpage, how can we do so? With a tag called a "break"!
     * The break tag is self-contained, as such: `<br>`.
     * If placed in between elements, such as headings and paragraphs, it increases the space that already exists between them on the webpage.
       * For example:
@@ -451,7 +451,7 @@ Make sure that they are simple enough to pursue!
      <br>
      <p>In my code, I put breaks between elements.</p>
      ```
-    * If placed within a text element-- between a pair of paragraph tags, for example-- it causes the text to go onto a new line in the webpage, but it does not put any space between the two lines.
+    * If placed within a text element-- between a an opening 'p' tag and its closing 'p' tag, for example-- it causes the text to go onto a new line in the webpage, but it does not put any space between the two lines.
       * In contrast, opening a new tag will create a new element, which entails putting a space between the elements.
       * For example:
      ```html
@@ -558,7 +558,7 @@ Make sure that they are simple enough to pursue!
     * If you have not yet completed [Challenge Problem 5](./HTMLCSS/ChallengeProblems/HTML_5_Lists_Challenge_Problem.html), give it a try now!
   * Nested lists can be used to create points and subpoints.
     * Within a list item, first add your main point as plain text. Then, within the same list item, add a list of the subpoints.
-      * Note: If an unordered list is nested, its bullet points are styled differently (in order to distinguish subpoints and sub-subpoints).
+      * Note: If an unordered list is nested, by default, its bullet points are styled differently (in order to distinguish subpoints and sub-subpoints).
     * For example:
     ```html
     <ol>
@@ -577,6 +577,7 @@ Make sure that they are simple enough to pursue!
 	    </li>
      </ol>  
      ```
+     * To see more examples of nested lists, please see [Lesson 6](./HTMLCSS/Lessons/HTML_6_Nested_Lists.html).
 * **Styling Text in HTML**
   * In HTML, tags can be used to add certain styles, such as bold, italicized, and highlighted, to text.
     * These tags are nested within the text element tag (paragraph tag, heading tag, etc.).
@@ -603,7 +604,7 @@ Make sure that they are simple enough to pursue!
 
 * **Preformatted Text**
   * Preformatted text will be displayed on your webpage almost exacty as it is in your HTML document.
-    * Indents, line breaks, and extra spaces in your code will  appear on your webpage if and only if they appear in preformatted text.
+    * Indents, line breaks, and extra spaces in your code will  appear on your webpage if and only if they occur within preformatted text.
     * By default, preformatted text is displayed in the font Monospace, which is used by most basic text editors.
     * If your preformatted text is longer than the width of the screen displaying your webpage, it will not go onto a new line on your webpage. Rather, a scroll bar will appear at the bottom of your webpage so that you can scroll to the right and view the text that has been cut off.
     * However, when you open a "pre" tag, the text will be displayed on a new line on your webpage, whether or not the "pre" tag is on a new line in your code.
@@ -628,7 +629,7 @@ Make sure that they are simple enough to pursue!
   * Subscript
     * To make text subscripted, use the `<sub> </sub>` tag.
     * For example: `<p>The following is subscripted: <sub>Subscripted Text</sub></p>`
-    * Subscript is ofen used to identify mathematical variables.
+    * Subscript is often used to identify mathematical variables.
       * For example: `<p>P<sub>1</sub>V<sub>1</sub> = P<sub>2</sub>V<sub>2</sub></p>`
   * Superscript
     * To make text superscriped, use the `<sup> </sup>` tag.
