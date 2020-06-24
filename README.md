@@ -350,7 +350,72 @@ Make sure that they are simple enough to pursue!
 		</html>
 		```
 
-* **Brackets and REPL**
+* **Text Editors**
+  * When coding in HTML or CSS, we write the code in a text editor. A text editor is simply a program that allows you to create a document, write characters, and save the document.
+  * There are several different types of text editors that we can use.
+    * First, let's use a *basic text editor* to create an HTML document and view it as a webpage.
+      * This is the simplest way to do so, but it doesn't offer us any cool features.
+    * Then, feel free to try out Brackets, a downloadable program, and/or Repl, an online text editor.
+      * These options offer us more cool features.
+    * You can follow along with this HTML/CSS curriculum using any of these text editors.
+  * Basic text editors
+    * Notepad and TextEdit
+      * *Windows* computers come with a basic text editor called Notepad.
+      	* To open Notepad...
+          * Search "Notepad" in the Start menu search bar.
+            * You might have to click the Start button (the Windows symbol in the bottom left) in order to find this search bar.
+          * If your computer does not have a Start menu search bar, select "Start," then "Programs," then "Accessories," then "Notepad."
+      * *Mac* computers come with a basic text editor called TextEdit.
+        * To open TextEdit...
+	  1. Select "Finder," then "Programs," then "TextEdit."
+	  2. Select "Preferences," then "Format," then "Plain Text."
+	     * This is necessary in order for TextEdit to save your files correctly.
+	  3. Select "Open and Save," and check the box to "Display HTML files as HTML code instead of preformatted text."
+	  4. Open a new document.
+      * Note: You cannot use sophisticated text editors, such as Microsoft Word, for coding.
+    * To save your document as an HTML file:
+      1. Select "File", then "Save As".
+      2. Give your document a file name ending in `.html`.
+         * The `.html` is called an *extension*.
+         * It tells the computer that the file contains HTML code so that the browser knows to open it as a webpage.
+      3. Click "Save."
+    * To view your webpage in a browser:
+      * Find your file in the file explorer.
+      * To open the webpage in the default browser, double click on it.
+      * To open the webpage in a different browser, right click on it, select "Open with," and select a browser.
+      * (Note: At this point, your webpage will be plain white because we have not added any code yet.)
+  * Brackets
+    * Brackets is a program that makes it easier to code in HTML and CSS. It offers the following features:
+      * Live Preview: You can view a live preview of your webpage that updates automatically as you code.
+      * IntelliSense (suggestions as you code)
+        * When you code in HTML, after you type an opening tag, Brackets will automatically provide the closing tag.
+        * When you code in CSS, after you type a property, Brackets will list possible values.
+    * If you would like to use Brackets, here is how to get started:
+      * Download the program from [brackets.io](brackets.io).
+      * Open the program, and click "File" (in the top left).
+        * To create, open, and edit a new document, select "New."
+          * To give it a file name, select "File" and then "Save As." Make sure that the file name ends in `.html`.
+            * The `.html` is called an *extension*.
+            * It tells the computer that the file contains HTML code so that the browser knows to open it as a webpage.
+        * To open and edit and exisiting document, select "Open."
+        * To open an existing folder before opening its documents, select "Open Folder."
+      * To view a live preview of your webpage, click the lightening bolt (in the top right).
+        * Note: At this point, your webpage will be plain white because we have not added any code yet.
+        * When the live preview is active, the lightening bolt is golden. When it is not active, the lightening bolt is gray.
+      * When you are finished editing, save the file again by selecting "File" and then "Save," or by pressing `Ctrl` or `Cmd` + S.
+        * A file with unsaved changes will have a small dot to the left of its name on Brackets's navigation menu (on the left).
+  * Repl
+    * Repl is an online editor that can be used to code in many languages, including HTML and CSS.
+      * Because Repl is run through the Internet, there is no need to download programs to or save files on your computer.
+    * If you would like to use Repl, here is how to get started:
+      * Go to [repl.it](repl.it) to log in or create an account.
+      * Click "New Repl," and select "HTML, CSS, JS."
+        * This will create a folder, or Repl, containing an HTML document called `index.html`, a CSS document called `style.css`, and a Javascript document called `script.js`.
+          * For now, let's focus on the HTML document, `index.html`.
+        * You can change the name of your Repl when creating it, or later by clicking on the pencil next to its name (at the top).
+      * To view your webpage, click the big green button with the triangle (at the top center).
+        * Your webpage will be displayed on the right.
+        * Note: At this point, your webpage will be plain white because we have not added any code yet.
 
 * **Getting Started with HTML**
   * Now that we have opened an HTML document, it is time to start coding!
