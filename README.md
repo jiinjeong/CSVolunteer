@@ -367,7 +367,7 @@ Make sure that they are simple enough to pursue!
           * If your computer does not have a Start menu search bar, select "Start," then "Programs," then "Accessories," then "Notepad."
       * *Mac* computers come with a basic text editor called TextEdit.
         * To open TextEdit...
-	  1. Select "Finder," then "Programs," then "TextEdit."
+          1. Select "Finder," then "Programs," then "TextEdit."
 	  2. Select "Preferences," then "Format," then "Plain Text."
 	     * This is necessary in order for TextEdit to save your files correctly.
 	  3. Select "Open and Save," and check the box to "Display HTML files as HTML code instead of preformatted text."
@@ -391,7 +391,7 @@ Make sure that they are simple enough to pursue!
         * When you code in HTML, after you type an opening tag, Brackets will automatically provide the closing tag.
         * When you code in CSS, after you type a property, Brackets will list possible values.
     * If you would like to use Brackets, here is how to get started:
-      * Download the program from [brackets.io](brackets.io).
+      * Download the program from [brackets.io](http://brackets.io).
       * Open the program, and click "File" (in the top left).
         * To create, open, and edit a new document, select "New."
           * To give it a file name, select "File" and then "Save As." Make sure that the file name ends in `.html`.
@@ -408,7 +408,7 @@ Make sure that they are simple enough to pursue!
     * Repl is an online editor that can be used to code in many languages, including HTML and CSS.
       * Because Repl is run through the Internet, there is no need to download programs to or save files on your computer.
     * If you would like to use Repl, here is how to get started:
-      * Go to [repl.it](repl.it) to log in or create an account.
+      * Go to [repl.it](http://repl.it) to log in or create an account.
       * Click "New Repl," and select "HTML, CSS, JS."
         * This will create a folder, or Repl, containing an HTML document called `index.html`, a CSS document called `style.css`, and a Javascript document called `script.js`.
           * For now, let's focus on the HTML document, `index.html`.
