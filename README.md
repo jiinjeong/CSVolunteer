@@ -384,9 +384,14 @@ Make sure that they are simple enough to pursue!
       * To open the webpage in the default browser, double click on it.
       * To open the webpage in a different browser, right click on it, select "Open with," and select a browser.
       * (Note: At this point, your webpage will be plain white because we have not added any code yet.)
+    * To return to editing your document:
+      * Find your file in the file explorer.
+      * Right click, select "Open with," and select "Notepad" or "TextEdit."
   * Brackets
     * Brackets is a program that makes it easier to code in HTML and CSS. It offers the following features:
       * Live Preview: You can view a live preview of your webpage that updates automatically as you code.
+        * If you hover over an element in the HTML code (or a rule in the CSS code), Brackets will highlight that element (or the affected elements) in the live preview.
+	* If you hover over a color in image file path in your code, Brackets will display a small preview of it.
       * IntelliSense (suggestions as you code)
         * When you code in HTML, after you type an opening tag, Brackets will automatically provide the closing tag.
         * When you code in CSS, after you type a property, Brackets will list possible values.
@@ -704,6 +709,181 @@ Make sure that they are simple enough to pursue!
   * To see smaller text, subscript, and superscript in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
   
 #### Week 7
+
+* **Default Browser Styling**
+  * When we open an HTML document as a webpage in a browser, the browser automatically applies certain default styles to it.
+    * For example, the text is black and the background is white. The font size is larger for headings than for paragraphs, and all text is left-justified.
+    * Different browsers may apply *slightly* different default styles.
+  * How can we override these default styles and add unique styles to our webpages? By coding in CSS!
+* **Getting Started with CSS**
+  * Generally, we write CSS code in a document separate from our HTML file, and then we link the CSS to the HTML.
+  * Here is how to do so:
+    1. Create a document *in the same folder* as the HTML file that you want to style. Give it an extension of `.css`. (In other words, select "Save as" and give the document a file name that ends in `.css`.)
+       * If you are using Repl, then simply click on `style.css` (in the navigation menu on the right).
+    2. Go back to your HTML file, and add a head section.
+    3. Within the head section, link the CSS file with the self-enclosed tag `<link rel="stylesheet" type="text/css" href="NAME_OF_YOUR_CSS_DOCUMENT.css">`
+       * `rel` stands for "relationship."
+         * The relationship of the CSS file to the HTML file is a stylesheet.
+       * `href` stands for "hyperreference," which is essentially a link.
+  * For example:
+  ```html
+  <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  ```
+* **The Basics**
+  * CSS code is a collection of *rules*. Each rule contains a *selector* and one or more *declarations*.
+  * The selector specifies the *target*, which is the element or elements on our webpage to which the rule should apply.
+  * Each declaration specifies a particular style that we want to apply to the target element(s). It consists of a *property* and a *value*.
+    * The property is the aspect of style that we want to change (e.g. color), and value states what we want to change it to (e.g. red).
+  * Syntax
+    * To write a CSS rule, first write the selector (target). Then, within curly brackets, write the declaration. Within the declaration, separate the property from the value with a colon.
+      * For example: `selector{property: value}`
+    * If you have multiple declarations, separate them with a semi-colon after each declaration. Also, in order to organize your code, place each declaration on a new line, indented once. The closing curly bracket should also be on its own line but not be indented.
+      * For example:
+      ```css
+      selector{
+          property1: value1;
+          property2: value2;
+      }
+      ```
+    * Most CSS files have multipe rules. When writing a new rule, go onto a new line.
+      * For example:
+      ```css
+      selectorA{
+          property1: value1;
+          property2: value2;
+      }
+
+      selectorB{
+          property1: value1;
+          property2: value2;
+          property3: value3;
+      }
+      ```
+* **Targeting HTML Tags**
+  * We can use many different criteria to target certain elements of our webpage. One such criteria is the type of the HTML tag(s) in which the element is wrapped.
+  * For example:
+    * This rule targets paragraphs:
+    ```css
+    p{
+	property: value;
+    }
+    ```
+    * This rule targets h1 headings:
+    ```css
+    h1{
+	property: value;
+    }
+    ```
+  * To target multiple HTML tags, separate them with a comma.
+    * For example, this rule targets h1, h2, and h3 headings:
+    ```css
+    h1, h2, h3{
+       property: value;
+    }
+    ```
+* **Font Size, Family, and Weight**
+  * Font Size
+    * To change the font size of text, use the property `font-size`.
+    * Font size is measured in pixels, abbreviated `px`.
+      * The measurement is based on the number of pixels that vertically span a line of text.
+    * For example, this changes the font-size of paragraph text to 20 pixels:
+    ```css
+    p{
+       font-size:20px;
+    }
+    ```
+  * Font-Family
+    * To change the font of text, use the property `font-family`.
+      * Some common font families are Arial and Helvetica.
+    * For example:
+    ```css
+    p{
+       font-family:arial;
+    }
+    ```
+    * Font-family stacks
+      * If the specified font is not installed on the computer of someone who is trying to view your webpage, the webpage will instead apply the font of the default browser style.
+        * We say that the browser does not support the specified font.
+      * However, if you would like, you can specify one or more different "fall-back options".
+      * To do so, list the fonts in order of preference, separated by commas. This is called a *font-family stack*.
+        * If the browser does not support the first font, it will try the second, and so on.
+        * For example:
+        ```css
+        p{
+         font-family:"Arial Narrow", arial, sans-serif;
+        }
+        ```
+          * Note: Font names comprised of multiple words must be surrounded in quotation marks.
+      * Building a font-family stack *(Optional)*
+        * Start the stack with the specific font that you prefer.
+        * Then, list a similar font, or a semi-specific group of fonts to which the preferred font belongs.
+        * Finally, list the broad group of fonts (font-family) to which the preferred font belongs.
+          * This allows the browser to apply whichever font from the font-family that it does support.
+      * If you are interested in learning more about fonts and font-families, see [here](https://www.w3schools.com/cssref/css_websafe_fonts.asp) and [here](https://www.w3.org/Style/Examples/007/fonts.en.html).
+  * Font-Weight
+    * To control whether text is bolded, or conversely, lightened, use the property `font-weight`.
+    * This property can have the following values:
+      * `bolder`
+      * `bold`
+      * `normal`
+      * `lighter`
+      * `inherit`
+        * We will learn about inheritance in future lessons.
+    * However, few fonts have a bolder version, and only some have a lighter version.
+      * One font that has both a bold version and a lighter version is Yu Gothic.
+    * For example:
+    ```css
+    p{
+      font-weight: bold;
+    }
+    ```
+    * *(Optional)* The property can also have a number value of 100, 200, 300, 400, 500, 600, 700, 800, or 900.
+      * 100-300 generally equate to `lighter`.
+      * 400-600 generally equate to `normal`.
+      * 700-900 generally equate to `bold`.
+        * If the font has a bolder version, then 600-700 generally equat to `bold` and 800-900 generally equate to `bolder`.
+* Color
+  * Text Color
+    * To control the color of text, use the property `color`.
+    * There are many pre-named colors that can be used as values.
+    * For example:
+    ```css
+    p{
+      color: red;
+    }
+    ```
+  * Background Color
+    * To control the background color of an element, use the property `background-color` or the property `background`.
+    * For example:
+    ```css
+    p{
+      background-color: blue;
+    }
+
+    h1{
+      background: purple;
+    }
+    ``` 
+   * Hex Codes and RGB Values *(Optional)*
+     * What if we want to use a very specific color that is not among the pre-named colors? We can use a hex code or RGB values as the value of the property.
+       * We can use a color picker, such as [this one](https://www.w3schools.com/colors/colors_picker.asp?color=%23ffab00) or [this one](https://htmlcolorcodes.com/color-picker/), to generate these codes for us.
+       * But if you would like to understand how they work, read on!
+     * Hex codes
+       * A hex code consists of a hashtag, `#`, followed by 6 characters.
+       * The first two characters represent the intensity of the *red* channel. The second two characters represent the intensity of the *green* channel, and the last two characters represent the intensity of the *blue* channel.
+       * Each character can range from `0` to `9` and then from `a` to `f`. `0` is the darkest and `f` is the lightest.
+         * For example: `#16c91e` is a light green.
+         * The hex code for black is `#000000`, and the hex code for white is `#ffffff`.
+       * If each channel contains two identical characters, the hex code can be shortened to three characters.
+         * For example, `#aabbcc` is equivalent to `#abc`. The hex code for white can also be expressed as `#fff`.
+     * RGB values
+       * An RBG value is written `rbg(x, x, x)`, where `x` represents a number.
+       * Similarly to hex codes, the first number represents the intensity of the *red* channel. The second number represents the intensity of the *green* channel, and the last number represents the intensity of the *blue* channel.
+       * Each number can range from `0` to `255`. `0` is the darkest and `255` is the lightest.
+         * For example: `rgb(22, 201, 30)` is a light green.
+         * Therefore, the RBG value for black is `rgb(0, 0, 0)`, and the RGB value for white is `rgb(255, 255, 255)`.
 
 #### Week 8
 * **Website Structure**
