@@ -884,6 +884,39 @@ Make sure that they are simple enough to pursue!
        * Each number can range from `0` to `255`. `0` is the darkest and `255` is the lightest.
          * For example: `rgb(22, 201, 30)` is a light green.
          * Therefore, the RBG value for black is `rgb(0, 0, 0)`, and the RGB value for white is `rgb(255, 255, 255)`.
+* **Text Decoration and Transformation**
+  * Text decoration
+    * The property `text-decoration` can have the following values:
+      * `underline`
+      * `overline`
+      * `line-through`
+        * This makes the text appear to be crossed-out.
+      * `none`
+      * `inherit`
+        * We will learn about inheritance in future lessons.
+    * For example:
+    ```css
+    h2{
+      text-decoration: underline;
+    }
+    ```
+  * Text transformation
+    * To transform text from uppercase to lowercase or visa versa, use the property `text-transform`.
+    * This property can have the following value:
+      * `capitalize`
+        * This capitalizes the first letter of each word.
+      * `uppercase`
+        * This makes all letters uppercase.
+      * `lowercase`
+      * `none`
+      * `inherit`
+        * We will learn about inheritance in future lessons.
+    * For example:
+    ```css
+    h2{
+      text-transform: uppercase;
+    }
+    ```
 * **Comments**
   * To write a comment in CSS, begin with a forward slash and an asterisk, `/*`, and end with an asterisk and a forward slash, `*/`.
   * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
