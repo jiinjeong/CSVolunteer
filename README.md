@@ -495,8 +495,8 @@ Make sure that they are simple enough to pursue!
 * **Comments**
   * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
     * They are often used to explain your code so that other programmers, and your future self, can understand it.
-    * You can place a comment anywhere in your code.
-  * To write a comment, use the self-contained tag `<!__Your Comment__>`.
+    * You can place a comment almost anywhere in your code.
+  * To write a comment in HTML, use the self-contained tag `<!__Your Comment__>`.
     * Notice that each of the lines is two underscores.
 * To see headings, paragraphs, blockquotes, and comments in action, please see [Lesson 2](./HTMLCSS/Lessons/HTML_2_Headings_and_Paragraphs.html).
 
@@ -884,7 +884,49 @@ Make sure that they are simple enough to pursue!
        * Each number can range from `0` to `255`. `0` is the darkest and `255` is the lightest.
          * For example: `rgb(22, 201, 30)` is a light green.
          * Therefore, the RBG value for black is `rgb(0, 0, 0)`, and the RGB value for white is `rgb(255, 255, 255)`.
+* **Comments**
+  * To write a comment in CSS, begin with a forward slash and an asterisk, `/*`, and end with an asterisk and a forward slash, `*/`.
+  * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
+    * Here are some of the common uses for comments in CSS code:
+      * To explain your code so that other programmers, and your future self, can understand it.
+        * For example:
+        ```css
+        p{
+          color: blue;   /* This rule makes the paragraph text blue. */
+        }
+        ```
+      * To temporarily disable a rule.
+        * For example:
+        ```css
+        /* p{
+          color: blue;
+        } */
+        ```
+      * To create a heading containing the file details.
+        * For example:
+        ```css
+        /*////////////////////////////
+        STYLE FOR MY WEBSITE
+        *Created by John Doe
+        *6/25/2020
+        ////////////////////////////*/
+        ```
+      * To divide the code into logical sections.
+        * For example:
+        ```css
+        /* Heading Styles */
+        h1{
+          color: blue;
+        }
+        h3{
+          color: green;
+        }
 
+        /* Paragraph Styles */
+        p{
+          color: maroon;
+        }
+        ```
 #### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
