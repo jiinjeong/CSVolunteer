@@ -844,7 +844,7 @@ Make sure that they are simple enough to pursue!
       * 400-600 generally equate to `normal`.
       * 700-900 generally equate to `bold`.
         * If the font has a bolder version, then 600-700 generally equat to `bold` and 800-900 generally equate to `bolder`.
-* Color
+* **Color**
   * Text Color
     * To control the color of text, use the property `color`.
     * There are many pre-named colors that can be used as values.
