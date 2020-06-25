@@ -960,6 +960,52 @@ Make sure that they are simple enough to pursue!
           color: maroon;
         }
         ```
+* **Attributes**
+  * Some HTML tags are used with attributes. We can assign a value to an attribute in order to provide information about the tag or its contents.
+  * Here is the basic syntax:
+    * For a tag that includes an opening and closing tag: `<tag_type attribute_name=attribute_value> </tag_type>`
+    * For a self-contained tag: `<tag_type attribute_name=attribute_value>`
+  * Some tags can have multiple attributes.
+* **IDs**
+  * What if we to want to write a CSS rule that targets, say, a specific paragraph on our webpage, but not every paragraph? We can do so by using an ID.
+  * First, we must assign an ID to the element that we want to target in the HTML code.
+    * To do so, give an ID attribute to the element, as such: `id="YOUR_ID_NAME"`.
+      * For example:
+      ```html
+      <h1 id="top-header">Mr. Bobo's Popsicle Stand</h1>
+      ```
+    * A given ID name can be used only once per webpage or website.
+  * To target the ID in your CSS code, use the ID name preceded by a hashtag as the selector, as such: `#YOUR_ID_NAME`.
+    * For example:
+    ```css
+    #top-header{
+      font-size: 70px;
+    }
+    ```
+* **Classes**
+  * What if we to want to write a CSS rule that targets, say, some of the paragraphs on our webpage, but not others? We can do so by using a class.
+  * First, we must assign a class to each of the elements that we want to target in the HTML code.
+    * To do so, give an class attribute to each element, as such: `class="YOUR_CLASS_NAME"`.
+      * For example:
+      ```html
+      <p class="flavor">vanilla</p>
+      <p class="price">$0.50</p>
+
+      <p class="flavor">chocolate</p>      
+      <p class="price">$0.75</p>
+      ```
+    * To give multiple classes to an element, separate the class names by a space, as such: `class="CLASS_NAME_1 CLASS_NAME_2"`.
+      * For example:
+      ```html
+      <p class="flavor daily-special">vanilla</p>
+      ```
+  * To target the class in your CSS code, use the class name preceded by a period as the selector, as such: `.YOUR_CLASS_NAME`.
+    * For example:
+    ```css
+    .flavor{
+      font-size: 30px;
+    }
+    ```
 #### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
@@ -982,12 +1028,7 @@ Make sure that they are simple enough to pursue!
     * In this example, the file path starts in `MyWebsite/Pages` (because it is the location of `page1.html`), goes up out of `MyWebsite/Pages` and into `MyWebsite`, and selects `MyWebsite/index.html`.
     * You can go up multiple directories by repeating the `../`
       * For example: `../../index.html`
-* **Attributes**
-  * Some tags are used with attributes. We can assign a value to an attribute in order to provide information about the tag or its contents.
-  * Here is the basic syntax:
-    * For a tag that includes an opening and closing tag: `<tag_type attribute_name=attribute_value> </tag_type>`
-    * For a self-contained tag: `<tag_type attribute_name=attribute_value>`
-  * Some tags can have multiple attributes.
+
 * **Images**
   * 
 
