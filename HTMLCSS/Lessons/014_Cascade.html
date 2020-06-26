@@ -1,0 +1,37 @@
+<!Doctype HTML>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="014_Cascade.css">
+    </head>
+    
+    <body>
+        <h2>The Cascade</h2>
+        <hr>
+        
+        <h4>What happens if two or more of our CSS rules contradict each other and have equal specificity? The latter (bottom-most) rule will be applied.</h4>
+        
+        <p>The computer reads a CSS file from top to bottom. In the case of equivalent rules, the rule that is lower-down will overwrite the rule that is higher-up.</p>
+        <blockquote>When loading this webpage, the computer first applied a color of red to this blockquote. But then, it overwrote that rule and applied a color of blue to this blockquote.</blockquote>
+        <br>
+        
+        <p>What if we have two conflicting rules that aren't exactly equivalent but do have equal specificity? Again, the rule that is lower-down will be applied.</p>
+        <blockquote class="first-class second-class">This blockquote has two classes: "first-class" and "second-class". A color of green is applied to the class "first-class", and a color of purple is applied to the class "second-class". Since the rule targeting "second-class" is beneath the other in the CSS code, this text will be purple. But if you cut that rule and paste it at the top of the CSS document, this text will turn green.</blockquote>
+        <br>
+        
+        <p>All this is called the cascade.</p>
+        <br>
+        
+        <h4>However, the cascade is not the deciding factor when an element has inherited a rule that contradicts a rule that it has inherited from a differnt parent.</h4>
+        <p>In this case, CSS applies the rule from the parent that is closer to element in the HTML code. In other words, CSS applies the rule from the parent in which the element is nested fewer layers deep.</p>
+        
+        <p>For example:</p>
+        
+        <div>
+            <p>This is a paragraph nested inside of a "div" tag. It will inherit the color applied to the "div" tag: fuschia.</p>
+            <ul>
+                <li>This list item is nested two layers deep in the "div" tag, but only one layer deep in the "ul" tag. Therefore, it will display the color applied to the "ul" tag: orange.</li>
+            </ul>
+        </div>
+    </body>
+</html>

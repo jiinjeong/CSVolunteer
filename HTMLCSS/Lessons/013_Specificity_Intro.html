@@ -1,0 +1,28 @@
+<!Doctype HTML>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="013_Specificity_Intro.css">
+    </head>
+    
+    <body>
+        <h2>Introduction to Specificity</h2>
+        <hr>
+        
+        <h4>What happens if two or more of our CSS rules contradict each other? The more specific rule will be applied.</h4>
+        
+        <ul>
+            <li>Inherited styles have a specificity of 0.</li>
+            <br>
+            
+            <li>Styles targeting a type of HTML element (a certain HTML tag) have a specificity of 1.</li>
+            <p>This is a paragraph. Although it has inherited a color of red from the list, a color of blue is applied directly to paragraphs.</p>
+            
+            <li>Styles targeting classes have a specificity of 10.</li>
+            <p class="my-class">This is a paragraph with a class of "my-class". Although a color of blue is applied to paragraphs (and this paragraph has inherited a color of red from the list), a color of green is applied to the class "my-class."</p>
+            
+            <li>Styles targeting IDs have a specificity of 100.</li>
+            <p id="my-ID" class="my-class">This is a paragraph with an ID of "my-ID" and a class of "my-class". Although a color of green is applied to the class "my-class" (and a color of blue is applied to paragraphs, and this paragraph has inherited a color of red from the list), a color of purple is applied to the ID "my-ID".</p>
+        </ul>
+    </body>
+</html>

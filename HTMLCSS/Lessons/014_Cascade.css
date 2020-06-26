@@ -1,0 +1,29 @@
+/* The computer runs this CSS code starting from here, the top. */
+
+blockquote{
+    color: red;
+}
+
+blockquote{
+    color: blue;
+}
+
+/****************/
+
+.first-class{
+    color: green;
+}
+
+.second-class{
+    color: purple;
+}
+
+/****************/
+
+div{
+    color: fuchsia;
+}
+
+ul{
+    color: darkorange;
+}

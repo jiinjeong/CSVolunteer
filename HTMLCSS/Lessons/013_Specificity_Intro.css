@@ -1,0 +1,19 @@
+ul{
+    color: red;
+}
+
+p{
+    color: blue;
+}
+
+.my-class{
+    color: green;
+}
+
+#my-ID{
+    color: purple;
+}
+
+li{
+    font-weight: bold;
+}

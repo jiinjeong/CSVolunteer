@@ -1,0 +1,21 @@
+#title{
+    color: darkgreen;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.subtitle{
+    color: blue;
+    font-size: 23px;
+}
+
+#warning{
+    background-color: red;
+    color: white;
+}
+
+.description{
+    font-weight: bold;
+}
+
+
