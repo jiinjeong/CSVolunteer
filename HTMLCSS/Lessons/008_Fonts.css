@@ -1,0 +1,28 @@
+p{
+    font-size: 20px;
+}
+
+blockquote{
+    font-size: 12px;
+}
+
+h4{
+    font-family: arial, sans-serif;
+}
+
+li{
+    font-family: "Yu Gothic"
+}
+
+/* Don't worry about the #a, #b and #c for now. */
+#a{
+    font-weight: lighter;
+}
+
+#b{ /* You don't have to include this rule because list items have a normal font-weight by default. */
+    font-weight: normal; 
+}
+
+#c{
+    font-weight: bold;
+}

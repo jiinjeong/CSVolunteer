@@ -1,0 +1,24 @@
+/* Don't worry about the #a, #b and #c for now. */
+#a{
+    text-decoration: underline;
+}
+
+#b{
+    text-decoration: overline; 
+}
+
+#c{
+    text-decoration: line-through;
+}
+
+#d{
+    text-transform: uppercase;
+}
+
+#e{
+    text-transform: lowercase; 
+}
+
+#f{
+    text-transform: capitalize;
+}
