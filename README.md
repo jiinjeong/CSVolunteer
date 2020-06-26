@@ -1118,7 +1118,7 @@ Make sure that they are simple enough to pursue!
   * To see examples of how specificity resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](013_Specificity_Intro.html) and [CSS file](013_Specificity_Intro.css).
 * **The Cascade**
   * How does CSS deal with conflicting rules of *equal specificity*? Its system for doing so is called *the cascade*.
-    * This is how CSS get is name of "cascading stylesheets."
+    * This is how CSS gets its name of "cascading stylesheets."
   * When running a CSS file, the computer starts at the top of the file and works towards the bottom, like a cascade.
     * Therefore, if we have two rules with the same selector and property, the one that is higher in the document will be overwritten when the computer encounters the one that is lower in the document.
       * In the following example, the computer will first apply a color of red to the paragraphs, but then it will overwrite that style and apply a color of blue. In the end, the paragraphs will be blue.
@@ -1131,7 +1131,7 @@ Make sure that they are simple enough to pursue!
        color: blue;
       }
       ```
-  * In the case of conflicting rules of equal specificity, the *latter rule* will be applied.
+  * In the case of conflicting rules of equal specificity, the *latter (lower-down) rule* will be applied.
     * For example:
     ```css
     .class_a{
@@ -1145,7 +1145,27 @@ Make sure that they are simple enough to pursue!
     ```html
     <p class="class_a class_b">This text will be blue.</p>
     ``` 
-    * To see examples of how the cascade resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](014_Cascade.html) and [CSS file](014_Cascade.css).
+  * However, the cascade is *not* used to deal with conflicting styles inherited from different parent elements.
+    * In the following example, the paragraph has inherited a color of red from the body, and it has inherited a color of blue from the division. There is a conflict between these inherited styles, both of which have a specificity of 0.
+    ```css
+    div{
+      color: blue;
+    }
+    
+    body{
+      color: red;
+    }
+    ```
+    ```html
+    <body>
+	    <div>
+		    <p>Which color do you think this will be?</p>
+	    </div>
+    </body>
+    ```
+    * If an element has inherited conflicting styles from different parent elements, it will not necessarily follow the rule that is lower-down in the code. Rather, it will follow the rule of its more "direct ancestor": the parent element in which it is nested with fewer layers of depth.
+      * In the example from above, the paragraph is nested two layers deep in the body, but only one layer deep in the division. Therefore, it is a more direct descendant of the division. It will be blue.
+  * To see examples of how the cascade resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](014_Cascade.html) and [CSS file](014_Cascade.css).
 #### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
