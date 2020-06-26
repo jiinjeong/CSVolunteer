@@ -1,0 +1,13 @@
+h3{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+h4{
+    text-transform: capitalize;
+}
+
+p{
+    text-decoration: line-through;
+    text-transform: lowercase;
+}

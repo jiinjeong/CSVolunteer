@@ -1,0 +1,13 @@
+h3{
+    font-size: 16px;
+    font-weight: normal; /* OR font-weight: 500; */
+}
+
+p{
+    font-size: 20px;
+    font-weight: bold; /* OR font-weight: 700; */
+}
+
+h1, h3, p{
+    font-family: arial, helvetica, sans-serif;
+}
