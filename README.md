@@ -844,6 +844,7 @@ Make sure that they are simple enough to pursue!
       * 400-600 generally equate to `normal`.
       * 700-900 generally equate to `bold`.
         * If the font has a bolder version, then 600-700 generally equat to `bold` and 800-900 generally equate to `bolder`.
+  * To see a few font sizes, families, and weights on a webpage, please see the Lesson 8 [HTML file](008_Fonts.html) and [CSS file](008_Fonts.css).
 * **Color**
   * Text Color
     * To control the color of text, use the property `color`.
@@ -884,6 +885,7 @@ Make sure that they are simple enough to pursue!
        * Each number can range from `0` to `255`. `0` is the darkest and `255` is the lightest.
          * For example: `rgb(22, 201, 30)` is a light green.
          * Therefore, the RBG value for black is `rgb(0, 0, 0)`, and the RGB value for white is `rgb(255, 255, 255)`.
+  * To see colors in action, please see the Lesson 9 [HTML file](009_Colors.html) and [CSS file](009_Colors.css).
 * **Text Decoration and Transformation**
   * Text decoration
     * The property `text-decoration` can have the following values:
@@ -917,6 +919,7 @@ Make sure that they are simple enough to pursue!
       text-transform: uppercase;
     }
     ```
+  * To see examples of text decoration and transformation, please see the Lesson 10 [HTML file](010_Text_Decoration_and_Transformation.html) and [CSS file](010_Text_Decoration_and_Transformation.css).
 * **Comments**
   * To write a comment in CSS, begin with a forward slash and an asterisk, `/*`, and end with an asterisk and a forward slash, `*/`.
   * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
@@ -1006,6 +1009,55 @@ Make sure that they are simple enough to pursue!
       font-size: 30px;
     }
     ```
+* **Inheritance**
+  * Recall that, in HTML, a "parent tag" has other tags nested within it.
+  * If we apply a CSS rule to a parent tag, the rule will also be applied to the nested tags.
+  * For example:
+    * Instead of targeting the list items (`li` tag), we can target the list (`ul` or `ol` tag). Since the list items are nested within the list, they will inherit the rule.
+    ```css
+    ul{
+      font-size: 20px;
+    }
+    ```
+    * One way to target all of the elements on a webpage is to target the `body` tag. Since all of the elements are nested within the body, they will inherit the rule.
+    ```css
+    body{
+      font-family: arial, helvetica, sans-serif;
+    }
+    ```
+* **Divisions**
+  * One HTML tag is that web developers use very frequently is the `div` tag.
+    * `div` stands for "division."
+  * By nesting content within div tags, we can divide our HTML code into logical sections.
+    * By itself, a `div` tag has no visual effect on the webpage. However, each `div` tag can be given an ID or class attribute, allowing us to apply unique styles to each section of the webpage.
+    * For example:
+    ```html
+    <body>
+        <div id="top-header">
+            <h1>Mr. Bobo's Popsicle Stand</h1>
+            <h3>A cool treat for a hot day!</h3>
+            <hr>
+        </div>
+
+        <div class="specials">
+            <h4>Daily Specials</h4>
+            <dl>
+                <dt>Monday</dt>
+                <dd>Strawberry</dd>
+                <dt>Wednesday</dt>
+                <dd>Pinapple and Coconut</dd>
+                <dt>Friday</dt>
+                <dd>Double Fudge Chocolate</dd>
+             </dl>
+         </div>
+
+         <div id="contact-us">
+             <p>Call 1(800)555-5555</p>
+             <p>Email us at mr.bobo@popsiclestand.com</p>
+          </div>
+     </body>
+     ```
+* To see examples of inheritance and division on a webpage, please see the Lesson 12 [HTML file](012_Inheritance_and_Division.html) and [CSS file](012_Inheritance_and_Division.css).
 #### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
