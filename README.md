@@ -1009,6 +1009,7 @@ Make sure that they are simple enough to pursue!
       font-size: 30px;
     }
     ```
+* To see examples of IDs and classes on a webpage, please see the Lesson 11 [HTML file](011_IDs_and_Classes.html) and [CSS file](011_IDs_and_Classes.css).
 * **Inheritance**
   * Recall that, in HTML, a "parent tag" has other tags nested within it.
   * If we apply a CSS rule to a parent tag, the rule will also be applied to the nested tags.
@@ -1058,6 +1059,93 @@ Make sure that they are simple enough to pursue!
      </body>
      ```
 * To see examples of inheritance and division on a webpage, please see the Lesson 12 [HTML file](012_Inheritance_and_Division.html) and [CSS file](012_Inheritance_and_Division.css).
+* **Introduction to Specificity**
+  * You may be wondering by now how CSS deals with conflicting rules.
+    * For example, what if we have a paragraph with a class of "description," and the paragraphs are styled red, but the "description" class is styled blue?
+  * In the case of conflicting CSS rules, the *more specific* rule will be applied.
+    * But how do we know which rule is more specific? Every rule is assigned a numeric value of specificity, based on its selector. CSS will apply rule with the highest specificity.
+    * Here are some common types of rules, in order from *least specific* to *most specific*:
+      * Inherited rules
+        * Specificty of 0
+      * Rules targeting HTML tags/elements (such as "p" or "h1")
+        * Specificty of 1
+      * Rules targeting classes
+        * Specificty of 10
+      * Rules targeting IDs
+        * Specificty of 100
+  * For example:
+    * A rule applied directly to an element trumps an inherited rule.
+    ```css
+    #inherited-ID{
+      color: red;
+    }
+
+    p{
+      color: blue;
+    }
+    ```
+    ```html
+    <div id="inherited-ID">
+        <p>This text will be blue.</p>
+    </div>
+    ```
+    * A class rule trumps an element rule (or an inherited rule).
+    ```css
+    p{
+      color: red;
+    }
+
+    .my-class{
+      color: blue;
+    }
+    ```
+    ```html
+    <p class="my-class">This text will be blue.</p>
+    ```
+    * An ID rule trumps a class rule (or an element or inherited rule).
+    ```css
+    .my-class{
+      color: red;
+    }
+
+    #my-ID{
+      color: blue;
+    }
+    ```
+    ```html
+    <p id="my-ID" class="my-class">This text will be blue.</p>
+    ```
+  * To see examples of how specificity resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](013_Specificity_Intro.html) and [CSS file](013_Specificity_Intro.css).
+* **The Cascade**
+  * How does CSS deal with conflicting rules of *equal specificity*? Its system for doing so is called *the cascade*.
+    * This is how CSS get is name of "cascading stylesheets."
+  * When running a CSS file, the computer starts at the top of the file and works towards the bottom, like a cascade.
+    * Therefore, if we have two rules with the same selector and property, the one that is higher in the document will be overwritten when the computer encounters the one that is lower in the document.
+      * In the following example, the computer will first apply a color of red to the paragraphs, but then it will overwrite that style and apply a color of blue. In the end, the paragraphs will be blue.
+      ```css
+      p{
+        color: red;
+      }
+
+      p{
+       color: blue;
+      }
+      ```
+  * In the case of conflicting rules of equal specificity, the *latter rule* will be applied.
+    * For example:
+    ```css
+    .class_a{
+      color: red;
+    }
+
+    .class_b{
+      color: blue;
+    }
+    ```
+    ```html
+    <p class="class_a class_b">This text will be blue.</p>
+    ``` 
+    * To see examples of how the cascade resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](014_Cascade.html) and [CSS file](014_Cascade.css).
 #### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
