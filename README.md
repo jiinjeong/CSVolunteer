@@ -1297,6 +1297,39 @@ Make sure that they are simple enough to pursue!
             height: 200px;
           }
           ```
+* **The Head**
+  * Recall that the head of an HTML document contains information about the webpage, which is called meta-data. But what information is included in the meta-data?
+  * Character setting
+    * To set the character encoding to UTF-8, use the self-contained tag `<meta charset="utf-8">`.
+      * `charset` stands for "character setting". UTF-8 is the standard character encoding.
+      * If you do not specify the character encoding, you can include English characters and basic symbols on your webpage, but you cannot include some symbols (such as copyright signs) or foreign language characters. 
+      * What is character encoding? *(Optional)*
+        * In order to save your webpage, the computer needs to convert the characters that you type into bytes. Then, in order to display your webpage, it needs to convert the bytes back into characters. The character encoding is the key used to do this.
+  * Title
+    * To give the webpage a title, wrap the text in `title` tags, as such: `<title>YOUR TITLE</title>`.
+    * The title will appear in the tab at the top of your webpage.
+      * It will also be displayed if your webpage comes up in a Google search.
+  * Description *(Optional)*
+    * The description may appear under the title when your webpage comes up in a Google search.
+    * To give your webpage a description, use the meta tag. Give it an attribute of `name` with a value of `description`. Also give it an attribute of `content` with a value of your description.
+      * For example: `<meta name="description" content="We serve the cheesiest pizza in town!">`
+  ![Title and Description in a Google Search](HTMLCSS/Lessons/title_and_description.png)
+  * Key words *(Optional)*
+    * Key words are words that are important to the content of your webpage. Sometimes, search engines utilize key words, but not as frequently anymore.
+      * For example, if your webpage is about your pizza restaurant, the key words might be "pizza", "italian", "dining", etc.
+    * To specify key words, use the meta tag. Give it an attribute of `name` with a value of `keywords`. Also give it an attribute of `content` with a value of your key word(s).
+      * To include multiple key words, separate them with commas.
+      * For example: `<meta name="keywords" content="pizza, italian, dining, restaurant">`
+  * Here is an example of an HTML head:
+  ```html
+  <head>
+      <meta charset="utf-8">
+      <title>The Pizza Palace</title>
+      <meta name="description" content="We serve the cheesiest pizza in town!">
+      <meta name="keywords" content="pizza, italian, dining, restaurant">
+      <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  ```
 	  
 ### Week 1-5: Python Intermediate
 #### Week 1: Loop 1: "For" loop
