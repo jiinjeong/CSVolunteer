@@ -1,0 +1,15 @@
+#name-of-park{
+    color: blue;
+    text-transform: capitalize;
+}
+
+.price{
+    text-decoration: underline;
+    color: maroon;
+}
+
+#thank-you{
+    font-size: 20px;
+    background-color: aqua;
+}
+

@@ -1,0 +1,23 @@
+p{
+    color: red;
+}
+
+p{
+    color: blue;
+}
+
+.green-class{
+    color: green;
+}
+
+.purple-class{
+    color: purple;
+}
+
+#deeppink-id{
+    color: deeppink;
+}
+
+.darkgreen-class{
+    color: darkgreen;
+}
