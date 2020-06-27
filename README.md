@@ -492,7 +492,7 @@ Make sure that they are simple enough to pursue!
      <p>In the words of Abraham Lincoln:</p>
      <blockquote>A house divided against itself cannot stand.</blockquote>
      ```
-* **Comments**
+* **Comments in HTML**
   * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
     * They are often used to explain your code so that other programmers, and your future self, can understand it.
     * You can place a comment almost anywhere in your code.
@@ -550,13 +550,13 @@ Make sure that they are simple enough to pursue!
   * Let's learn how to display a list on our webpage.
   * There are two common types of lists:
     * Unordered lists (bullet points)
-      * Uses "ul" tags, as such: `<ul> </ul>`
-        * "ul" stands for unordered list.
+      * Uses `ul` tags, as such: `<ul> </ul>`
+        * `ul` stands for "unordered list".
     * Ordered lists (numbered points)
-      * Uses "ol" tags, as such: `<ol> </ol>`
-        * "ol" stands for ordered list.
+      * Uses `ol` tags, as such: `<ol> </ol>`
+        * `ol` stands for "ordered list".
   * Within the list tag, wrap each list item in an "li" tag, as such: `<li>Your list item</li>`
-    * "li" stands for list item.
+    * `li` stands for "list item".
   * For example:
      ```html
      <p>This is an unordered list.</p>
@@ -582,11 +582,13 @@ Make sure that they are simple enough to pursue!
 	    Description 2A
 	    Description 2B
   * To create a definition list:
-    * Use the "dl" tag, as such: `<dl> </dl>`
-      * "dl" stands for definition list.
-    * Within the dl tag:
-      * Wrap terms in the "dt" tag, as such: `<dt>Your Term</dt>`.
-      * Wrap descriptions in the "dd" tag, as such: `<dd>Your Description</dd>`.
+    * Use the `dl` tag, as such: `<dl> </dl>`
+      * `dl` stands for "definition list".
+    * Within the `dl` tag:
+      * Wrap terms in the `dt` tag, as such: `<dt>Your Term</dt>`.
+        * `dt` stands for "definition term".
+      * Wrap descriptions in the `dd` tag, as such: `<dd>Your Description</dd>`.
+        * `dd` stands for "definition description".
     * For example:
     ```html
     <dl>
@@ -663,7 +665,7 @@ Make sure that they are simple enough to pursue!
     * Note: If the "strong" tag is nested in an "h" tag, the "strong" tag will have no effect because headings are already bold. 
   * Italics
     * To make text italicized, use the `<em> </em>` tag.
-      * "em" stands for "emphasis."
+      * `em` stands for "emphasis."
     * For example: `<p>The following is italicized: <em>Italicized Text</em></p>`
   * Highlight
     * To make text highlighted, use the `<mark> </mark>` tag.
@@ -720,11 +722,12 @@ Make sure that they are simple enough to pursue!
   * Here is how to do so:
     1. Create a document *in the same folder* as the HTML file that you want to style. Give it an extension of `.css`. (In other words, select "Save as" and give the document a file name that ends in `.css`.)
        * If you are using Repl, then simply click on `style.css` (in the navigation menu on the right).
+       * Note: The CSS file does not have to be in the same folder as the HTML file, but if it is in a different folder, we have to use a relative file path. We will learn about website structure and relative file paths in a future lesson.
     2. Go back to your HTML file, and add a head section.
     3. Within the head section, link the CSS file with the self-enclosed tag `<link rel="stylesheet" type="text/css" href="NAME_OF_YOUR_CSS_DOCUMENT.css">`
        * `rel` stands for "relationship."
          * The relationship of the CSS file to the HTML file is a stylesheet.
-       * `href` stands for "hyperreference," which is essentially a link.
+       * `href` stands for "hyper-reference," which is essentially a link.
   * For example:
   ```html
   <head>
@@ -920,7 +923,7 @@ Make sure that they are simple enough to pursue!
     }
     ```
   * To see examples of text decoration and transformation, please see the Lesson 10 [HTML file](010_Text_Decoration_and_Transformation.html) and [CSS file](010_Text_Decoration_and_Transformation.css).
-* **Comments**
+* **Comments in CSS**
   * To write a comment in CSS, begin with a forward slash and an asterisk, `/*`, and end with an asterisk and a forward slash, `*/`.
   * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
     * Here are some of the common uses for comments in CSS code:
@@ -1171,7 +1174,7 @@ Make sure that they are simple enough to pursue!
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
   * All of the files for a website should be contained in a single folder.
     * Within the website folder, you might want to create separate folders for HTML documents (webpages), CSS documents, images, and video or audio files.
-  * By convention, the home page of a website is titled `index.html`.
+  * By convention, the home page of a website is titled `index.html`, and it links to a CSS file titled `main.css` or `style.css`.
 * **Relative file paths**
   * In the next few lessons, we will be adding images and videos to our webpages, and we will be linking our webpages to other webpages in order to create a website. When we do so, we will have to tell the computer how to get to the image file, video file, or HTML document that we want.
   * In other words, when we reference a given file within our HTML document, we need to provide a relative file path. A relative file path is a path to get from the location of our HTML document to the location of the given file.
@@ -1188,9 +1191,110 @@ Make sure that they are simple enough to pursue!
     * In this example, the file path starts in `MyWebsite/Pages` (because it is the location of `page1.html`), goes up out of `MyWebsite/Pages` and into `MyWebsite`, and selects `MyWebsite/index.html`.
     * You can go up multiple directories by repeating the `../`
       * For example: `../../index.html`
-
+* **Links**
+  * A create a link on our webpage, we use "a" tags, as such: `<a href=DESTINATION-OF-LINK>YOUR CLICKABLE TEXT</a>
+    * `a` stands for "anchor".
+    * The link tag should be used with the hyperreference attribute, abbreviated `href`. The value is this attribute is the destination of the link.
+      * It tells the computer where to go or what to do when the user clicks on the text of the link.
+  * There are four types of links that can be included on a webpage:
+    * Internal links
+      * When clicked, an internal link leads to different page on the same website.
+        * For example, at the top of many websites, there is a navigation bar with internal links leading to the "About Us" page, the "Contact Us" page, and/or the website's other pages.
+      * The value of the `href` attribute is the relative file path to the other.
+        * For example: `<a href="about_us.html">About Us</a>`
+    * External links
+      * When clicked, an external link leads to a page on a different website.
+      * The value of the `href` attribute is the URL of the other website or webpage.
+        * You must include `http://` before the URL.
+          * `http` stands for "hypertext transfer protocol", and it tells the the browser how to communicate with the server.
+          * However, the `www.` is optional.
+        * For example: `<a href="http://google.com">Google</a>`
+    * Download links
+      * When the user clicks on a download link, a file will be downloaded to his or her computer.
+        * The file will appear in the "Downloads" folder, and the computer will display a notification in the bottom-left of the screen.
+        * Downloadable files are commonly formatted as PDF documents.
+      * The value of the `href` attribute is the relative file path to the file to be downloaded.
+        * For example: `<a href="downloadable_menus/menu.pdf">Download Our Take-Out Menu</a>`
+    * Anchor links
+      * When clicked, an anchor link leads to a different section of the same webpage.
+        * For example, at the bottom of many webpages, there is an anchor link leading back to the top of the webpage.
+      * The value of the `href` attribute is the ID of the section to which the link leads, preceded by a hashtag, `#`.
+        * For example: `<a href=#top>Back to top</a>`
+  * Target Attribute
+    * The target attribute is often given to internal links and external links. It can make them open in a new tab.
+      * That way, the webpage containing the link remains open after the user clicks the link.
+    * To do so, give the target attribute a value of `_blank`.
+      * For example: `<a href="check-out.html" target="_blank">Purchase This Item</a>`
+* **Absolute and Relative Sizes**
+  * We can specify the size of an HTML element in two ways: with an absolute size or a relative size.
+    * An absolute size produces fixed, or constant, dimensions when displayed on a given screen.
+      * One unit of absolute size is the pixel, abbreviated `px`.
+        * Note: A size in pixels can vary in dimensions when displayed on different screens.
+    * A relative size produces dimensions based on the dimensions of another element on your webpage.
+      * One unit of relative measurement is the percentage, abbreviated `%`. Percentages are relative to the width of the parent element.
+        * For example, if a size is specified as `75%`, then it will be as long as 75% of the width of the parent element.
+      * Recall that the parent element of a given element is the element in which the given element is nested.
+        * If an element is nested directly in the the body, then its parent element is the body.
+          * By default, the width of the body is the entire width of the browser window on which a webpage is viewed.
+        * In the following example, the parent element of the ordered list is the body, and the parent element of the list items is the ordered list.
+        ```html
+        <body>
+            <ol>        <!_This ordered list is nested inside of its parent element, the body.__>
+                <li>This list item is nested inside of its parent element, the ordered list.</li>
+            </ol>
+        </body>
+        ```
 * **Images**
-  * 
+  * To display an image on a webpage, we use a self-contained image tag, as such: `<img src="LOCATION_OF_IMAGE">`.
+    * The image tag must be used with the source attribute, abbreviated `src`. The value of this attribute is the location of the image.
+      * It tells the computer where to find the image that we want.
+      * Note: We use the source attribute instead of the hyper-reference attribute because we a drawing information from an external resource, not leading the user to an external resource.
+    * The location of the image can:
+        * a filepath to the image.
+          * For example: `<img src="images/my-image.jpg">`
+        * the image address of an image from the internet.
+          * To get the image address, right click on an image from the Internet, and select "Copy image address".
+          * For example: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">`
+  * Size of an image
+    * To control the size of an image, we can specificy its width and/or its height.
+      * If we specify either the width or the height but not the other, the other will be automatically adjusted so that the image retains its original proportions.
+      * If we specify both the width and the height in a ratio that differs from that of the image's original proportions, the image will be stretched or squished take on the specified width and height.
+    * We can control the width and height of the image in either the HTML code or the CSS code, but it is more common to do so in the CSS code.
+      * In the HTML code: Use the width and/or height attribute.
+        * For example:
+          * Absolute size: `<img src="images/my-image.jpg" height=300px>`
+          * Relative size: `<img src="logo.png" width=50%>`
+          * A combination: `<img src="banner.png" width=100% height=200px>`
+      * In the CSS code: Target the desired image tag and use the width and/or height property.
+        * For example:
+          * Absolute size:
+          ```html
+          <img src="images/my-image.jpg">
+          ```
+          ```css
+          img{
+            height: 300px;
+          }
+          ```
+          * Relative size:
+          ```html
+          <img id="logo" src="logo.png">
+          ```
+          ```css
+          #logo{
+            width: 50%;
+          }
+          ```
+          * A combination:
+          ```html
+          <img class="banner" src="banner.png">
+          ```
+          ```css
+          .banner{
+            width: 100%;
+            height: 200px;
+          }
+          ```
 
 ### Week 1-5: Python Intermediate
 #### Week 1: Loop 1: "For" loop
