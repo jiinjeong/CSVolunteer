@@ -1228,12 +1228,12 @@ Make sure that they are simple enough to pursue!
       * For example: `<a href="check-out.html" target="_blank">Purchase This Item</a>`
 * **Absolute and Relative Sizes**
   * We can specify the size of an HTML element in two ways: with an absolute size or a relative size.
-    * An absolute size produces fixed, or constant, dimensions when displayed on a given screen.
+    * An absolute size produces fixed, or constant, dimensions.
       * One unit of absolute size is the pixel, abbreviated `px`.
-        * Note: A size in pixels can vary in dimensions when displayed on different screens.
+        * Note: A size in pixels can vary in dimensions when displayed on different screens. Therefore, the pixel is technically a relative unit, but on a given screen, it acts like an absolute unit.
     * A relative size produces dimensions based on the dimensions of another element on your webpage.
       * One unit of relative measurement is the percentage, abbreviated `%`. Percentages are relative to the width of the parent element.
-        * For example, if a size is specified as `75%`, then it will be as long as 75% of the width of the parent element.
+        * For example, if an element is given a width of `75%`, then it will take up 75% of the width of the parent element.
       * Recall that the parent element of a given element is the element in which the given element is nested.
         * If an element is nested directly in the the body, then its parent element is the body.
           * By default, the width of the body is the entire width of the browser window on which a webpage is viewed.
@@ -1258,6 +1258,7 @@ Make sure that they are simple enough to pursue!
           * For example: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">`
   * Size of an image
     * To control the size of an image, we can specificy its width and/or its height.
+      * Image height is measured in pixels. Image width can be measured in pixels or percentages.
       * If we specify either the width or the height but not the other, the other will be automatically adjusted so that the image retains its original proportions.
       * If we specify both the width and the height in a ratio that differs from that of the image's original proportions, the image will be stretched or squished take on the specified width and height.
     * We can control the width and height of the image in either the HTML code or the CSS code, but it is more common to do so in the CSS code.
@@ -1296,7 +1297,7 @@ Make sure that they are simple enough to pursue!
             height: 200px;
           }
           ```
-
+	  
 ### Week 1-5: Python Intermediate
 #### Week 1: Loop 1: "For" loop
 * **What is a `for` loop?**: `for` loops are used to iterate over sequences. Sequences that we have seen are lists and strings. Other iterable sequences include dictionaries, sets, and tuples. `for` loops execute a set of statements for each element in the sequence.
