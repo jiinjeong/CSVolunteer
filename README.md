@@ -1210,8 +1210,9 @@ Make sure that they are simple enough to pursue!
           * However, the `www.` is optional.
         * For example: `<a href="http://google.com">Google</a>`
     * Download links
-      * When the user clicks on a download link, a file will be downloaded to his or her computer.
-        * The file will appear in the "Downloads" folder, and the computer will display a notification in the bottom-left of the screen.
+      * When clicked, a download link leads to a file that can be downloaded onto your computer.
+        * When you click on the download link, the file may be downloaded automatically, or the browser may open a preview of it with a download button.
+          * If it downloads automatically, the file will appear in the "Downloads" folder, and the computer will display a notification in the bottom-left of the screen.
         * Downloadable files are commonly formatted as PDF documents.
       * The value of the `href` attribute is the relative file path to the file to be downloaded.
         * For example: `<a href="downloadable_menus/menu.pdf">Download Our Take-Out Menu</a>`
@@ -1221,7 +1222,7 @@ Make sure that they are simple enough to pursue!
       * The value of the `href` attribute is the ID of the section to which the link leads, preceded by a hashtag, `#`.
         * For example: `<a href=#top>Back to top</a>`
   * Target Attribute
-    * The target attribute is often given to internal links and external links. It can make them open in a new tab.
+    * We can make links open in a new tab by using the target attribute.
       * That way, the webpage containing the link remains open after the user clicks the link.
     * To do so, give the target attribute a value of `_blank`.
       * For example: `<a href="check-out.html" target="_blank">Purchase This Item</a>`
