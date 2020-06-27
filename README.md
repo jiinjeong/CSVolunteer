@@ -1192,7 +1192,7 @@ Make sure that they are simple enough to pursue!
     * You can go up multiple directories by repeating the `../`
       * For example: `../../index.html`
 * **Links**
-  * A create a link on our webpage, we use "a" tags, as such: `<a href=DESTINATION-OF-LINK>YOUR CLICKABLE TEXT</a>
+  * A create a link on our webpage, we use "a" tags, as such: `<a href=DESTINATION-OF-LINK>YOUR CLICKABLE TEXT</a>`
     * `a` stands for "anchor".
     * The link tag should be used with the hyperreference attribute, abbreviated `href`. The value is this attribute is the destination of the link.
       * It tells the computer where to go or what to do when the user clicks on the text of the link.
@@ -1200,7 +1200,7 @@ Make sure that they are simple enough to pursue!
     * Internal links
       * When clicked, an internal link leads to different page on the same website.
         * For example, at the top of many websites, there is a navigation bar with internal links leading to the "About Us" page, the "Contact Us" page, and/or the website's other pages.
-      * The value of the `href` attribute is the relative file path to the other.
+      * The value of the `href` attribute is the relative file path to the other webpage.
         * For example: `<a href="about_us.html">About Us</a>`
     * External links
       * When clicked, an external link leads to a page on a different website.
