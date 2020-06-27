@@ -1226,7 +1226,7 @@ Make sure that they are simple enough to pursue!
       * That way, the webpage containing the link remains open after the user clicks the link.
     * To do so, give the target attribute a value of `_blank`.
       * For example: `<a href="check-out.html" target="_blank">Purchase This Item</a>`
-* **Absolute and Relative Sizes**
+* **Introduction to Absolute and Relative Sizes**
   * We can specify the size of an HTML element in two ways: with an absolute size or a relative size.
     * An absolute size produces fixed, or constant, dimensions.
       * One unit of absolute size is the pixel, abbreviated `px`.
