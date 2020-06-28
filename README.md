@@ -1226,6 +1226,7 @@ Make sure that they are simple enough to pursue!
       * That way, the webpage containing the link remains open after the user clicks the link.
     * To do so, give the target attribute a value of `_blank`.
       * For example: `<a href="check-out.html" target="_blank">Purchase This Item</a>`
+  * To see examples of links in an HTML document, please see [Lesson 15](HTMLCSS/Lessons/015_Links.html).
 * **Introduction to Absolute and Relative Sizes**
   * We can specify the size of an HTML element in two ways: with an absolute size or a relative size.
     * An absolute size produces fixed, or constant, dimensions.
@@ -1306,12 +1307,14 @@ Make sure that they are simple enough to pursue!
   * Alternate text
     * We can give an image an alternate text. If the computer is unable to load the image for any reason, it will display the alternate text instead.
     * To do so, the the image an `alt` attribute with a value of your alternate text, as such: `<img src="LOCATION_OF_IMAGE" alt="YOUR ALTERNATE TEXT">`.
+  * To see examples of images in an HTML document, please see the Lesson 16 [HTML document](HTMLCSS/Lessons/016_Images.html) and [CSS document](HTMLCSS/Lessons/016_Images.css).
 * **The Head**
   * Recall that the head of an HTML document contains information about the webpage, which is called metadata. But what information is included in the metadata?
   * Character setting
     * To set the character encoding to UTF-8, use the self-contained tag `<meta charset="utf-8">`.
       * `charset` stands for "character setting". UTF-8 is the standard character encoding.
-      * If you do not specify the character encoding, you can include English characters and basic symbols on your webpage, but you cannot include some symbols (such as copyright signs) or foreign language characters. 
+      * If you do not specify the character encoding, you can include English characters and basic symbols on your webpage, but you may not be able to include some symbols (such as copyright signs) or foreign language characters. 
+        * UTF-8 supports more characters than other forms of character encoding.
       * What is character encoding? *(Optional)*
         * In order to save your webpage, the computer needs to convert the characters that you type into bytes. Then, in order to display your webpage, it needs to convert the bytes back into characters. The character encoding is the key used to do this.
   * Title
@@ -1343,6 +1346,7 @@ Make sure that they are simple enough to pursue!
   * Note: You would think that we would specify the language of the webpage in the head, along with the metadata. However, we actually specify the language in the `html` tag by using the `lang` attribute.
     * For a webpage written in English, give the `lang` attribute a value of `en`.
     * For example: `<html lang="en"> </html>`
+  * To see examples of a head in an HTML document, please see [Lesson 17](HTMLCSS/Lessons/017_Head.html).
 ### Week 1-5: Python Intermediate
 #### Week 1: Loop 1: "For" loop
 * **What is a `for` loop?**: `for` loops are used to iterate over sequences. Sequences that we have seen are lists and strings. Other iterable sequences include dictionaries, sets, and tuples. `for` loops execute a set of statements for each element in the sequence.
