@@ -1232,7 +1232,7 @@ Make sure that they are simple enough to pursue!
       * One unit of absolute size is the pixel, abbreviated `px`.
         * Note: A size in pixels can vary in dimensions when displayed on different screens. Therefore, the pixel is technically a relative unit, but on a given screen, it acts like an absolute unit.
     * A relative size produces dimensions based on the dimensions of another element on your webpage.
-      * One unit of relative measurement is the percentage, abbreviated `%`. Percentages are relative to the width of the parent element.
+      * One unit of relative size is the percentage, abbreviated `%`. Percentages are relative to the width of the parent element.
         * For example, if an element is given a width of `75%`, then it will take up 75% of the width of the parent element.
       * Recall that the parent element of a given element is the element in which the given element is nested.
         * If an element is nested directly in the the body, then its parent element is the body.
@@ -1245,6 +1245,12 @@ Make sure that they are simple enough to pursue!
             </ol>
         </body>
         ```
+    * In general, it is better to use relative sizes than absolute sizes.
+      * A webpage may be viewed in browser windows of many different sizes.
+        * For example, a browser window on a desktop computer or laptop may be large, but a browser window on a tablet or smartphone is small.
+      * A good webpage will adapt to the size of the browser window so that it looks good when viewed on any device.
+        * Relative sizes are one useful tool in this regard.
+	* Making webpages compatible with different browsers and devices is called "responsive web design".
 * **Images**
   * To display an image on a webpage, we use a self-contained image tag, as such: `<img src="LOCATION_OF_IMAGE">`.
     * The image tag must be used with the source attribute, abbreviated `src`. The value of this attribute is the location of the image.
@@ -1297,6 +1303,9 @@ Make sure that they are simple enough to pursue!
             height: 200px;
           }
           ```
+  * Alternate text
+    * We can give an image an alternate text. If the computer is unable to load the image for any reason, it will display the alternate text instead.
+    * To do so, the the image an `alt` attribute with a value of your alternate text, as such: `<img src="LOCATION_OF_IMAGE" alt="YOUR ALTERNATE TEXT">`.
 * **The Head**
   * Recall that the head of an HTML document contains information about the webpage, which is called metadata. But what information is included in the metadata?
   * Character setting
@@ -1331,7 +1340,9 @@ Make sure that they are simple enough to pursue!
       <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   ```
-	  
+  * Note: You would think that we would specify the language of the webpage in the head, along with the metadata. However, we actually specify the language in the `html` tag by using the `lang` attribute.
+    * For a webpage written in English, give the `lang` attribute a value of `en`.
+    * For example: `<html lang="en"> </html>`
 ### Week 1-5: Python Intermediate
 #### Week 1: Loop 1: "For" loop
 * **What is a `for` loop?**: `for` loops are used to iterate over sequences. Sequences that we have seen are lists and strings. Other iterable sequences include dictionaries, sets, and tuples. `for` loops execute a set of statements for each element in the sequence.
