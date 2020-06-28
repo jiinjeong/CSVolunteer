@@ -1309,7 +1309,7 @@ Make sure that they are simple enough to pursue!
     * To give the webpage a title, wrap the text in `title` tags, as such: `<title>YOUR TITLE</title>`.
     * The title will appear in the tab at the top of your webpage.
       * It will also be displayed if your webpage comes up in a Google search.
-  ![Title in a Tab](HTML/CSS/Lessons/title_in_tab.png)
+  ![Title in a Tab](HTMLCSS/Lessons/title_in_tab.png)
   * Description *(Optional)*
     * The description may appear under the title when your webpage comes up in a Google search.
     * To give your webpage a description, use the meta tag. Give it an attribute of `name` with a value of `description`. Also give it an attribute of `content` with a value of your description.
