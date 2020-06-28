@@ -1,0 +1,56 @@
+<!Doctype HTML>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="016_Images.css">
+    </head>
+    
+    <body>
+        <h2>Images</h2>
+        <hr>
+        
+        <h3>Embedding Images</h3>
+        
+        <p>To embed an image in a webpage, we use the image tag. The source attribute specifies the location of the image.</p>
+        
+        <p>The location of the image can be a relative file path...
+        <img src="sample-image.gif">
+            
+        <p>or the image address of an image from the Internet.</p>
+        <img src="https://qph.fs.quoracdn.net/main-qimg-c213792ce2d42cfdf0cd7efa1f62acdf">
+        <blockquote>(To get the image address, right click on an image from the Internet and select "Copy image address".)</blockquote>
+        <hr>
+        
+        <h3>Resizing Images with Pixels</h3>
+        
+        <p>To control the size of an image, we can give it a width and/or height attribute in the HTML code.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width=200px>
+        
+        <p>However, it is more common to give it a width and/or height property in the CSS code.</p>
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">
+        
+        <p>Notice that, when we specify either the width or the height, the image will retain its original proportions. But if we specify both, it may be stretched or squished.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width=300px height=100px>
+        <hr>
+        
+        <h3>Resizing Images with Percentages</h3>
+        
+        <p>Recall that pixels are a unit of absolute size (well, not technically, but...). We can also give image widths a relative size, measured in percentage of the width of the parent element.</p>
+        <p>The width of this image will be 100% of the width of its parent, the body:</p>
+        <img src="https://qph.fs.quoracdn.net/main-qimg-c213792ce2d42cfdf0cd7efa1f62acdf" width=100%>
+        <p>Try minimizing, maximizing, or resizing your browser. You will notice that the image resizes itself so that it always takes up the full width of the body.</p>
+        <hr>
+        
+        <h3>Alternate Text</h3>
+        
+        <p>If the computer cannot find or load an image, it displays this instead:</p>
+        <img src="this-image-does-not-actually-exist.png">
+        <p>But what if the image contains very important information? Is there a way to provide that information to the user, even if the image cannot be loaded?</p>
+        <p>Yes! We can give an image an alternate text. If the computer cannot load the image, it will display the alternate text instead.</p>
+        <img src="this-image-does-not-actually-exist.png" alt="This is the alternate text. It acts like a description, or summary, of the image.">
+        
+        <p>If the computer is able to load the image, it will not display the alternate text.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" width=100px alt="I hope you have a great day!">
+        
+    </body>
+</html>
