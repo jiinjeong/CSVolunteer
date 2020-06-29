@@ -431,6 +431,7 @@ Make sure that they are simple enough to pursue!
   * At the top of the document, we need to state the code is in HTML, so that computer knows how to run it. This is done with a self-contained "document type" tag: `<!Doctype HTML>`.
      * Note: The capitalization is arbitrary.
   * Furthermore, we need to wrap all of our code in an HTML tag:
+    * The HTML tag is also called the "root element".
 	```html
 	<html>
 		Your code will go here.
@@ -1044,8 +1045,9 @@ Make sure that they are simple enough to pursue!
 * **Divisions**
   * One HTML tag is that web developers use very frequently is the `div` tag.
     * `div` stands for "division."
-  * By nesting content within div tags, we can divide our HTML code into logical sections.
+  * By nesting content within `div` tags, we can divide our HTML code into logical sections.
     * By itself, a `div` tag has no visual effect on the webpage. However, each `div` tag can be given an ID or class attribute, allowing us to apply unique styles to each section of the webpage.
+    * We say that a division acts as a "container" for a section of our HTML code and as a "hook" for applying CSS to that section.
     * For example:
     ```html
     <body>
@@ -1238,6 +1240,15 @@ Make sure that they are simple enough to pursue!
       * That way, the webpage containing the link remains open after the user clicks the link.
     * To do so, give the target attribute a value of `_blank`.
       * For example: `<a href="check-out.html" target="_blank">Purchase This Item</a>`
+  * Title Attribute
+    * We can make a link display a text in a little box when we hover over it by using the title attribute.
+      * In fact, we can do the same to any HTML element.
+        * (The title attribute is a global attribute, which means that it can be given to any element.)
+    * To do so, give the title attribute a value of the text that you want to display.
+      * For example:
+      ```html
+      <a href="https://www.w3schools.com/html/default.asp" title="Click here to access an HTML tutorial by W3Schools.">Learn more about HTML!</a>`
+      ```
   * To see examples of links in an HTML document, please see [Lesson 15](HTMLCSS/Lessons/015_Links.html).
 * **Introduction to Absolute and Relative Sizes**
   * We can specify the size of an HTML element in two ways: with an absolute size or a relative size.
