@@ -387,9 +387,13 @@ Make sure that they are simple enough to pursue!
     * To return to editing your document:
       * Find your file in the file explorer.
       * Right click, select "Open with," and select "Notepad" or "TextEdit."
+     * You can view your HTML document and your webpage simultaneously.
+       * Open both and minimize the windows. Drag the windows so that you can see them both at the same time, perhaps with one on the left and one on the right.
+       * Once you make changes to the HTML code, save the document and refresh the webpage to update it.
   * Brackets
     * Brackets is a program that makes it easier to code in HTML and CSS. It offers the following features:
       * Live Preview: You can view a live preview of your webpage that updates automatically as you code.
+        * (Note: This feature is only compatible with Google Chrome, not with other browsers.)
         * If you hover over an element in the HTML code (or a rule in the CSS code), Brackets will highlight that element (or the affected elements) in the live preview.
 	* If you hover over a color in image file path in your code, Brackets will display a small preview of it.
       * IntelliSense (suggestions as you code)
@@ -674,7 +678,7 @@ Make sure that they are simple enough to pursue!
     * For example: `<p><mark>This whole sentence is highlighted and <strong>this part of it is also bold.</strong></mark></p>`
   * To see bold, italicized, and highlighted text in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
 
-* **Preformatted Text**
+* **Preformatted Text** *(Optional)*
   * Preformatted text will be displayed on your webpage almost exacty as it is in your HTML document.
     * Indents, line breaks, and extra spaces in your code will  appear on your webpage if and only if they occur within preformatted text.
     * By default, preformatted text is displayed in the font Monospace, which is used by most basic text editors.
@@ -727,7 +731,7 @@ Make sure that they are simple enough to pursue!
     3. Within the head section, link the CSS file with the self-enclosed tag `<link rel="stylesheet" type="text/css" href="NAME_OF_YOUR_CSS_DOCUMENT.css">`
        * `rel` stands for "relationship."
          * The relationship of the CSS file to the HTML file is a stylesheet.
-       * `href` stands for "hyper-reference," which is essentially a link.
+       * `href` stands for "hyper-reference", which is essentially a link.
   * For example:
   ```html
   <head>
@@ -851,7 +855,7 @@ Make sure that they are simple enough to pursue!
 * **Color**
   * Text Color
     * To control the color of text, use the property `color`.
-    * There are many pre-named colors that can be used as values.
+    * There are over 140 [pre-named colors](https://matplotlib.org/3.1.1/_images/sphx_glr_named_colors_003.png) that can be used as values.
     * For example:
     ```css
     p{
@@ -872,22 +876,30 @@ Make sure that they are simple enough to pursue!
     ``` 
    * Hex Codes and RGB Values *(Optional)*
      * What if we want to use a very specific color that is not among the pre-named colors? We can use a hex code or RGB values as the value of the property.
-       * We can use a color picker, such as [this one](https://www.w3schools.com/colors/colors_picker.asp?color=%23ffab00) or [this one](https://htmlcolorcodes.com/color-picker/), to generate these codes for us.
+       * We can use a color picker, such as [this one](https://htmlcolorcodes.com/color-picker/) or [this one](https://www.w3schools.com/colors/colors_picker.asp?color=%23ffab00), to generate these codes for us.
        * But if you would like to understand how they work, read on!
      * Hex codes
        * A hex code consists of a hashtag, `#`, followed by 6 characters.
        * The first two characters represent the intensity of the *red* channel. The second two characters represent the intensity of the *green* channel, and the last two characters represent the intensity of the *blue* channel.
        * Each character can range from `0` to `9` and then from `a` to `f`. `0` is the darkest and `f` is the lightest.
-         * For example: `#16c91e` is a light green.
-         * The hex code for black is `#000000`, and the hex code for white is `#ffffff`.
+         * The intensity of each channel (red, green, and blue) is a number in base 16, which is called the hexadecimal number system. Here is how to count two-digit numbers in the hexadecimal system:
+	   * 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0c, 0d, 0e, 0f, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1a, 1b, 1c, 1d, 1e, 1f, 20, 21, 22... 93, 94, 95, 96, 97, 98, 99, 9a, 9b, 9c, 9d, 9e, 9f, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac, ad, ae, af, b0, b1... ff
+       * For example:
+         * `#ff0000` is the brightest pure red. `#00ff00` is the brightest pure green. `#0000ff` is the brightest pure blue.
+         * `#000000` is black, and `#ffffff` is white.
+	 * `#454545` is a dark gray, and `#909090` is a light gray.
+	 * `#16c91e` is a light green.
        * If each channel contains two identical characters, the hex code can be shortened to three characters.
          * For example, `#aabbcc` is equivalent to `#abc`. The hex code for white can also be expressed as `#fff`.
      * RGB values
        * An RBG value is written `rbg(x, x, x)`, where `x` represents a number.
        * Similarly to hex codes, the first number represents the intensity of the *red* channel. The second number represents the intensity of the *green* channel, and the last number represents the intensity of the *blue* channel.
        * Each number can range from `0` to `255`. `0` is the darkest and `255` is the lightest.
-         * For example: `rgb(22, 201, 30)` is a light green.
-         * Therefore, the RBG value for black is `rgb(0, 0, 0)`, and the RGB value for white is `rgb(255, 255, 255)`.
+       * For example:
+         * `rgb(0, 0, 0)` is black, and `rgb(255, 255, 255)` is white.
+	 * `rgb(255, 0, 0)` is the brightest pures red. `rgb(0, 255, 0)` is the brightest pure green. `rgb(0, 0, 255)` is the brightest pure blue.
+	 * `rgb(69, 69, 69)` is a dark gray and `rgb(144, 144, 144)` is a light gray.
+         * `rgb(22, 201, 30)` is a light green.
   * To see colors in action, please see the Lesson 9 [HTML file](009_Colors.html) and [CSS file](009_Colors.css).
 * **Text Decoration and Transformation**
   * Text decoration
@@ -1256,7 +1268,7 @@ Make sure that they are simple enough to pursue!
   * To display an image on a webpage, we use a self-contained image tag, as such: `<img src="LOCATION_OF_IMAGE">`.
     * The image tag must be used with the source attribute, abbreviated `src`. The value of this attribute is the location of the image.
       * It tells the computer where to find the image that we want.
-      * Note: We use the source attribute instead of the hyper-reference attribute because we a drawing information from an external resource, not leading the user to an external resource.
+      * Note: We use the source attribute instead of the hyper-reference attribute because we a drawing information from an external resource and embedding it in the webpage, not leading the user or computer away from the webpage to a external resource.
     * The location of the image can:
         * a filepath to the image.
           * For example: `<img src="images/my-image.jpg">`
