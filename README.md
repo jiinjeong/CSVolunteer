@@ -351,7 +351,10 @@ Make sure that they are simple enough to pursue!
 		```
 
 * **Text Editors**
-  * When coding in HTML or CSS, we write the code in a text editor. A text editor is simply a program that allows you to create a document, write characters, and save the document.
+  * When coding in HTML or CSS, we write the code in a text editor, and we view the resulting webpage in a browser.
+    * A text editor is simply a program that allows you to create a document, write characters, and save the document.
+    * A browser is a program that displays HTML files as webpages, including those on the World Wide Web (the Internet).
+      * Some common browsers include Google Chrome, Apple Safari, Mozilla Firefox, Opera, Internet Explorer, and Microsoft Edge.
   * There are several different types of text editors that we can use.
     * First, let's use a *basic text editor* to create an HTML document and view it as a webpage.
       * This is the simplest way to do so, but it doesn't offer us any cool features.
@@ -368,10 +371,10 @@ Make sure that they are simple enough to pursue!
       * *Mac* computers come with a basic text editor called TextEdit.
         * To open TextEdit...
           1. Select "Finder," then "Programs," then "TextEdit."
-	  2. Select "Preferences," then "Format," then "Plain Text."
-	     * This is necessary in order for TextEdit to save your files correctly.
-	  3. Select "Open and Save," and check the box to "Display HTML files as HTML code instead of preformatted text."
-	  4. Open a new document.
+          2. Select "Preferences," then "Format," then "Plain Text."
+             * This is necessary in order for TextEdit to save your files correctly.
+          3. Select "Open and Save," and check the box to "Display HTML files as HTML code instead of preformatted text."
+          4. Open a new document.
       * Note: You cannot use sophisticated text editors, such as Microsoft Word, for coding.
     * To save your document as an HTML file:
       1. Select "File", then "Save As".
@@ -395,12 +398,16 @@ Make sure that they are simple enough to pursue!
       * Live Preview: You can view a live preview of your webpage that updates automatically as you code.
         * (Note: This feature is only compatible with Google Chrome, not with other browsers.)
         * If you hover over an element in the HTML code (or a rule in the CSS code), Brackets will highlight that element (or the affected elements) in the live preview.
-	* If you hover over a color in image file path in your code, Brackets will display a small preview of it.
+        * If you hover over a color or an image filepath in your code, Brackets will display a small preview of it.
       * IntelliSense (suggestions as you code)
+        * When you start to type the name of an element, property, or value, Brackets will list possible completions of the word.
+          * Also, after you type a CSS property, Brackets will list possible values.
+          * To accept Bracket's top suggestions, press "enter". To accept a latter suggestion, press the down arrow key until that suggestion is highlighted, and then press "enter".
         * When you code in HTML, after you type an opening tag, Brackets will automatically provide the closing tag.
-        * When you code in CSS, after you type a property, Brackets will list possible values.
+      * Multi-Line Indentation: You can increase the indentation of multiple lines of code simultaneously.
+        * To do so, highlight the desired lines and press "tab".
     * If you would like to use Brackets, here is how to get started:
-      * Download the program from [brackets.io](http://brackets.io).
+      * Download the program from [brackets.io](http://brackets.io) and run through the installation.
       * Open the program, and click "File" (in the top left).
         * To create, open, and edit a new document, select "New."
           * To give it a file name, select "File" and then "Save As." Make sure that the file name ends in `.html`.
@@ -408,10 +415,12 @@ Make sure that they are simple enough to pursue!
             * It tells the computer that the file contains HTML code so that the browser knows to open it as a webpage.
         * To open and edit and exisiting document, select "Open."
         * To open an existing folder before opening its documents, select "Open Folder."
+          * Then, to open a document, click on its name in Bracket's navigation menu (on the left).
+        * Once you have opened a document, its name will appear under "Working Files" in the navigation menu (on the left). You can easily switch between these working files by clicking on their names.
       * To view a live preview of your webpage, click the lightening bolt (in the top right).
-        * Note: At this point, your webpage will be plain white because we have not added any code yet.
+        * (Note: At this point, your webpage will be plain white because we have not added any code yet.)
         * When the live preview is active, the lightening bolt is golden. When it is not active, the lightening bolt is gray.
-      * When you are finished editing, save the file again by selecting "File" and then "Save," or by pressing `Ctrl` or `Cmd` + S.
+      * When you are finished editing, save the file again by selecting "File" and then "Save," or by pressing "Ctrl" or "Cmd" + "S".
         * A file with unsaved changes will have a small dot to the left of its name on Brackets's navigation menu (on the left).
   * Repl
     * Repl is an online editor that can be used to code in many languages, including HTML and CSS.
@@ -421,10 +430,10 @@ Make sure that they are simple enough to pursue!
       * Click "New Repl," and select "HTML, CSS, JS."
         * This will create a folder, or Repl, containing an HTML document called `index.html`, a CSS document called `style.css`, and a Javascript document called `script.js`.
           * For now, let's focus on the HTML document, `index.html`.
-        * You can change the name of your Repl when creating it, or later by clicking on the pencil next to its name (at the top).
+        * To change the name of your Repl, click on the pencil next to its name (at the top).
       * To view your webpage, click the big green button with the triangle (at the top center).
         * Your webpage will be displayed on the right.
-        * Note: At this point, your webpage will be plain white because we have not added any code yet.
+        * (Note: At this point, your webpage will be plain white because we have not added any code yet.)
 
 * **Getting Started with HTML**
   * Now that we have opened an HTML document, it is time to start coding!
