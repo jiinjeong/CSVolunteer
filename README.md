@@ -437,10 +437,10 @@ Make sure that they are simple enough to pursue!
 
 * **Getting Started with HTML**
   * Now that we have opened an HTML document, it is time to start coding!
-  * At the top of the document, we need to state the code is in HTML, so that computer knows how to run it. This is done with a self-contained "document type" tag: `<!Doctype HTML>`.
+  * At the top of the document, we need to state the code is in HTML, so that computer knows how to run it. This is done with a self-contained document type tag: `<!Doctype HTML>`.
      * Note: The capitalization is arbitrary.
   * Furthermore, we need to wrap all of our code in an HTML tag:
-    * The HTML tag is also called the "root element".
+    * The HTML tag is also called the *root element*.
 	```html
 	<html>
 		Your code will go here.
@@ -474,18 +474,18 @@ Make sure that they are simple enough to pursue!
 		</body>
 	</html>
 	```
-	* To see this in an actual HTML document, please see [Lesson 1](./HTMLCSS/Lessons/HTML_1_Getting_Started.html) or [Lesson 1 with Explanations](./HTMLCSS/Lessons/HTML_1_Getting_Started_With_Explanations.html).
+	* To see this in an actual HTML document, please see [Lesson 1](HTMLCSS/Lessons/001_Getting_Started.html) or [Lesson 1 with Explanations](HTMLCSS/Lessons/001_Getting_Started_With_Explanations.html).
 
 * **Headings**
   * There are various ways to display text on your webpage. One such way is displaying the text as a heading, also called a header.
-  * To make a heading, wrap the text in an "h" tag, as such: `<h1>Your Content</h1>`.
-  * There are six different types of headings: h1, h2, h3, h4, h5, and h6. By default, h1 is the largest and the rest are progressively smaller.
-    * Therefore, the title of your webpage is usually an h1 or h2 heading, whereas section titles and subtitles are usually h3 or h4 headings.
+  * To make a heading, wrap the text in an `h` tag, as such: `<h1>Your Content</h1>`.
+  * There are six different types of headings: `h1`, `h2`, `h3`, `h4`, `h5`, and `h6`. By default, `h1` is the largest and the rest are progressively smaller.
+    * Therefore, the title of your webpage is usually an `h1` or `h2` heading, whereas section titles and subtitles are usually `h3` or `h4` headings.
 * **Paragraphs**
   * Paragraphs are another way to display text on your webpage.
-  * To make a paragraph, wrap the text in a "p" tag, as such: `<p>Your Content</p>`.
+  * To make a paragraph, wrap the text in a `p` tag, as such: `<p>Your Content</p>`.
   * To start a new paragraph, start a new paragraph tag. By default, the two paragraphs will be separated by a space.
-    * Close the first paragraph tag, go onto a new line (by pressing enter), and open a new paragraph tag.
+    * Close the first paragraph tag, go onto a new line (by pressing "enter"), and open a new paragraph tag.
 	* For example:
 	```html
 	<p>This is my first paragraph.</p>
@@ -499,7 +499,7 @@ Make sure that they are simple enough to pursue!
 	```
 * **Blockquotes**
   * Blockquotes are another way to display text on your webpage.
-  * To make a blockquote, wrap the text in a blockquote tag, as such: `<blockquote>Your Content</blockquote>`.
+  * To make a blockquote, wrap the text in a `blockquote` tag, as such: `<blockquote>Your Content</blockquote>`.
   * By default, a blockquote is just like a paragraph, but with wider margins on both sides. It is often used for long quotations.
     * For example:
      ```html
@@ -507,12 +507,12 @@ Make sure that they are simple enough to pursue!
      <blockquote>A house divided against itself cannot stand.</blockquote>
      ```
 * **Comments in HTML**
-  * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
+  * Comments are a way to include text in your code *without* displaying it on your webpage.
     * They are often used to explain your code so that other programmers, and your future self, can understand it.
     * You can place a comment almost anywhere in your code.
   * To write a comment in HTML, use the self-contained tag `<!__Your Comment__>`.
     * Notice that each of the lines is two underscores.
-* To see headings, paragraphs, blockquotes, and comments in action, please see [Lesson 2](./HTMLCSS/Lessons/HTML_2_Headings_and_Paragraphs.html).
+* To see headings, paragraphs, blockquotes, and comments in action, please see [Lesson 2](./HTMLCSS/Lessons/002_Headings_and_Paragraphs.html).
 
 * **Breaks**
   * You may have noticed by now that we can put spaces in between lines of code (by pressing enter) without affecting the webpage.
