@@ -586,7 +586,7 @@ Make sure that they are simple enough to pursue!
      </ol>
      ```
   * To see a similar example in an HTML document, please see [Lesson 5](./HTMLCSS/Lessons/005_Lists.html).
-* **Nesting Lists and Creating Subpoints**
+* **Nesting Lists and Creating Subpoints** *(Optional)*
   * Do you think that a list item can itself be a list? The answer is yes!
     * A list inside of a list is called a *nested list*.
       * The nested list can be the same type (unordered, ordered, or definition) as the list than contains it, or it can be a different type.
@@ -612,10 +612,8 @@ Make sure that they are simple enough to pursue!
         </li>
     </ol>
     ```
-    * If you have not yet completed [Challenge Problem 5](./HTMLCSS/ChallengeProblems/005_Lists_Challenge_Problem.html) and would like to do so, give it a try now!
   * Nested lists can be used to create points and subpoints.
     * Within a list item, first add your main point as plain text. Then, within the same list item, add a list of the subpoints.
-      * Note: If an unordered list is nested, by default, its bullet points are styled differently (in order to distinguish subpoints and sub-subpoints).
     * For example:
     ```html
     <ol>
@@ -669,7 +667,7 @@ Make sure that they are simple enough to pursue!
 * **Styling Text in HTML**
   * In HTML, tags can be used to add certain styles, such as bold, italicized, and highlighted, to text.
     * These tags are nested within the text element tag (paragraph tag, heading tag, etc.).
-    * However, by convention, when nesting these tags, we do not go onto a new, indented line.
+    * However, by convention, when nesting these tags, we do not go onto a new, indented line in the code.
       * Rather, we open and close these tags without "interrupting" the text.
       * For example:
       ```html
@@ -678,7 +676,7 @@ Make sure that they are simple enough to pursue!
   * Bold
     * To make text bold, use the `<strong> </strong>` tag.
     * For example: `<p>The following is bold: <strong>Bold Text</strong></p>`
-    * Note: If the "strong" tag is nested in an "h" tag, the "strong" tag will have no effect because headings are already bold. 
+    * Note: If the `strong` tag is nested in an `h` tag, the `strong` tag will have no effect because headings are already bold. 
   * Italics
     * To make text italicized, use the `<em> </em>` tag.
       * `em` stands for "emphasis."
@@ -688,7 +686,7 @@ Make sure that they are simple enough to pursue!
     * For example: `<p>The following is highlighted: <mark>Highlighted Text</mark></p>`
   * To apply multiple styles to text, we can nest style tags inside of each other.
     * For example: `<p><mark>This whole sentence is highlighted and <strong>this part of it is also bold.</strong></mark></p>`
-  * To see bold, italicized, and highlighted text in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
+  * To see bold, italicized, and highlighted text in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/007_Text_Styling.html).
 
 * **Preformatted Text** *(Optional)*
   * Preformatted text will be displayed on your webpage almost exacty as it is in your HTML document.
@@ -703,14 +701,14 @@ Make sure that they are simple enough to pursue!
   line breaks, and     extra spaces that you include in your code.</pre>
   ```
   * Can the "pre" tag be a nested tag and/or a parent tag?
-    * The "pre" tag can be nested in an "h" tag or a "blockquote tag. However,"The "pre tag" *cannot* be nested in a "p" tag because preformatted text already has paragraph properties.
-    * Other text styling tags, such as "strong" and "em," can be nested in a "pre" tag. The exception is the "mark" tag, which will have no effect if nested in a "pre" tag.
+    * The `pre` tag can be nested in an `h` tag or a `blockquote` tag. However, the `pre` tag *cannot* be nested in a `p` tag because preformatted text already has paragraph-like properties.
+    * Other text styling tags, such as `strong` and `em`, can be nested in a `pre` tag. The exception is the `mark` tag, which will have no effect if nested in a `pre` tag.
   ```html
   <h3><pre>This is a preformatted heading.</pre></h3>
   <pre>This is a preformatted sentence that contains an <em>italisized</em> word.</pre>
   ```
-   * To see preformatted text in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
-* **More Styling Text in HTML** *(Optional)* 
+   * To see preformatted text in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/007_Text_Styling.html).
+* **More Text Styling in HTML** *(Optional)* 
   * Smaller
     * To decrease the font size of text, use the `<small> </small>` tag.
     * For example: `<p>The following is smaller: <small>Smaller Text</small></p>`
@@ -724,7 +722,7 @@ Make sure that they are simple enough to pursue!
     * For example: `<p>The following is superscripted: <sup>Superscripted Text</sup></p>`
     * Subscript is ofen used to express exponents.
       * For example: `<p>9<sup>5</sup> = 3<sup>10</sup></p>`
-  * To see smaller text, subscript, and superscript in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/HTML_7_Styling_Text.html).
+  * To see smaller text, subscript, and superscript in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/007_Text_Styling.html).
   
 #### Week 7
 
@@ -732,7 +730,7 @@ Make sure that they are simple enough to pursue!
   * When we open an HTML document as a webpage in a browser, the browser automatically applies certain default styles to it.
     * For example, the text is black and the background is white. The font size is larger for headings than for paragraphs, and all text is left-justified.
     * Different browsers may apply *slightly* different default styles.
-  * How can we override these default styles and add unique styles to our webpages? By coding in CSS!
+  * How can we overwrite these default styles and add unique styles to our webpages? By coding in CSS!
 * **Getting Started with CSS**
   * Generally, we write CSS code in a document separate from our HTML file, and then we link the CSS to the HTML.
   * Here is how to do so:
@@ -740,7 +738,7 @@ Make sure that they are simple enough to pursue!
        * If you are using Repl, then simply click on `style.css` (in the navigation menu on the right).
        * Note: The CSS file does not have to be in the same folder as the HTML file, but if it is in a different folder, we have to use a relative file path. We will learn about website structure and relative file paths in a future lesson.
     2. Go back to your HTML file, and add a head section.
-    3. Within the head section, link the CSS file with the self-enclosed tag `<link rel="stylesheet" type="text/css" href="NAME_OF_YOUR_CSS_DOCUMENT.css">`
+    3. Within the head section, link the CSS file with the self-contained tag `<link rel="stylesheet" type="text/css" href="NAME_OF_YOUR_CSS_DOCUMENT.css">`.
        * `rel` stands for "relationship."
          * The relationship of the CSS file to the HTML file is a stylesheet.
        * `href` stands for "hyper-reference", which is essentially a link.
@@ -781,7 +779,7 @@ Make sure that they are simple enough to pursue!
       }
       ```
 * **Targeting HTML Tags**
-  * We can use many different criteria to target certain elements of our webpage. One such criteria is the type of the HTML tag(s) in which the element is wrapped.
+  * We can use many different criteria to target certain elements of our webpage. One such criteria is the type of the HTML tag in which the element is wrapped or contained.
   * For example:
     * This rule targets paragraphs:
     ```css
@@ -789,14 +787,14 @@ Make sure that they are simple enough to pursue!
 	property: value;
     }
     ```
-    * This rule targets h1 headings:
+    * This rule targets `h1` headings:
     ```css
     h1{
 	property: value;
     }
     ```
   * To target multiple HTML tags, separate them with a comma.
-    * For example, this rule targets h1, h2, and h3 headings:
+    * For example, this rule targets `h1`, `h2`, and `h3` headings:
     ```css
     h1, h2, h3{
        property: value;
@@ -805,9 +803,9 @@ Make sure that they are simple enough to pursue!
 * **Font Size, Family, and Weight**
   * Font Size
     * To change the font size of text, use the property `font-size`.
-    * Font size is measured in pixels, abbreviated `px`.
+    * Font size is usually measured in pixels, abbreviated `px`.
       * The measurement is based on the number of pixels that vertically span a line of text.
-    * For example, this changes the font-size of paragraph text to 20 pixels:
+    * For example, the following rule changes the font-size of paragraph text to 20 pixels:
     ```css
     p{
        font-size:20px;
@@ -823,7 +821,7 @@ Make sure that they are simple enough to pursue!
     }
     ```
     * Font-family stacks
-      * If the specified font is not installed on the computer of someone who is trying to view your webpage, the webpage will instead apply the font of the default browser style.
+      * If the specified font is not installed on a computer that is trying to display your webpage, the webpage will instead apply the font of the default browser style.
         * We say that the browser does not support the specified font.
       * However, if you would like, you can specify one or more different "fall-back options".
       * To do so, list the fonts in order of preference, separated by commas. This is called a *font-family stack*.
@@ -838,7 +836,7 @@ Make sure that they are simple enough to pursue!
       * Building a font-family stack *(Optional)*
         * Start the stack with the specific font that you prefer.
         * Then, list a similar font, or a semi-specific group of fonts to which the preferred font belongs.
-        * Finally, list the broad group of fonts (font-family) to which the preferred font belongs.
+        * Finally, list the broad group of fonts, called the *font-family*, to which the preferred font belongs.
           * This allows the browser to apply whichever font from the font-family that it does support.
       * If you are interested in learning more about fonts and font-families, see [here](https://www.w3schools.com/cssref/css_websafe_fonts.asp) and [here](https://www.w3.org/Style/Examples/007/fonts.en.html).
   * Font-Weight
@@ -858,12 +856,12 @@ Make sure that they are simple enough to pursue!
       font-weight: bold;
     }
     ```
-    * *(Optional)* The property can also have a number value of 100, 200, 300, 400, 500, 600, 700, 800, or 900.
+    * *(Optional)* The `font-weight` property can also have a number value of 100, 200, 300, 400, 500, 600, 700, 800, or 900.
       * 100-300 generally equate to `lighter`.
       * 400-600 generally equate to `normal`.
       * 700-900 generally equate to `bold`.
         * If the font has a bolder version, then 600-700 generally equat to `bold` and 800-900 generally equate to `bolder`.
-  * To see a few font sizes, families, and weights on a webpage, please see the Lesson 8 [HTML file](008_Fonts.html) and [CSS file](008_Fonts.css).
+  * To see a few font sizes, families, and weights on a webpage, please see the Lesson 8 [HTML file](HTMLCSS/Lessons/008_Fonts.html) and [CSS file](HTMLCSS/Lessons/008_Fonts.css).
 * **Color**
   * Text Color
     * To control the color of text, use the property `color`.
