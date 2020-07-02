@@ -491,7 +491,7 @@ Make sure that they are simple enough to pursue!
 	<p>This is my first paragraph.</p>
 	<p>This is my second paragraph.</p>
 	```
-	* You *cannot* start a new paragraph by simply pressing enter within a paragraph tag. This will make your code go onto a new line, but it will have no effect on your webpage.
+	* You *cannot* start a new paragraph by simply pressing "enter" within a paragraph tag. This will make your code go onto a new line, but it will have no effect on your webpage.
 	  * For example:
 	```html
 	<p>This is my first paragraph.
@@ -515,7 +515,7 @@ Make sure that they are simple enough to pursue!
 * To see headings, paragraphs, blockquotes, and comments in action, please see [Lesson 2](./HTMLCSS/Lessons/002_Headings_and_Paragraphs.html).
 
 * **Breaks**
-  * You may have noticed by now that we can put spaces in between lines of code (by pressing enter) without affecting the webpage.
+  * You may have noticed by now that we can put spaces in between lines of code (by pressing "enter") without affecting the webpage.
     * This helps us to visually organize our code.
     * For example:
      ```html
@@ -524,9 +524,9 @@ Make sure that they are simple enough to pursue!
 
      <p>In my code, I put a space between the headings and this paragraph.</p>
      ```
-  * This raises the question: If we want to put a space between elements *on our webpage* (without using CSS), perhaps to separate sections of the webpage, how can we do so? With a tag called a "break"!
+  * This raises the question: If we want to put a space between elements *on our webpage* (without using CSS), perhaps to separate sections of the webpage, how can we do so? With a tag called a break!
     * The break tag is self-contained, as such: `<br>`.
-    * If placed in between elements, such as headings and paragraphs, it increases the space that already exists between them on the webpage.
+    * If placed in between two elements, it increases the space that already exists between them on the webpage.
       * For example:
      ```html
      <h2>Main Heading</h2>
@@ -535,7 +535,7 @@ Make sure that they are simple enough to pursue!
      <br>
      <p>In my code, I put breaks between elements.</p>
      ```
-    * If placed within a text element-- between a an opening 'p' tag and its closing 'p' tag, for example-- it causes the text to go onto a new line in the webpage, but it does not put any space between the two lines.
+    * If placed within a text element-- between a an opening `p` tag and its closing `p` tag, for example-- it causes the text to go onto a new line in the webpage, but it does not put any space between the two lines.
       * In contrast, opening a new tag will create a new element, which entails putting a space between the elements.
       * For example:
      ```html
@@ -543,10 +543,10 @@ Make sure that they are simple enough to pursue!
      <h3>Sub<br>heading</h3>
      <p>In my code, I put a break right here<br>so that the paragraph continues on a new line.</p>
      ```
-    * To see the difference more clearly, please see [Lesson 3](./HTMLCSS/Lessons/HTML_3_Breaks.html).
+    * To see the difference more clearly, please see [Lesson 3](./HTMLCSS/Lessons/003_Breaks.html).
 
 * **Horizontal Rules**
-  * Breaks are a useful tool for separating sections of a webpage. But are there any other ways to do so? Yes, with a tag called a "horizontal rule"!
+  * Breaks are a useful tool for separating sections of a webpage. But are there any other ways to do so? Yes, with a tag called a horizontal rule!
     * By default, a horizontal rule is simply a horizontal line.
       * It creates a visual division on our webpage.
     * The horizontal rule tag is self-contained, as such: `<hr>`.
@@ -558,7 +558,7 @@ Make sure that they are simple enough to pursue!
      <hr>
      <p>My webpage will display a horizontal line between the headings and this paragraph.</p>
      ```
-  * To see a horizontal rule on a webpage, please see [Lesson 4](./HTMLCSS/Lessons/HTML_4_Horizontal_Rules.html).
+  * To see a horizontal rule on a webpage, please see [Lesson 4](./HTMLCSS/Lessons/004_Horizontal_Rules.html).
 
 * **Ordered and Unordered Lists**
   * Let's learn how to display a list on our webpage.
@@ -569,7 +569,7 @@ Make sure that they are simple enough to pursue!
     * Ordered lists (numbered points)
       * Uses `ol` tags, as such: `<ol> </ol>`
         * `ol` stands for "ordered list".
-  * Within the list tag, wrap each list item in an "li" tag, as such: `<li>Your list item</li>`
+  * Nested within the list tag, wrap each list item in an `li` tag, as such: `<li>Your list item</li>`.
     * `li` stands for "list item".
   * For example:
      ```html
@@ -585,7 +585,7 @@ Make sure that they are simple enough to pursue!
         <li>Another list item.</li>
      </ol>
      ```
-  * To see a similar example in an HTML document, please see [Lesson 5](./HTMLCSS/Lessons/HTML_5_Lists.html).
+  * To see a similar example in an HTML document, please see [Lesson 5](./HTMLCSS/Lessons/005_Lists.html).
 * **Definition Lists** *(Optional)*
   * There is a third type of list, called a definition list.
     * These are often used to list terms and their descriptions, like a dictionary.
