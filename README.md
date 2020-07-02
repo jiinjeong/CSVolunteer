@@ -323,7 +323,7 @@ Make sure that they are simple enough to pursue!
 
 * **Nesting Tags**
   * "Nesting tags" means writing tags inside of other tags.
-    * The inner tag is called the nested tag, and the outer tag is called the parent tag.
+    * The inner tag is called the *nested tag*, and the outer tag is called the *parent tag*.
     * How do you think that nested tags are written? Perhaps like this: `<parent_tag> <nested_tag> Your Content </nested_tag> </parent_tag>`.
     * In some cases, we do nest tags just like that! But if you have too many layers of nested tags (i.e. tags nested inside tags nested inside tags nested inside tags...), it can get messy.
       * In this example, it is hard to keep track of the tags and make sure that we close them all: `<html> <body> <div> <ul> <li>Content</li> <li>More Content</li> </ul> </div> </body> </html>`
@@ -524,7 +524,7 @@ Make sure that they are simple enough to pursue!
 
      <p>In my code, I put a space between the headings and this paragraph.</p>
      ```
-  * This raises the question: If we want to put a space between elements *on our webpage* (without using CSS), perhaps to separate sections of the webpage, how can we do so? With a tag called a break!
+  * This raises the question: If we want to put a space between elements *on our webpage* (without using CSS), perhaps to separate sections of the webpage, how can we do so? With a tag called a *break*!
     * The break tag is self-contained, as such: `<br>`.
     * If placed in between two elements, it increases the space that already exists between them on the webpage.
       * For example:
@@ -546,7 +546,7 @@ Make sure that they are simple enough to pursue!
     * To see the difference more clearly, please see [Lesson 3](./HTMLCSS/Lessons/003_Breaks.html).
 
 * **Horizontal Rules**
-  * Breaks are a useful tool for separating sections of a webpage. But are there any other ways to do so? Yes, with a tag called a horizontal rule!
+  * Breaks are a useful tool for separating sections of a webpage. But are there any other ways to do so? Yes, with a tag called a *horizontal rule*!
     * By default, a horizontal rule is simply a horizontal line.
       * It creates a visual division on our webpage.
     * The horizontal rule tag is self-contained, as such: `<hr>`.
@@ -586,17 +586,68 @@ Make sure that they are simple enough to pursue!
      </ol>
      ```
   * To see a similar example in an HTML document, please see [Lesson 5](./HTMLCSS/Lessons/005_Lists.html).
+* **Nesting Lists and Creating Subpoints**
+  * Do you think that a list item can itself be a list? The answer is yes!
+    * A list inside of a list is called a *nested list*.
+      * The nested list can be the same type (unordered, ordered, or definition) as the list than contains it, or it can be a different type.
+    * For example:
+    ```html
+    <p>The teams, in order from the highest scorer to the lowest scorer, are:</p>
+    <ol>
+        <li>
+            <ul>
+                <li>Jane</li>
+                <li>Nick</li>
+                <li>Yousef</li>
+            </ul>
+        </li>
+        <br>
+
+        <li>
+            <ul>
+                <li>Juan</li>
+                <li>Masha</li>
+                <li>Caroline</li>
+            </ul>
+        </li>
+    </ol>
+    ```
+    * If you have not yet completed [Challenge Problem 5](./HTMLCSS/ChallengeProblems/005_Lists_Challenge_Problem.html) and would like to do so, give it a try now!
+  * Nested lists can be used to create points and subpoints.
+    * Within a list item, first add your main point as plain text. Then, within the same list item, add a list of the subpoints.
+      * Note: If an unordered list is nested, by default, its bullet points are styled differently (in order to distinguish subpoints and sub-subpoints).
+    * For example:
+    ```html
+    <ol>
+        <li>Point One
+            <ol>
+                <li>Point One A</li>
+                <li>Point One B</li>
+            </ol>
+        </li>
+	    
+        <li>Point Two
+            <ul>
+                <li>Point Two A</li>
+                </li>Point Two B</li>
+            </ul>
+        </li>
+    </ol>  
+    ```
+     * To see more examples of nested lists, please see [Lesson 6](./HTMLCSS/Lessons/006_Nested_Lists.html).
 * **Definition Lists** *(Optional)*
-  * There is a third type of list, called a definition list.
+  * There is a third type of list, called a *definition list*.
     * These are often used to list terms and their descriptions, like a dictionary.
   * On a webpage, a definition list appears like this:
-	Term 1
-	    Description 1
-	Term 2
-	    Description 2A
-	    Description 2B
+  ```
+  Term 1
+      Description 1
+  Term 2
+      Description 2A
+      Description 2B
+  ```
   * To create a definition list:
-    * Use the `dl` tag, as such: `<dl> </dl>`
+    * Use the `dl` tag, as such: `<dl> </dl>`.
       * `dl` stands for "definition list".
     * Within the `dl` tag:
       * Wrap terms in the `dt` tag, as such: `<dt>Your Term</dt>`.
@@ -614,56 +665,7 @@ Make sure that they are simple enough to pursue!
 	    <dd>Comes with bread and butter.</dd>
     </dl>
     ```
-   * To practice creating definition lists, please see [Challenge Problem 6](./HTMLCSS/ChallengeProblems/HTML_6_Definition_Lists_Challenge_Problem).
-* **Nesting Lists and Creating Subpoints**
-  * Do you think that a list item can itself be a list? The answer is yes!
-    * A list inside of a list is called a *nested list*.
-      * The nested list can be the same type (unordered, ordered, or definition) as the list than contains it, or it can be a different type.
-    * For example:
-    ```html
-    <p>The teams, in order from the highest scorer to the lowest scorer, are:</p>
-    <ol>
-	<li>
-            <ul>
-	        <li>Jane</li>
-		<li>Nick</li>
-		<li>Yousef</li>
-	    </ul>
-	</li>
-	<br>
-	
-	<li>
-	    <ul>
-		<li>Juan</li>
-		<li>Masha</li>
-		<li>Caroline</li>
-	    </ul>
-	</li>
-    </ol>
-     ```
-    * If you have not yet completed [Challenge Problem 5](./HTMLCSS/ChallengeProblems/HTML_5_Lists_Challenge_Problem.html), give it a try now!
-  * Nested lists can be used to create points and subpoints.
-    * Within a list item, first add your main point as plain text. Then, within the same list item, add a list of the subpoints.
-      * Note: If an unordered list is nested, by default, its bullet points are styled differently (in order to distinguish subpoints and sub-subpoints).
-    * For example:
-    ```html
-    <ol>
-	    <li>Point One
-		    <ol>
-			    <li>Point One A</li>
-			    <li>Point One B</li>
-		    </ol>
-	    </li>
-	    
-	    <li>Point Two
-		    <ul>
-			    <li>Point Two A</li>
-			    </li>Point Two B</li>
-	    	    </ul>
-	    </li>
-     </ol>  
-     ```
-     * To see more examples of nested lists, please see [Lesson 6](./HTMLCSS/Lessons/HTML_6_Nested_Lists.html).
+   * To practice creating definition lists, please see [Challenge Problem 6](./HTMLCSS/ChallengeProblems/006_Definition_Lists_Challenge_Problem.html).
 * **Styling Text in HTML**
   * In HTML, tags can be used to add certain styles, such as bold, italicized, and highlighted, to text.
     * These tags are nested within the text element tag (paragraph tag, heading tag, etc.).
