@@ -1037,7 +1037,7 @@ Make sure that they are simple enough to pursue!
     ```
 * To see examples of IDs and classes on a webpage, please see the Lesson 11 [HTML file](HTMLCSS/Lessons/011_IDs_and_Classes.html) and [CSS file](HTMLCSS/Lessons/011_IDs_and_Classes.css).
 * **Inheritance**
-  * Recall that, in HTML, a "parent tag" has other tags nested within it.
+  * Recall that, in HTML, a *parent tag* has other tags nested within it.
   * If we apply a CSS rule to a parent tag, the rule will also be applied to the nested tags.
   * For example:
     * Instead of targeting the list items (`li` tag), we can target the list (`ul` or `ol` tag). Since the list items are nested within the list, they will inherit the rule.
@@ -1053,11 +1053,11 @@ Make sure that they are simple enough to pursue!
     }
     ```
 * **Divisions**
-  * One HTML tag is that web developers use very frequently is the `div` tag.
-    * `div` stands for "division."
+  * One HTML tag that web developers use very frequently is the `div` tag.
+    * `div` stands for "division".
   * By nesting content within `div` tags, we can divide our HTML code into logical sections.
     * By itself, a `div` tag has no visual effect on the webpage. However, each `div` tag can be given an ID or class attribute, allowing us to apply unique styles to each section of the webpage.
-    * We say that a division acts as a "container" for a section of our HTML code and as a "hook" for applying CSS to that section.
+    * We say that a division acts as a *container* for a section of our HTML code and as a *hook* for applying CSS rules to that section.
     * For example:
     ```html
     <body>
@@ -1076,25 +1076,25 @@ Make sure that they are simple enough to pursue!
                 <dd>Pinapple and Coconut</dd>
                 <dt>Friday</dt>
                 <dd>Double Fudge Chocolate</dd>
-             </dl>
+            </dl>
          </div>
 
          <div id="contact-us">
-             <p>Call 1(800)555-5555</p>
+             <p>Call 1(800) 555-5555</p>
              <p>Email us at mr.bobo@popsiclestand.com</p>
-          </div>
+         </div>
      </body>
      ```
-* To see examples of inheritance and division on a webpage, please see the Lesson 12 [HTML file](012_Inheritance_and_Division.html) and [CSS file](012_Inheritance_and_Division.css).
+* To see examples of inheritance and divisions on a webpage, please see the Lesson 12 [HTML file](HTMLCSS/Lessons/012_Inheritance_and_Division.html) and [CSS file](HTMLCSS/Lessons/012_Inheritance_and_Division.css).
 * **Introduction to Specificity**
   * You may be wondering by now how CSS deals with conflicting rules.
-    * For example, what if we have a paragraph with a class of "description," and the paragraphs are styled red, but the "description" class is styled blue?
+    * For example, what if we have a paragraph with a class of "description", and the paragraphs are styled red, but the "description" class is styled blue?
   * In the case of conflicting CSS rules, the *more specific* rule will be applied.
-    * But how do we know which rule is more specific? Every rule is assigned a numeric value of specificity, based on its selector. CSS will apply rule with the highest specificity.
+    * But how do we know which rule is more specific? Every rule is assigned a numeric value of specificity, based on its selector. CSS will apply the rule with the highest specificity.
     * Here are some common types of rules, in order from *least specific* to *most specific*:
       * Inherited rules
         * Specificty of 0
-      * Rules targeting HTML tags/elements (such as "p" or "h1")
+      * Rules targeting HTML tags/elements (such as `p` or `h1`)
         * Specificty of 1
       * Rules targeting classes
         * Specificty of 10
@@ -1103,7 +1103,7 @@ Make sure that they are simple enough to pursue!
   * For example:
     * A rule applied directly to an element trumps an inherited rule.
     ```css
-    #inherited-ID{
+    #my-ID{
       color: red;
     }
 
@@ -1112,7 +1112,7 @@ Make sure that they are simple enough to pursue!
     }
     ```
     ```html
-    <div id="inherited-ID">
+    <div id="my-ID">
         <p>This text will be blue.</p>
     </div>
     ```
@@ -1142,12 +1142,12 @@ Make sure that they are simple enough to pursue!
     ```html
     <p id="my-ID" class="my-class">This text will be blue.</p>
     ```
-  * To see examples of how specificity resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](013_Specificity_Intro.html) and [CSS file](013_Specificity_Intro.css).
+  * To see examples of how specificity resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](HTMLCSS/Lessons/013_Specificity_Intro.html) and [CSS file](HTMLCSS/Lessons/013_Specificity_Intro.css).
 * **The Cascade**
   * How does CSS deal with conflicting rules of *equal specificity*? Its system for doing so is called *the cascade*.
-    * This is how CSS gets its name of "cascading stylesheets."
-  * When running a CSS file, the computer starts at the top of the file and works towards the bottom, like a cascade.
-    * Therefore, if we have two rules with the same selector and property, the one that is higher in the document will be overwritten when the computer encounters the one that is lower in the document.
+    * This is how CSS gets its name of "cascading stylesheets".
+  * When reading a CSS file (while loading a webpage), the computer starts at the top of the file and works towards the bottom, like a cascade.
+    * Therefore, if we have two rules with the same selector and property, the one that is higher in the document will be overwritten when the computer encounters the one that is lower in the document. When the webpage finishes loading, the *latter (lower-down) rule* will be applied.
       * In the following example, the computer will first apply a color of red to the paragraphs, but then it will overwrite that style and apply a color of blue. In the end, the paragraphs will be blue.
       ```css
       p{
@@ -1192,12 +1192,12 @@ Make sure that they are simple enough to pursue!
     ```
     * If an element has inherited conflicting styles from different parent elements, it will not necessarily follow the rule that is lower-down in the code. Rather, it will follow the rule of its more "direct ancestor": the parent element in which it is nested with fewer layers of depth.
       * In the example from above, the paragraph is nested two layers deep in the body, but only one layer deep in the division. Therefore, it is a more direct descendant of the division. It will be blue.
-  * To see examples of how the cascade resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](014_Cascade.html) and [CSS file](014_Cascade.css).
+  * To see examples of how the cascade resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](HTMLCSS/Lessons/014_Cascade.html) and [CSS file](HTMLCSS/Lessons/014_Cascade.css).
 #### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
   * All of the files for a website should be contained in a single folder.
-    * Within the website folder, you might want to create separate folders for HTML documents (webpages), CSS documents, images, and video or audio files.
+    * Within the website folder, you might want to create separate folders for HTML documents (webpages), CSS documents (stylesheets), images, and video or audio files.
   * By convention, the home page of a website is titled `index.html`, and it links to a CSS file titled `main.css` or `style.css`.
 * **Relative file paths**
   * In the next few lessons, we will be adding images and videos to our webpages, and we will be linking our webpages to other webpages in order to create a website. When we do so, we will have to tell the computer how to get to the image file, video file, or HTML document that we want.
