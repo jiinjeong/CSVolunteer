@@ -885,7 +885,7 @@ Make sure that they are simple enough to pursue!
     }
     ``` 
    * Hex Codes and RGB Values *(Optional)*
-     * What if we want to use a very specific color that is not among the pre-named colors? We can use a hex code or RGB values as the value of the property.
+     * What if we want to use a very specific color that is not among the pre-named colors? We can use a hex code or RGB value as the value of the property.
        * We can use a color picker, such as [this one](https://htmlcolorcodes.com/color-picker/) or [this one](https://www.w3schools.com/colors/colors_picker.asp?color=%23ffab00), to generate these codes for us.
        * But if you would like to understand how they work, read on!
      * Hex codes
@@ -893,24 +893,24 @@ Make sure that they are simple enough to pursue!
        * The first two characters represent the intensity of the *red* channel. The second two characters represent the intensity of the *green* channel, and the last two characters represent the intensity of the *blue* channel.
        * Each character can range from `0` to `9` and then from `a` to `f`. `0` is the darkest and `f` is the lightest.
          * The intensity of each channel (red, green, and blue) is a number in base 16, which is called the hexadecimal number system. Here is how to count two-digit numbers in the hexadecimal system:
-	   * 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0c, 0d, 0e, 0f, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1a, 1b, 1c, 1d, 1e, 1f, 20, 21, 22... 93, 94, 95, 96, 97, 98, 99, 9a, 9b, 9c, 9d, 9e, 9f, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac, ad, ae, af, b0, b1... ff
+           * 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0c, 0d, 0e, 0f, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1a, 1b, 1c, 1d, 1e, 1f, 20, 21, 22... 93, 94, 95, 96, 97, 98, 99, 9a, 9b, 9c, 9d, 9e, 9f, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, aa, ab, ac, ad, ae, af, b0, b1... ff
        * For example:
          * `#ff0000` is the brightest pure red. `#00ff00` is the brightest pure green. `#0000ff` is the brightest pure blue.
          * `#000000` is black, and `#ffffff` is white.
-	 * `#454545` is a dark gray, and `#909090` is a light gray.
-	 * `#16c91e` is a light green.
+         * `#454545` is a dark gray, and `#909090` is a light gray.
+         * `#16c91e` is a light green.
        * If each channel contains two identical characters, the hex code can be shortened to three characters.
          * For example, `#aabbcc` is equivalent to `#abc`. The hex code for white can also be expressed as `#fff`.
      * RGB values
-       * An RBG value is written `rbg(x, x, x)`, where `x` represents a number.
+       * An RBG value is written `rbg(x, y, z)`, where `x`, `y`, and `z` each represent a number.
        * Similarly to hex codes, the first number represents the intensity of the *red* channel. The second number represents the intensity of the *green* channel, and the last number represents the intensity of the *blue* channel.
        * Each number can range from `0` to `255`. `0` is the darkest and `255` is the lightest.
        * For example:
+         * `rgb(255, 0, 0)` is the brightest pure red. `rgb(0, 255, 0)` is the brightest pure green. `rgb(0, 0, 255)` is the brightest pure blue.
          * `rgb(0, 0, 0)` is black, and `rgb(255, 255, 255)` is white.
-	 * `rgb(255, 0, 0)` is the brightest pures red. `rgb(0, 255, 0)` is the brightest pure green. `rgb(0, 0, 255)` is the brightest pure blue.
-	 * `rgb(69, 69, 69)` is a dark gray and `rgb(144, 144, 144)` is a light gray.
+         * `rgb(69, 69, 69)` is a dark gray and `rgb(144, 144, 144)` is a light gray.
          * `rgb(22, 201, 30)` is a light green.
-  * To see colors in action, please see the Lesson 9 [HTML file](009_Colors.html) and [CSS file](009_Colors.css).
+  * To see colors in action, please see the Lesson 9 [HTML file](HTMLCSS/Lessons/009_Colors.html) and [CSS file](HTMLCSS/Lessons/009_Colors.css).
 * **Text Decoration and Transformation**
   * Text decoration
     * The property `text-decoration` can have the following values:
@@ -929,12 +929,13 @@ Make sure that they are simple enough to pursue!
     ```
   * Text transformation
     * To transform text from uppercase to lowercase or visa versa, use the property `text-transform`.
-    * This property can have the following value:
+    * This property can have the following values:
       * `capitalize`
         * This capitalizes the first letter of each word.
       * `uppercase`
-        * This makes all letters uppercase.
+        * This makes all of the letters uppercase.
       * `lowercase`
+        * This makes all of the letters lowercase.
       * `none`
       * `inherit`
         * We will learn about inheritance in future lessons.
@@ -944,7 +945,7 @@ Make sure that they are simple enough to pursue!
       text-transform: uppercase;
     }
     ```
-  * To see examples of text decoration and transformation, please see the Lesson 10 [HTML file](010_Text_Decoration_and_Transformation.html) and [CSS file](010_Text_Decoration_and_Transformation.css).
+  * To see examples of text decoration and transformation, please see the Lesson 10 [HTML file](HTMLCSS/Lessons/010_Text_Decoration_and_Transformation.html) and [CSS file](HTMLCSS/Lessons/010_Text_Decoration_and_Transformation.css).
 * **Comments in CSS**
   * To write a comment in CSS, begin with a forward slash and an asterisk, `/*`, and end with an asterisk and a forward slash, `*/`.
   * Comments are a way to include text in your code WITHOUT displaying it on your webpage.
@@ -1002,7 +1003,7 @@ Make sure that they are simple enough to pursue!
       ```html
       <h1 id="top-header">Mr. Bobo's Popsicle Stand</h1>
       ```
-    * A given ID name can be used only once per webpage or website.
+    * A given ID name can be used only once per webpage.
   * To target the ID in your CSS code, use the ID name preceded by a hashtag as the selector, as such: `#YOUR_ID_NAME`.
     * For example:
     ```css
@@ -1013,7 +1014,7 @@ Make sure that they are simple enough to pursue!
 * **Classes**
   * What if we to want to write a CSS rule that targets, say, some of the paragraphs on our webpage, but not others? We can do so by using a class.
   * First, we must assign a class to each of the elements that we want to target in the HTML code.
-    * To do so, give an class attribute to each element, as such: `class="YOUR_CLASS_NAME"`.
+    * To do so, give a class attribute to each element, as such: `class="YOUR_CLASS_NAME"`.
       * For example:
       ```html
       <p class="flavor">vanilla</p>
@@ -1034,7 +1035,7 @@ Make sure that they are simple enough to pursue!
       font-size: 30px;
     }
     ```
-* To see examples of IDs and classes on a webpage, please see the Lesson 11 [HTML file](011_IDs_and_Classes.html) and [CSS file](011_IDs_and_Classes.css).
+* To see examples of IDs and classes on a webpage, please see the Lesson 11 [HTML file](HTMLCSS/Lessons/011_IDs_and_Classes.html) and [CSS file](HTMLCSS/Lessons/011_IDs_and_Classes.css).
 * **Inheritance**
   * Recall that, in HTML, a "parent tag" has other tags nested within it.
   * If we apply a CSS rule to a parent tag, the rule will also be applied to the nested tags.
