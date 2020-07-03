@@ -12,7 +12,7 @@
         
         <h4>What happens if two or more of our CSS rules contradict each other and have equal specificity? The latter (bottom-most) rule will be applied.</h4>
         
-        <p>The computer reads a CSS file from top to bottom. In the case of equivalent rules, the rule that is lower-down will overwrite the rule that is higher-up.</p>
+        <p>The computer reads a CSS file from top to bottom. In the case of equivalent rules (with the same selector and property but different values), the rule that is lower-down will overwrite the rule that is higher-up.</p>
         <blockquote>When loading this webpage, the computer first applied a color of red to this blockquote. But then, it overwrote that rule and applied a color of blue to this blockquote.</blockquote>
         <br>
         
@@ -23,7 +23,7 @@
         <p>All this is called the cascade.</p>
         <br>
         
-        <h4>However, the cascade is not the deciding factor when an element has inherited a rule that contradicts a rule that it has inherited from a differnt parent.</h4>
+        <h4>However, the cascade is not the deciding factor when an element has inherited a rule that contradicts a rule that it has inherited from a different parent.</h4>
         <p>In this case, CSS applies the rule from the parent that is closer to element in the HTML code. In other words, CSS applies the rule from the parent in which the element is nested fewer layers deep.</p>
         
         <p>For example:</p>
