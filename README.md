@@ -1200,26 +1200,26 @@ Make sure that they are simple enough to pursue!
     * Within the website folder, you might want to create separate folders for HTML documents (webpages), CSS documents (stylesheets), images, and video or audio files.
   * By convention, the home page of a website is titled `index.html`, and it links to a CSS file titled `main.css` or `style.css`.
 * **Relative file paths**
-  * In the next few lessons, we will be adding images and videos to our webpages, and we will be linking our webpages to other webpages in order to create a website. When we do so, we will have to tell the computer how to get to the image file, video file, or HTML document that we want.
+  * In the next few lessons, we will be adding images to our webpages, and we will be linking our webpages to other webpages in order to create a website. When we do so, we will have to tell the computer how to get to the image file or to the other HTML document.
   * In other words, when we reference a given file within our HTML document, we need to provide a relative file path. A relative file path is a path to get from the location of our HTML document to the location of the given file.
   * If both the given file and our HTML document are in the same folder, the relative file path is simply the name of the given file.
     * This is because the relative file path always starts in the location of our HTML document.
     * For example, if a folder called `MyWebsite` contains `index.html` and `image.png`, then the relative file path from `index.html` to `image.png` is `image.png`.
-  * If the given file is in a folder that is in the folder of the HTML document, the relative file path is the name of the inner folder, a forward slash, and the name of the given document.
+  * If the given file is in a folder that is in the folder of the HTML document, the relative file path is the name of the inner folder, a forward slash (`/`), and the name of the given document.
     * This is because a foward slash means to go into the folder or file written after it.
     * For example, if a folder called `MyWebsite` contains `index.html` and a folder called `Images`, and `Images` contains `image.png`, then the relative file path from `index.html` to `image.png` is `Images/image.png`.
       * In this example, the file path starts in the folder `MyWebsite` (because it is the location of `index.html`), goes into the folder `MyWebsite/Images`, and selects the file `MyWebsite/Images/image.png`.
-  * If the given file is in a folder that contains the folder of the HTML document, then the relative file path is two periods (`..`), a forward slash, and the name of the given document.
+  * If the given file is in a folder that contains the folder of the HTML document, then the relative file path is two periods (`..`), a forward slash (`/`), and the name of the given document.
     * This is because `..` means to go out of the current folder and into the folder than contains it.
   * For example, if a folder called `MyWebsite` contains `index.html` and a folder called `Pages`, and `Pages` contains `page1.html`, then the relative file path from `page1.html` to `index.html` is `../index.html`.
     * In this example, the file path starts in `MyWebsite/Pages` (because it is the location of `page1.html`), goes up out of `MyWebsite/Pages` and into `MyWebsite`, and selects `MyWebsite/index.html`.
-    * You can go up multiple directories by repeating the `../`
+    * You can go up multiple directories by repeating the `../`.
       * For example: `../../index.html`
 * **Links**
-  * A create a link on our webpage, we use "a" tags, as such: `<a href=DESTINATION-OF-LINK>YOUR CLICKABLE TEXT</a>`
+  * A create a link on our webpage, we use an `a` tag, as such: `<a href=DESTINATION-OF-LINK>YOUR CLICKABLE TEXT</a>`
     * `a` stands for "anchor".
-    * The link tag should be used with the hyperreference attribute, abbreviated `href`. The value is this attribute is the destination of the link.
-      * It tells the computer where to go or what to do when the user clicks on the text of the link.
+    * The link tag should be used with the hyper-reference attribute, abbreviated `href`. The value is this attribute is the destination of the link.
+      * It tells the computer where to go or what to do when the user clicks on the text of the link, called the *anchor text*.
   * There are four types of links that can be included on a webpage:
     * Internal links
       * When clicked, an internal link leads to different page on the same website.
@@ -1247,14 +1247,14 @@ Make sure that they are simple enough to pursue!
         * For example: `<a href=#top>Back to top</a>`
   * Target Attribute
     * We can make links open in a new tab by using the target attribute.
-      * That way, the webpage containing the link remains open after the user clicks the link.
+      * That way, the webpage containing the link remains open after the user clicks on the link.
     * To do so, give the target attribute a value of `_blank`.
       * For example: `<a href="check-out.html" target="_blank">Purchase This Item</a>`
   * Title Attribute
     * We can make a link display a text in a little box when we hover over it by using the title attribute.
       * In fact, we can do the same to any HTML element.
         * (The title attribute is a global attribute, which means that it can be given to any element.)
-    * To do so, give the title attribute a value of the text that you want to display.
+    * To do so, give the title attribute a value of the text that you want to display, surrounded by quotation marks.
       * For example:
       ```html
       <a href="https://www.w3schools.com/html/default.asp" title="Click here to access an HTML tutorial by W3Schools.">Learn more about HTML!</a>`
@@ -1290,10 +1290,10 @@ Make sure that they are simple enough to pursue!
     * The image tag must be used with the source attribute, abbreviated `src`. The value of this attribute is the location of the image.
       * It tells the computer where to find the image that we want.
       * Note: We use the source attribute instead of the hyper-reference attribute because we a drawing information from an external resource and embedding it in the webpage, not leading the user or computer away from the webpage to a external resource.
-    * The location of the image can:
+    * The location of the image can be:
         * a filepath to the image.
           * For example: `<img src="images/my-image.jpg">`
-        * the image address of an image from the internet.
+        * the image address of an image from the Internet.
           * To get the image address, right click on an image from the Internet, and select "Copy image address".
           * For example: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">`
   * Size of an image
@@ -1339,31 +1339,31 @@ Make sure that they are simple enough to pursue!
           ```
   * Alternate text
     * We can give an image an alternate text. If the computer is unable to load the image for any reason, it will display the alternate text instead.
-    * To do so, the the image an `alt` attribute with a value of your alternate text, as such: `<img src="LOCATION_OF_IMAGE" alt="YOUR ALTERNATE TEXT">`.
+    * To do so, give the image the `alt` attribute with a value of your alternate text, as such: `<img src="LOCATION_OF_IMAGE" alt="YOUR ALTERNATE TEXT">`.
   * To see examples of images in an HTML document, please see the Lesson 16 [HTML document](HTMLCSS/Lessons/016_Images.html) and [CSS document](HTMLCSS/Lessons/016_Images.css).
 * **The Head**
-  * Recall that the head of an HTML document contains information about the webpage, which is called metadata. But what information is included in the metadata?
+  * Recall that the head of an HTML document contains information about the webpage. This information is called *metadata*. But what exactly is included in the metadata?
   * Character setting
-    * To set the character encoding to UTF-8, use the self-contained tag `<meta charset="utf-8">`.
+    * To set the character encoding to UTF-8, use the self-contained `meta` tag. Give it an attribute of `charset` with a value of `"utf-8"`, as such: `<meta charset="utf-8">`.
       * `charset` stands for "character setting". UTF-8 is the standard character encoding.
       * If you do not specify the character encoding, you can include English characters and basic symbols on your webpage, but you may not be able to include some symbols (such as copyright signs) or foreign language characters. 
         * UTF-8 supports more characters than other forms of character encoding.
       * What is character encoding? *(Optional)*
         * In order to save your webpage, the computer needs to convert the characters that you type into bytes. Then, in order to display your webpage, it needs to convert the bytes back into characters. The character encoding is the key used to do this.
   * Title
-    * To give the webpage a title, wrap the text in `title` tags, as such: `<title>YOUR TITLE</title>`.
+    * To give the webpage a title, wrap the title text in `title` tags, as such: `<title>YOUR TITLE</title>`.
     * The title will appear in the tab at the top of your webpage.
       * It will also be displayed if your webpage comes up in a Google search.
   ![Title in a Tab](HTMLCSS/Lessons/title_in_tab.png)
   * Description *(Optional)*
-    * The description may appear under the title when your webpage comes up in a Google search.
-    * To give your webpage a description, use the meta tag. Give it an attribute of `name` with a value of `description`. Also give it an attribute of `content` with a value of your description.
+    * The description may appear under the title if your webpage comes up in a Google search.
+    * To give your webpage a description, use the self-contained `meta` tag. Give it an attribute of `name` with a value of `description`. Also give it an attribute of `content` with a value of your description.
       * For example: `<meta name="description" content="We serve the cheesiest pizza in town!">`
   ![Title and Description in a Google Search](HTMLCSS/Lessons/title_and_description.png)
   * Key words *(Optional)*
     * Key words are words that are important to the content of your webpage. Sometimes, search engines utilize key words, but not as frequently anymore.
       * For example, if your webpage is about your pizza restaurant, the key words might be "pizza", "italian", "dining", etc.
-    * To specify key words, use the meta tag. Give it an attribute of `name` with a value of `keywords`. Also give it an attribute of `content` with a value of your key word(s).
+    * To specify key words, use the self-contained `meta` tag. Give it an attribute of `name` with a value of `keywords`. Also give it an attribute of `content` with a value of your key word(s).
       * To include multiple key words, separate them with commas.
       * For example: `<meta name="keywords" content="pizza, italian, dining, restaurant">`
   * Here is an example of an HTML head:
