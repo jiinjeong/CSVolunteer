@@ -1584,39 +1584,33 @@ Make sure that they are simple enough to pursue!
 * **Child Combinator**
   * We can target tags/elements that are children (direct descendents) of certain other tags/elements.
   * To do so, write the selector for the parent and then the selector for the target, separated by a greater-than sign, `>`.
-    * The greater-than sign is called the *"child combinator"*.
+    * The greater-than sign is called the *child combinator*.
     * For example:
-      * The following targets list items that are the children of ordered lists.
+      * The following targets paragraphs that are the children of elements with an ID of `my-ID`.
       ```css
-      ol > li{
-          color: red;
+      #my-ID > p{
+       color: red;
       }
       ```
       ```html
-      <body>
-          <ol>
-              <li>This will be red.
-                  <ul>
-                      <li>This will be NOT be red.</li>
-                  </ul>
-              </li>
-          </ol>
-
-          <ul>
-              <li>This will NOT be red.</li>
-          </ul>
-      </body>
+      <div id="my-ID">
+          <p>This will be red.</p>
+          <div>
+              <p>This will NOT be red.</p>
+          </div>
+      </div>
       ```
-      * The following targets paragraphs that are children of elements with a class of "customer-feedback".
+      
+      * The following targets list items that are children of ordered lists.
       ```css
-      .customer-feedback > p{
+      ol > li{
           color: red;
       }
       ```
 * **Adjacent Combinator**
   * We can target tags/elements that appear directly after certain other tags/elements.
   * To do so, write the selector for the preceding tag/element and then the selector for the target, separated by a plus sign, `+`.
-    * The plus sign is called the *"adjacent combinator"*.
+    * The plus sign is called the *adjacent combinator*.
   * For example:
     * The following targets paragraphs that appear directly after `h3` headings.
     ```css
@@ -1627,7 +1621,7 @@ Make sure that they are simple enough to pursue!
     ```html
     <body>
         <h3>This will NOT be red.</h3>
-        <p>This will be red.</h3>
+        <p>This will be red.</p>
         <p>This will NOT be red.</p>
      </body>
      ```
@@ -1635,7 +1629,7 @@ Make sure that they are simple enough to pursue!
     * Paragraphs that come after images might be captions.
     * `h4` headings that come after `h1` headings might be subtitles, or details like the author's name and the publication date.
     * Etc.
-    * To use the a similar example as above:
+    * To use a similar example as above:
     ```css
     h3 + p{
         font-weight: lighter;
@@ -1662,7 +1656,9 @@ Make sure that they are simple enough to pursue!
   * Specificity
     * The universal selector targets each tag/element directly, not through inheritance.
       * In contrast, when we target the body, elements within the body inherit the style.
+      * Therefore, a rule with the universal selector will trump a default browser style, whereas a rule that an element has inherited from the body will not.
     * However, the universal selector has a specificity of 0.
+      * Therefore, a rule targeting a tag type, class, ID, or combination thereof will always trump a rule with the universal selector.
       * For example:
       ```css
       p{
@@ -1679,7 +1675,7 @@ Make sure that they are simple enough to pursue!
   * When do we use the universal selector as opposed to targeting the body?
     * Generally, web developers target the body when applying styles.
     * However, some web developers use the universal selector to enact a *CSS reset*.
-      * A CSS reset overwrites all of the default browser style. To do so, it sets every relevant property to its most basic and bland value.
+      * A CSS reset overwrites all of the default browser styles. To do so, it sets every relevant property to its most basic and bland value.
         * This creates a "blank slate" before the web developer adds his or her own styles.
         * For example:
         ```css
@@ -1692,13 +1688,13 @@ Make sure that they are simple enough to pursue!
           padding: 0px;
         }
 * **Dynamic Pseudo-Classes**
-  * In CSS, there are certain predefined classes called active pseudo-classes.
+  * In CSS, there are certain predefined classes called dynamic pseudo-classes.
     * Unlike those of regular classes, the elements which belong to a dynamic pseudo-class are constantly changing. They change based on *user behavior*.
     * User behavior refers to the interaction with the webpage of the person viewing it.
   * Dynamic pseudo-classes are usually used with links and buttons. Here are some of the most common:
-    * Hover: While the user's cursor is hovering over an element, it temporarily joins the pseudo-class of "hover".
-    * Active: While the user is clicking an element, it temporarily joins the pseudo-class of "active".
-    * Visited: Once the user has followed a link, it joins the pseudo-class of "visited".
+    * `hover`: While the user's cursor is hovering over an element, it temporarily joins the pseudo-class of `hover`.
+    * `active`: While the user is clicking an element, it temporarily joins the pseudo-class of `active`.
+    * `visited`: Once the user has followed a link, it joins the pseudo-class of `visited`.
   * To use a pseudo-class in a selector, write the name of the pseudo-class preceded by a colon, `:`.
     * For example:
     ```css
@@ -1713,7 +1709,7 @@ Make sure that they are simple enough to pursue!
   * Specificity and the casacde
     * Pseudo-class selectors have a specificity of 10, just like regular classes.
       * For example, `.my-class:active{` has a specificity of 20.
-    * An element that belongs the pseudo-class of "visited" can simultaneously belong to "hover OR "active". Therefore, we must consider the cascade when styling with pseudo-classes.
+    * An element that belongs the pseudo-class of `visited` can simultaneously belong to either `hover` or `active`. Therefore, we must consider the cascade when styling with pseudo-classes.
       * For example:
         * Given this code, when we hover over a link that we have already visited, it will not change color...
         ```css
