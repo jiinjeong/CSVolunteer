@@ -297,6 +297,7 @@ Make sure that they are simple enough to pursue!
 
 ### Week 6-8: HTML/CSS
 @19riverak
+
 #### Week 6
 * **What is HTML/CSS?**
   * HTML and CSS are two different coding languages. Together, they are used to design webpages and websites.
@@ -725,7 +726,6 @@ Make sure that they are simple enough to pursue!
   * To see smaller text, subscript, and superscript in an HTML document, please see [Lesson 7](./HTMLCSS/Lessons/007_Text_Styling.html).
   
 #### Week 7
-
 * **Default Browser Styling**
   * When we open an HTML document as a webpage in a browser, the browser automatically applies certain default styles to it.
     * For example, the text is black and the background is white. The font size is larger for headings than for paragraphs, and all text is left-justified.
@@ -1193,6 +1193,7 @@ Make sure that they are simple enough to pursue!
     * If an element has inherited conflicting styles from different parent elements, it will not necessarily follow the rule that is lower-down in the code. Rather, it will follow the rule of its more "direct ancestor": the parent element in which it is nested with fewer layers of depth.
       * In the example from above, the paragraph is nested two layers deep in the body, but only one layer deep in the division. Therefore, it is a more direct descendant of the division. It will be blue.
   * To see examples of how the cascade resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](HTMLCSS/Lessons/014_Cascade.html) and [CSS file](HTMLCSS/Lessons/014_Cascade.css).
+
 #### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
@@ -1380,6 +1381,361 @@ Make sure that they are simple enough to pursue!
     * For a webpage written in English, give the `lang` attribute a value of `en`.
     * For example: `<html lang="en"> </html>`
   * To see examples of a head in an HTML document, please see [Lesson 17](HTMLCSS/Lessons/017_Head.html).
+
+#### Independent Project
+* Design your own website! It could be:
+  * a blog-like website about yourself.
+  * a website for a business or organization.
+  * an informational website on any topic.
+  * anything else that you can think of!
+  
+### Additional HTML/CSS (in case your student gets ahead)
+* **Options for Adding CSS to HTML**
+  * So far, we have styled our webpages by linking the HTML file to a CSS file. The CSS file is called an *external stylesheet*.
+    * This is the most common and efficient method.
+      * When styling a website with multiple pages, we can link all (or some) of the pages to the same CSS file.
+        * This applies uniform styles to every page on our website.
+        * Since the CSS code is condensed and centralized, it is easy to write, read, and update (change).
+    * However, there are two other methods of adding CSS to HTML.
+  * Embedded stylesheets
+    * We can include our CSS code directly in HTML document, in the head.
+      * Such CSS code is called an *embedded stylesheet*.
+    * To do so, use the `style` tag within the head. Within the `style` tag, write your CSS code exactly as you would in an external stylesheet.
+      * For example:
+      ```html
+      <head>
+          <style>
+              p{
+                color: blue;
+              }
+
+              #featured-content{
+                font-weight: bold;
+                font-size: 20px;
+              }
+          </style>
+      </head>
+      ```
+    * Can we use both an external stylesheet and an embedded style? Yes, absolutely!
+      * Often, a webpage will be linked to the main external stylesheet for its website. But it will also have an embedded stylesheet that specifies styles specific to that webpage.
+      * What if a rule in the embedded stylesheet conflicts with a rule in the external stylesheet? 
+        * If the rules differ in specificity, the more specific rule will be applied.
+        * If the rules have equal specificity, the cascade determines which rule will be applied.
+          * The computer reads the external stylesheet first, then the embedded stylesheet. Therefore, the embedded stylesheet is lower in the cascade.
+            * You can think of an embedded stylesheet as a continuation of the external stylesheet.
+          * Therefore, a rule in the embedded stylesheet will trump a rule of equal specificity in the external stylesheet.
+  * In-line styling
+    * We can also apply CSS rules directly to a specific HTML element.
+      * This is called *in-line styling*.
+    * To do so, give the element an attribute of `style` with a value of one or more CSS declarations.
+      * In-line declarations follow (almost) the same syntax as other declarations. As usual, separate the property from the value with a colon, `:`, and end each declaration with a semi-colon, `;`. However, do not include line breaks.
+      * For example:
+      ```html
+      <p style="color: red; font-size: 20px;">This text will be red with a font size of 20 pixels.</p>
+      ```
+     * What if an in-line rule conflicts with a rule in a stylesheet, either embedded or external?
+       * In-line rules are more specific than any other CSS rules.
+         * This is because they apply to individual elements.
+         * They have a specificity of 1000.
+       * Therefore, an in-line rule is always applied.
+         * In-line styling is useful for applying exceptions to the CSS code in our stylesheet(s).
+  * To summarize:
+    * We can apply uniform styles to multiple pages of your website by linking them to the same external stylesheet.
+    * We can apply unique styles to a single webpage using an embedded stylesheet.
+      * An embedded stylesheet is lower in the cascade than an external stylesheet.
+    * We can apply unique styles to a single element using an in-line style.
+      * In-line styles have the highest specificity.
+
+* **Combining Selectors**
+  * We have learned how to target elements of a certain tag type, ID, or class. But what if we want to target elements that fit two or more such criteria?
+    * For example:
+      * paragraphs with an ID of `my-id` (but not headings with that ID)
+      * list items with a class of `first-class` and of `second-class` (but not list items with one or the other of the classes)
+      * elements with an ID of `my-id` and a class of `my-class` (but not elements with either the ID or the class)
+    * To write a combined selector, simply write the tag type, ID, and/or class selectors one after another, without spaces.
+      * If a tag type is included, it must be first in the list. However, the ID and/or class(es) can go in any order.
+      * For example:
+        * The following targets paragraphs with an ID of `my-id`.
+        ```css
+        p#my-id{
+          color: red;
+        }
+        ```
+        * The following targets list items with a class of `first-class` and of `second-class`.
+        ```css
+        li.first-class.second-class{
+          color: red;
+        }
+        ```
+        OR
+        ```css
+        li.second-class.first-class{
+          color: red;
+        }
+        ```
+        * The following targets elements with an ID of `my-id` and a class of `my-class`.
+        ```css
+        #my-id.myclass{
+          color: red;
+        }
+        ```
+        OR
+        ```css
+        .myclass#my-id{
+          color: red;
+        }
+        ```
+* **Descendants and Children**
+  * Recall that a parent tag/element is a tag/element that has other tags/elements nested in it.
+  * All tags/elements nested within a given parent are called *descendants* of the parent, regardless of how many layers deep they are nested.
+  * All tags/elements nested one layer deep within a parent are called *children* (or direct descendants) of the parent.
+  * For example:
+  ```html
+  <body>
+      <div>      <!__This division is a child (and descendant) of the body. It is also the parent of the paragraph.__>
+          <p>This paragraph is a child (and descendant) of the division. It is also a descendant of the body.</p>
+      </div>
+  </body>
+  ```
+  * We can assign numbers to children based on the order in which they appear.
+    * For example:
+    ```html
+    <div>
+        <p>This paragraph is the FIRST child of the division.</p>
+
+        <ol>      <!__This ordered list is the SECOND child of the division.__>
+            <li>This list item is not a child of the division (although it is a descendant).</li>
+        </ol>
+
+        <p>This paragraph is the THIRD and LAST child of the division.</p>
+    </div>
+    ```
+* **Descendant Selectors**
+  * We can target tags/elements that are descendants of certain other tags/elements.
+  * To do so, write the selector for the parent and then the selector for the target, separated by a space.
+    * For example:
+      * The following targets list items that are the descendants of ordered lists.
+      ```css
+      ol li{
+          color: red;
+      }
+      ```
+      ```html
+      <body>
+          <ol>
+              <li>This will be red.
+                  <ol>
+                      <li>This will be red as well.</li>
+                  </ol>
+              </li>
+          </ol>
+
+          <ul>
+              <li>This will NOT be red.</li>
+          </ul>
+      </body>
+      ```
+      * The following targets links that are descendants of divisions with an ID of `navigation`.
+      ```css
+      div#navigation a{
+          color: red;
+      }
+      ```
+      ```html
+      <body>
+          <div id="navigation">
+              <a href="http://google.com">This will be red.</a>
+              <p>This will NOT be red.</p>
+          </div>
+       
+          <div>
+              <a href="http://repl.it">This will NOT be red.</p>
+          </div>
+      </body>
+      ```
+  * Note: Descendant selectors target their targets directly, not through inheritance.
+* **More Specificity**
+  * We have learned about some complex selectors, such as combined selectors and descendant selectors. In coming lessons, we will learn about even more. But how so we evaluate the specificity of such complex selectors?
+  * To evaluate the specificity of a complex selector, total the specificities of the individual selectors which make up the complex selector.
+    * In other words, add 1 for each tag type, 10 for each class, and 100 for each ID in the selector.
+    * For example:
+      * `div#navigation a{` has a specificity of 102.
+        * 1 for the `div`
+        * 100 for the `#navigation`
+        * 1 for the `a`
+      * `.first-class.second-class > p{` has a specificity of 21.
+        * 10 for the `first-class`
+        * 10 for the `second-class`
+        * 1 for the `p`
+    * Another example:
+    ```css
+    p.my-class{      /*Specificity of 11*/
+      color: blue;
+    }
+
+    .my-class{               /*Specificity of 10*/
+      color: red;
+    }
+    ```
+    ```html
+    <p class="my-class">This text will be blue.</p>
+    ```
+    
+* **Child Combinator**
+  * We can target tags/elements that are children (direct descendents) of certain other tags/elements.
+  * To do so, write the selector for the parent and then the selector for the target, separated by a greater-than sign, `>`.
+    * The greater-than sign is called the *"child combinator"*.
+    * For example:
+      * The following targets list items that are the children of ordered lists.
+      ```css
+      ol > li{
+          color: red;
+      }
+      ```
+      ```html
+      <body>
+          <ol>
+              <li>This will be red.
+                  <ul>
+                      <li>This will be NOT be red.</li>
+                  </ul>
+              </li>
+          </ol>
+
+          <ul>
+              <li>This will NOT be red.</li>
+          </ul>
+      </body>
+      ```
+      * The following targets paragraphs that are children of elements with a class of "customer-feedback".
+      ```css
+      .customer-feedback > p{
+          color: red;
+      }
+      ```
+* **Adjacent Combinator**
+  * We can target tags/elements that appear directly after certain other tags/elements.
+  * To do so, write the selector for the preceding tag/element and then the selector for the target, separated by a plus sign, `+`.
+    * The plus sign is called the *"adjacent combinator"*.
+  * For example:
+    * The following targets paragraphs that appear directly after `h3` headings.
+    ```css
+    h3 + p{
+        color: red;
+    }
+    ```
+    ```html
+    <body>
+        <h3>This will NOT be red.</h3>
+        <p>This will be red.</h3>
+        <p>This will NOT be red.</p>
+     </body>
+     ```
+  * When is this useful?
+    * Paragraphs that come after images might be captions.
+    * `h4` headings that come after `h1` headings might be subtitles, or details like the author's name and the publication date.
+    * Etc.
+    * To use the a similar example as above:
+    ```css
+    h3 + p{
+        font-weight: lighter;
+        font-size: 20px;
+    }
+    ```
+    ```html
+    <body>
+        <h3>An Analysis of Partial Migration Among <em>Corvus splendens</em></h3>
+        <p>By Jane Doe, with funding from the Audubon Society</h3>
+        <p>This study will seek to determine the average length of the migratory journey of...</p>
+    </body>
+    ```
+* **The Universal Selector**
+  * What if we want to target every single HTML tag/element?
+    * Do we have to list them all out? No, of course not!
+  * To do so, use the universal selector, an asterisk, `*`.
+    * For example:
+    ```css
+    *{
+      font-family: arial, helvetica, sans-serif;
+    }
+    ```
+  * Specificity
+    * The universal selector targets each tag/element directly, not through inheritance.
+      * In contrast, when we target the body, elements within the body inherit the style.
+    * However, the universal selector has a specificity of 0.
+      * For example:
+      ```css
+      p{
+        color: blue;
+      }
+
+      *{
+        color: red;
+      }
+      ```
+      ```html
+      <p>This text will be blue, even though the rule with the universal selector comes after the rule targeting paragraphs, because the universal selector has a specificity of 0.</p>
+      ```
+  * When do we use the universal selector as opposed to targeting the body?
+    * Generally, web developers target the body when applying styles.
+    * However, some web developers use the universal selector to enact a *CSS reset*.
+      * A CSS reset overwrites all of the default browser style. To do so, it sets every relevant property to its most basic and bland value.
+        * This creates a "blank slate" before the web developer adds his or her own styles.
+        * For example:
+        ```css
+        *{
+          color: black;
+          font-size: 16px;
+          font-weight: normal;
+          text-decoration: none;
+          margin: 0px;
+          padding: 0px;
+        }
+* **Dynamic Pseudo-Classes**
+  * In CSS, there are certain predefined classes called active pseudo-classes.
+    * Unlike those of regular classes, the elements which belong to a dynamic pseudo-class are constantly changing. They change based on *user behavior*.
+    * User behavior refers to the interaction with the webpage of the person viewing it.
+  * Dynamic pseudo-classes are usually used with links and buttons. Here are some of the most common:
+    * Hover: While the user's cursor is hovering over an element, it temporarily joins the pseudo-class of "hover".
+    * Active: While the user is clicking an element, it temporarily joins the pseudo-class of "active".
+    * Visited: Once the user has followed a link, it joins the pseudo-class of "visited".
+  * To use a pseudo-class in a selector, write the name of the pseudo-class preceded by a colon, `:`.
+    * For example:
+    ```css
+    a:hover{
+      color: red;
+    }
+
+    :visited.click-me{
+      font-weight: lighter;
+    }
+    ```
+  * Specificity and the casacde
+    * Pseudo-class selectors have a specificity of 10, just like regular classes.
+      * For example, `.my-class:active{` has a specificity of 20.
+    * An element that belongs the pseudo-class of "visited" can simultaneously belong to "hover OR "active". Therefore, we must consider the cascade when styling with pseudo-classes.
+      * For example:
+        * Given this code, when we hover over a link that we have already visited, it will not change color...
+        ```css
+        a:hover{
+          color: red;
+        }
+
+        a:visited{
+          color: purple;
+        }
+        ```
+        * But given this code, it will.
+        ```css
+        a:visited{
+          color: purple;
+        }
+
+        a:hover{
+          color: red;
+        }
+        ```
+
 ### Week 1-5: Python Intermediate
 #### Week 1: Loop 1: "For" loop
 * **What is a `for` loop?**: `for` loops are used to iterate over sequences. Sequences that we have seen are lists and strings. Other iterable sequences include dictionaries, sets, and tuples. `for` loops execute a set of statements for each element in the sequence.
