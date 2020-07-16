@@ -1216,7 +1216,7 @@ Make sure that they are simple enough to pursue!
   * To see examples of how the cascade resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](HTMLCSS/Lessons/014_Cascade.html) and [CSS file](HTMLCSS/Lessons/014_Cascade.css).
 * **Inherit**
   * Some CSS properties can have a value of `inherit`.
-    * These properties include font size, family, font weight, color, background color, text decoration, text transformation, and others.
+    * These properties include font size, font family, font weight, color, background color, text decoration, text transformation, and others.
   * When we give an element a property with a value of `inherit`, the computer takes the value of the property that the element has inherited and applies it directly to the element.
     * As a result, the style has a specificity commensurate to the selector. It is less likely to be overwritten by conflicting styles or default browser styles.
       * In contrast, inherited styles have a specificity of 0.
@@ -1489,11 +1489,11 @@ Make sure that they are simple enough to pursue!
       * preformatted text (`pre`)
   * By default, in-line elements *stack horizontally*.
     * This means that, if you have one inline element after another, the latter will be displayed to the right of the former on the webpage.
-      * Also, if you nest an inline element inside of another element, it will may be displayed on the same line as preceding and/or subsequent content of its parent element.
+      * Also, if you nest an inline element inside of another element, it may be displayed on the same line as preceding and/or subsequent content of its parent element.
         * Therefore, inline elements can be placed within sentences.
       * In other words, when you open an inline element, it continues on the same line on the webpage.
       * However, once an row of inline elements fills up the width of their parent element, the next one will spill onto a new line below.
-    * By default, an inline element occupies only enough width to display its contents (text, image, etc.).
+    * By default, an inline element occupies only enough width to display its content (text, image, etc.).
     * Here are some examples of inline elements:
       * links (`a`)
       * images (`img`)
@@ -1600,7 +1600,7 @@ Make sure that they are simple enough to pursue!
             margin: 30px 10px;
           }
           ```
-        * To apply a margin of one width to the top of an element, a margin of a width thickness to the left and right, and a margin of yet a different width to the bottom, specify three values, separated by spaces.
+        * To apply a margin of one width to the top of an element, a margin of a different width to the left and right, and a margin of yet a different width to the bottom, specify three values, separated by spaces.
           * The first value will be applied to the top, the second will be applied to the left and right, and the third will be applied to the bottom.
           * For example:
           ```css
@@ -1656,7 +1656,7 @@ Make sure that they are simple enough to pursue!
         * `ridge`
           * This also looks like a 3-D picture frame.
         * Note: If the border is too thin, then certain textures (`double`, `outset`, `inset`, `groove`, and `ridge`) may not be noticeable.
-        ![Image of border styles](HTMLCSS/Lessons/border-styles.png)
+        * ![Image of border styles](HTMLCSS/Lessons/border-styles.png)
       * Border color can be a color name, a hex code, a RGB value, or a value from a different color system.
         * If we do not specify the color, it defaults to black.
     * To apply a uniform border to all four sides of an element, give it a property of `border`.
@@ -1690,26 +1690,26 @@ Make sure that they are simple enough to pursue!
          border-color: blue;
        }
        ```
-    * To apply the style to an individual side of a border, use one of the following properties:
-      * Width
-        * `border-top-width`
-        * `border-right-width`
-        * `border-bottom-width`
-        * `border-left-width`
-        * `border-top-width`
-      * Style
-        * `border-top-style`
-        * `border-right-style`
-        * `border-bottom-style`
-        * `border-left-style`
-        * `border-top-style`
-      * Color
-        * `border-top-color`
-        * `border-right-color`
-        * `border-bottom-color`
-        * `border-left-color`
-        * `border-top-color`
-    * For example:
+     * To apply the style to an individual side of a border, use one of the following properties:
+       * Width
+         * `border-top-width`
+         * `border-right-width`
+         * `border-bottom-width`
+         * `border-left-width`
+         * `border-top-width`
+       * Style
+         * `border-top-style`
+         * `border-right-style`
+         * `border-bottom-style`
+         * `border-left-style`
+         * `border-top-style`
+       * Color
+         * `border-top-color`
+         * `border-right-color`
+         * `border-bottom-color`
+         * `border-left-color`
+         * `border-top-color`
+       * For example:
        ```css
        p{
          border: 5px solid green;
@@ -1717,13 +1717,13 @@ Make sure that they are simple enough to pursue!
        }
        ```
   * Here is a diagram of the box model:
-  ![Box model](HTMLCSS/Lessons/box-model-diagram.png)
+    * ![Box model](HTMLCSS/Lessons/box-model-diagram.png)
 * **Inspect**
   * Most browsers come with a development tool called "Inspect" or "Inspect element".
     * It allows us to view (and even temporarily alter) the code of a webpage.
     * It also allows us to highlight the different sections of an element that follows the box model.
       * Let's focus on this function for now.
-  * The steps for accessing the inspection toolbar may differ slightly among browsers. However, for Google Chrome and Microsoft Edge, the steps are as follow:
+  * The steps for accessing the inspection toolbar may differ slightly among browsers. However, for Google Chrome and Microsoft Edge, the steps are as follows:
     * Navigate to the webpage that you want to inspect.
     * Right click and select "Inspect".
     * The inspection toolbar will appear on the right of the browser window.
@@ -1732,14 +1732,14 @@ Make sure that they are simple enough to pursue!
       * The tag for the element should be highlighted in the copy of the HTML code (displayed at the top of the inspection toolbar, on the right).
       * Alternately, you can find the element in that HTML code and click on it.
     * Within the inspection toolbar, there is a colorful box model diagram. Hover over a section of it (content, padding, border, or margin) to see the corresponding section of the element highlighted on the webpage.
-      * The dimensions of each section, in pixels, is displayed on the diagram.
+      * The dimensions of each section, in pixels, are displayed on the diagram.
 * **Centering**
   * There are many ways to center content or elements using CSS. Let's learn a few simple methods for horizontally centering.
   * Text align
     * The `text-align` property controls how content is justified within the width of the element.
-      * By default, for block-level elements, this width is 100% of the width of the parent element. Recall that we can change this width using the `width` property of the box model.
+      * By default, for block-level elements, this width is 100% of the width of the parent element. Recall that we can change this by using the `width` property of the box model.
     * To center the content within the width, give the `text-align` property a value of `center`.
-      * It can also have a value of `left`, `right`, `inherit`, and other options.
+      * It can also have a value of `left`, `right`, `inherit`, or other options.
   * Percentages
     * In order to center an entire element within the body of its parent element, we could specify the width, right and left padding, and right and left margin in percentages that add up to 100%.
       * Note that the right and left padding count separately towards the total, as do the right and left margin.
@@ -1752,7 +1752,7 @@ Make sure that they are simple enough to pursue!
       }
     * However, this is not the best method for the following reasons:
       * It requires time-consuming computations.
-      * If you decide to change the one value, you must recalculate the others to compensate.
+      * If you decide to change one value, you must recalculate the others to compensate.
       * It may be difficult to include a border of a significant width because border width cannot be measured in percentages.
     * Is there a better option? Yes! We can use automatic margins!
   * Automatic margins
@@ -1760,7 +1760,7 @@ Make sure that they are simple enough to pursue!
       * If both the left and right margins are automatic, then they adjust their width automatically so that the element is centered.
         * In other words, any portion of the width of the parent element not occupied by the element itself is divided evenly between automatic left and right margins.
       * Note: If the top or bottom margin is automatic, it will have a width of 0.
-    * The options for specifying margins as automatic are the same as the options for specifying margins of a certain width.
+    * To specify a margin as automatic, we use the `margin` property with a value of `auto`. The options for doing so are the same as the options for specifying margins of a certain width:
       * To apply automatic margins to all four sides of an element:
       ```css
       p{
@@ -1804,7 +1804,7 @@ Make sure that they are simple enough to pursue!
     * If we display this code in a browser and inspect the paragraph elements, we may notice that the 10-pixel bottom margin of Paragraph 1 overlaps with the 30-pixel top margin of Paragraph 2!
       * As a result, the margin between the two paragraphs is 30 pixels in width, not 40. How come?
   * In CSS, there is a feature called the *vertical margin collapse*.
-    * In the case of two, consecutive block-level elements, the margin between them will be the greater of either the bottom margin of the first element or the top margin of the second element.
+    * In the case of two, consecutive elements that follow the box model, the margin between them will be the greater of either the bottom margin of the first element or the top margin of the second element.
       * The margin between them is *not* necessarily the sum of the bottom margin of the first element and the top margin of the second element.
       * In essence, these two vertcial margins collapse into a single vertical margin.
 * **Display Type**
@@ -1814,36 +1814,38 @@ Make sure that they are simple enough to pursue!
         * We call these elements *block-level elements*.
     * Inline
       * Certain elements, such as links and images, have a display type of `inline` by default.
-        * We call these elements *in-line elements*.
+        * We call these elements *inline elements*.
   * We can change the display type of an element using the `display` property.
-   * The value of the property is the desired display type.
-   * For example:
-     * To change the display type of images to `block`:
-       ```css
-       img{
-         display: block;
-       ```
-     * To change the display type of elements with a class of `inline-class` to `inline`:
-     ```css
-     .inline-class{
-       display: inline;
-     }
-     ```
+    * The value of the property should be the desired display type.
+    * For example:
+      * To change the display type of images to `block`:
+      ```css
+      img{
+        display: block;
+      }
+      ```
+      * To change the display type of elements with a class of `inline-class` to `inline`:
+      ```css
+      .inline-class{
+        display: inline;
+      }
+      ```
 * **Inline-Block Elements**
-  * Paragraphs are block-level elements, and so they stack vertically. But what if we wanted to have two paragraphs next to each other, one on the left and one on the right? Likewise, links are inline elements, and they occupy whatever the width of their content displayed inline. But what if we want to give them a fixed width?
-  * The display type of `inline-block` combines the features of the block display type and the inline display type.
-    * Elements with a display type of `inline-block` *follow the box model*, like block-level elements.
-    * Elements with a display type of `inline-block` *stack horizontally*, like inline elements.
+  * Paragraphs are block-level elements, and so they stack vertically. But what if we wanted to have two paragraphs next to each other, one on the left and one on the right? Likewise, links are inline elements, and so they occupy the width of their content. But what if we want to give them a fixed width?
+  * The display type `inline-block` combines the features of the `block` display type and the `inline` display type.
+    * Elements with a display type of `inline-block`:
+      * *follow the box model*, like block-level elements
+      * AND *stack horizontally*, like inline elements
   * For example:
     * To position two paragraphs next to each other:
     ```css
     p.my-class{
       display: inline-block;
-      width: 30%;
+      width: 25%;
       margin: 10%;
     }
     ```
-    * To style links with a fixed with:
+    * To style links with a fixed width:
     ```css
     a{
       display: inline-block;
