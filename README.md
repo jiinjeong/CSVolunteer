@@ -846,8 +846,6 @@ Make sure that they are simple enough to pursue!
       * `bold`
       * `normal`
       * `lighter`
-      * `inherit`
-        * We will learn about inheritance in future lessons.
     * However, few fonts have a bolder version, and only some have a lighter version.
       * One font that has both a bold version and a lighter version is Yu Gothic.
     * For example:
@@ -919,8 +917,6 @@ Make sure that they are simple enough to pursue!
       * `line-through`
         * This makes the text appear to be crossed-out.
       * `none`
-      * `inherit`
-        * We will learn about inheritance in future lessons.
     * For example:
     ```css
     h2{
@@ -937,8 +933,6 @@ Make sure that they are simple enough to pursue!
       * `lowercase`
         * This makes all of the letters lowercase.
       * `none`
-      * `inherit`
-        * We will learn about inheritance in future lessons.
     * For example:
     ```css
     h2{
@@ -1142,6 +1136,33 @@ Make sure that they are simple enough to pursue!
     ```html
     <p id="my-ID" class="my-class">This text will be blue.</p>
     ```
+  * What if a CSS rule conflicts with a default browser style?
+    * A style applied directly to an element will always trump a default browser style.
+      * For example:
+      ```css
+      h1{
+        font-weight: normal;
+      }
+      ```
+      ```html
+      <div>
+          <h1>Although headings are bold by default, this heading will have a normal font weight.</h1>
+      </div>
+      ```
+    * Certain inherited styles will trump a default browser style, while others will not.
+      * For example:
+      ```css
+      div{
+        font-weight: normal;
+        font-family: arial;
+      }
+      ```
+      ```html
+      <div>
+          <h1>This heading will have the default font weight (bold) instead of the inherited font weight (normal). However, it will have the inherited font family (Arial) instead of the default font family (Times New Roman).</h1>
+      </div>
+      ```
+      
   * To see examples of how specificity resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](HTMLCSS/Lessons/013_Specificity_Intro.html) and [CSS file](HTMLCSS/Lessons/013_Specificity_Intro.css).
 * **The Cascade**
   * How does CSS deal with conflicting rules of *equal specificity*? Its system for doing so is called *the cascade*.
@@ -1193,7 +1214,12 @@ Make sure that they are simple enough to pursue!
     * If an element has inherited conflicting styles from different parent elements, it will not necessarily follow the rule that is lower-down in the code. Rather, it will follow the rule of its more "direct ancestor": the parent element in which it is nested with fewer layers of depth.
       * In the example from above, the paragraph is nested two layers deep in the body, but only one layer deep in the division. Therefore, it is a more direct descendant of the division. It will be blue.
   * To see examples of how the cascade resolves conflicting CSS rules on a webpage, please see the Lesson 13 [HTML file](HTMLCSS/Lessons/014_Cascade.html) and [CSS file](HTMLCSS/Lessons/014_Cascade.css).
-
+* **Inherit**
+  * Some CSS properties can have a value of `inherit`.
+    * These properties include font size, family, font weight, color, background color, text decoration, text transformation, and others.
+  * When we give an element a property with a value of `inherit`, the computer takes the value of the property that the element has inherited and applies it directly to the element.
+    * As a result, the style has a specificity commensurate to the selector. It is less likely to be overwritten by conflicting styles or default browser styles.
+      * In contrast, inherited styles have a specificity of 0.
 #### Week 8
 * **Website Structure**
   * Pretty soon, we will turn your webpage into a website by linking it to other webpages. But first, we need to understand how a website is structured.
@@ -1445,7 +1471,385 @@ Make sure that they are simple enough to pursue!
       * An embedded stylesheet is lower in the cascade than an external stylesheet.
     * We can apply unique styles to a single element using an in-line style.
       * In-line styles have the highest specificity.
+* **Block-Level vs. Inline Elements**
+  * HTML elements can be divided into two categories: block-level and inline.
+  * By default, block-level elements *stack vertically*.
+    * This means that, if you have one block-level element after another, the latter will be displayed below the former on the webpage.
+      * Also, if you nest a block-level element inside of another element, it will be displayed below any preceding content and above any subsequent content of its parent element.
+      * In other words, when you open a block-level element, it goes onto a new line on the webpage.
+    * A block-level element occupies the entire width of its parent element.
+      * In other words, it occupies a horizontal strip of its parent element.
+    * Here are some examples of block-level elements:
+      * headings (`h1`-`h6`)
+      * paragraphs (`p`)
+      * blockquotes (`blockquote`)
+      * divisions (`div`)
+      * lists and list items (`ol`, `ul`, `li`, `dl`, `dt`, and `dd`)
+      * horizontal rules (`hr`)
+      * preformatted text (`pre`)
+  * By default, in-line elements *stack horizontally*.
+    * This means that, if you have one inline element after another, the latter will be displayed to the right of the former on the webpage.
+      * Also, if you nest an inline element inside of another element, it will may be displayed on the same line as preceding and/or subsequent content of its parent element.
+        * Therefore, inline elements can be placed within sentences.
+      * In other words, when you open an inline element, it continues on the same line on the webpage.
+      * However, once an row of inline elements fills up the width of their parent element, the next one will spill onto a new line below.
+    * By default, an inline element occupies only enough width to display its contents (text, image, etc.).
+    * Here are some examples of inline elements:
+      * links (`a`)
+      * images (`img`)
+      * bold (`strong`)
+      * italics (`em`)
+      * highlight (`mark`)
+      * smaller (`small`)
+      * superscript and subscript (`sup` and `sub`)
+* **The Box Model**
+  * The box model is a CSS technique for controlling the position and spacing of block-level elements.
+    * Inline elements do not follow the box model.
+    * Note: While you are experimenting with the box model of an element, it may be helpful to give the element a background color so that you can see more clearly the space that it is occupying.
+  * The box model divides the space within and around an element into sections: the content, the padding, the border, and the margin.
+    * The content of an element is the text or image itself.
+      * We can control the width of the content with the `width` property.
+        * Width can be measured in pixels, abbreviated `px`, or percentage of the width of the parent element, abbreviated `%`.
+        * For example:
+        ```css
+        div{
+          width: 80%;
+        }
+        ```
+      * We can control the height of the content with the `height` property.
+        * Height is measured in pixels, abbreviated `px`.
+        * For example:
+        ```css
+        h1{
+          height: 200px;
+        }
+        ```
+  * The padding is space surrounding the content that is part of the element.
+    * In other words, the padding is the internal space within elements. Together, the padding and the content make up the element.
+    * The width, or thickness, of the padding can be measured in pixels, abbreviated `px`, or percentage of the width of the parent element, abbreviated `%`.
+    * We can control the padding with the `padding` property.
+      * To apply padding of uniform width to all four sides of an element, specify one value.
+        * For example:
+        ```css
+        p{
+          padding: 5%;
+        }
+        ```
+      * To apply padding of one width to the top and bottom of an element and padding of a different width to the left and right, specify two values, separated by a space.
+        * The first value will be applied to the top and bottom, and the second will be applied to the left and right. 
+        * For example:
+        ```css
+        h4{
+          padding: 30px 10px;
+        }
+        ```
+      * To apply padding of one width to the top of an element, padding of a different width to the left and right, and padding of yet a different width to the bottom, specify three values, separated by spaces.
+        * The first value will be applied to the top, the second will be applied to the left and right, and the third will be applied to the bottom.
+        * For example:
+        ```css
+        ol{
+          padding: 20px 10% 0;
+        }
+        ```
+      * To apply padding of a different width to each side of an element, specify four values, separated by spaces.
+        * The first value will be applied to the top, the second will be applied to the right, the third will be applied to the bottom, and the forth value will be applied to the left.
+          * Note that it goes clock-wise.
+        * For example:
+        ```css
+        div{
+          padding: 5% 10% 15% 20%;
+        }
+        ```
+    * We can also apply padding to a single side of an element by using the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property.
+      * The following example will produce the same results as the previous example:
+      ```css
+      div{
+        padding-top: 5%;
+        padding-right: 10%;
+        padding-bottom: 15%;
+        padding-left: 20%;
+      }
+      ```
+      * This can be useful for overwriting the inherited padding on one side of an element.
+    * An element can have no padding.
+      * To remove the padding from an element, give it a padding of 0.
+        * The units are optional.
+      * For example:
+      ```css
+      *{
+        padding: 0;
+      }
+      ```
+  * The margin is space surrounding an element (outside of the padding).
+    * Unlike the padding, the margin is not part of the element.
+    * The options for specifying the margin are exactly the same as the options for specifying the padding.
+      * The width, or thickness, of the margin can be measured in pixels, abbreviated `px`, or percentage of the width of the parent element, abbreviated `%`.
+      * We can control the margin with the `margin` property.
+        * To apply a margin of uniform width to all four sides of an element, specify one value.
+          * For example:
+          ```css
+          p{
+            margin: 5%;
+          }
+          ```
+        * To apply margin of one width to the top and bottom of an element and a margin of a different width to the left and right, specify two values, separated by a space.
+          * The first value will be applied to the top and bottom, and the second will be applied to the left and right. 
+          * For example:
+          ```css
+          h4{
+            margin: 30px 10px;
+          }
+          ```
+        * To apply a margin of one width to the top of an element, a margin of a width thickness to the left and right, and a margin of yet a different width to the bottom, specify three values, separated by spaces.
+          * The first value will be applied to the top, the second will be applied to the left and right, and the third will be applied to the bottom.
+          * For example:
+          ```css
+          ol{
+            margin: 20px 10% 0;
+          }
+          ```
+        * To apply a margin of a different width to each side of an element, specify four values, separated by spaces.
+          * The first value will be applied to the top, the second will be applied to the right, the third will be applied to the bottom, and the forth value will be applied to the left.
+            * Note that it goes clock-wise.
+          * For example:
+          ```css
+          div{
+            margin: 5% 10% 15% 20%;
+          }
+          ```
+      * We can also apply a margin to a single side of an element by using the `margin-top`, `margin-right`, `margin-bottom`, or `margin-left` property.
+        * The following example will produce the same results as the previous example:
+        ```css
+        div{
+          margin-top: 5%;
+          margin-right: 10%;
+          margin-bottom: 15%;
+          margin-left: 20%;
+        }
+        ```
+        * This can be useful for overwriting the inherited margin on one side of an element.
+      * An element can have no margin.
+        * To remove the margin from an element, give it a margin of 0.
+          * The units are optional.
+        * For example:
+        ```css
+        *{
+          margin: 0;
+        }
+        ```
+  * The border is a decorative border surrounding an element.
+    * In an element with both padding and margin, the border goes between the padding and the margin.
+    * When we apply a border to an element, we must specify the width, or thickness, and the style, or texture, of the border. We can also specify the color.
+      * Border width is measured in pixels, abbreviated `px`.
+      * The border style can be one of the following:
+        * `none` (transparent)
+        * `solid`
+        * `dotted`
+        * `dashed`
+        * `double`
+        * `outset`
+          * This makes it look as if the element pops out of the page.
+        * `inset`
+          * This makes it look as if the element is depressed into the page.
+        * `groove`
+          * This looks like a 3-D picture frame.
+        * `ridge`
+          * This also looks like a 3-D picture frame.
+        * Note: If the border is too thin, then certain textures (`double`, `outset`, `inset`, `groove`, and `ridge`) may not be noticeable.
+        ![Image of border styles](HTMLCSS/Lessons/border-styles.png)
+      * Border color can be a color name, a hex code, a RGB value, or a value from a different color system.
+        * If we do not specify the color, it defaults to black.
+    * To apply a uniform border to all four sides of an element, give it a property of `border`.
+      * For the value, specify the width and style and, optionally, the color in any order, separated by spaces.
+      * For example:
+      ```css
+      h2{
+        border: 5px dotted blue;
+      }
+      ```
+    * To apply a different border to each to side of an element, use the `border-top`, `border-right`, `border-bottom`, and `border-left` properties.
+      * Likewise, for the value of each property, specify the width and style and, optionally, the color in any order, separated by spaces.
+      * For example:
+      ```css
+      h2{
+        border-top: 2px dashed purple;
+        border-right: solid #f00 5px;
+        border-bottom: rgb(0, 255, 0) 7px ridge;
+        border-left: none 10px;
+      }
+      ```
+   * We can also change just the width, just the style, or just the color of a border (or side of a border).
+     * To apply the style to a border, use the `border-width`, `border-style`, or `border-color` property.
+       * For example:
+       ```css
+       p{
+         border: 5px solid green;
+       }
 
+       p.my-class{
+         border-color: blue;
+       }
+       ```
+    * To apply the style to an individual side of a border, use one of the following properties:
+      * Width
+        * `border-top-width`
+        * `border-right-width`
+        * `border-bottom-width`
+        * `border-left-width`
+        * `border-top-width`
+      * Style
+        * `border-top-style`
+        * `border-right-style`
+        * `border-bottom-style`
+        * `border-left-style`
+        * `border-top-style`
+      * Color
+        * `border-top-color`
+        * `border-right-color`
+        * `border-bottom-color`
+        * `border-left-color`
+        * `border-top-color`
+    * For example:
+       ```css
+       p{
+         border: 5px solid green;
+         border-top-color: blue;
+       }
+       ```
+  * Here is a diagram of the box model:
+  ![Box model](HTMLCSS/Lessons/box-model-diagram.png)
+* **Inspect**
+  * Most browsers come with a development tool called "Inspect" or "Inspect element".
+    * It allows us to view (and even temporarily alter) the code of a webpage.
+    * It also allows us to highlight the different sections of an element that follows the box model.
+      * Let's focus on this function for now.
+  * The steps for accessing the inspection toolbar may differ slightly among browsers. However, for Google Chrome and Microsoft Edge, the steps are as follow:
+    * Navigate to the webpage that you want to inspect.
+    * Right click and select "Inspect".
+    * The inspection toolbar will appear on the right of the browser window.
+  * To highlight sections of a box-model element:
+    * Right click on the element that you want to inspect, and select "Inspect".
+      * The tag for the element should be highlighted in the copy of the HTML code (displayed at the top of the inspection toolbar, on the right).
+      * Alternately, you can find the element in that HTML code and click on it.
+    * Within the inspection toolbar, there is a colorful box model diagram. Hover over a section of it (content, padding, border, or margin) to see the corresponding section of the element highlighted on the webpage.
+      * The dimensions of each section, in pixels, is displayed on the diagram.
+* **Centering**
+  * There are many ways to center content or elements using CSS. Let's learn a few simple methods for horizontally centering.
+  * Text align
+    * The `text-align` property controls how content is justified within the width of the element.
+      * By default, for block-level elements, this width is 100% of the width of the parent element. Recall that we can change this width using the `width` property of the box model.
+    * To center the content within the width, give the `text-align` property a value of `center`.
+      * It can also have a value of `left`, `right`, `inherit`, and other options.
+  * Percentages
+    * In order to center an entire element within the body of its parent element, we could specify the width, right and left padding, and right and left margin in percentages that add up to 100%.
+      * Note that the right and left padding count separately towards the total, as do the right and left margin.
+      * For example:
+      ```css
+      p{
+        width: 75%;
+        padding: 2.5%;
+        margin: 20px 8% 10px 12%;
+      }
+    * However, this is not the best method for the following reasons:
+      * It requires time-consuming computations.
+      * If you decide to change the one value, you must recalculate the others to compensate.
+      * It may be difficult to include a border of a significant width because border width cannot be measured in percentages.
+    * Is there a better option? Yes! We can use automatic margins!
+  * Automatic margins
+    * Automatic margins are a better method for centering an entire element within the body of its parent element.
+      * If both the left and right margins are automatic, then they adjust their width automatically so that the element is centered.
+        * In other words, any portion of the width of the parent element not occupied by the element itself is divided evenly between automatic left and right margins.
+      * Note: If the top or bottom margin is automatic, it will have a width of 0.
+    * The options for specifying margins as automatic are the same as the options for specifying margins of a certain width.
+      * To apply automatic margins to all four sides of an element:
+      ```css
+      p{
+        margin: auto;
+      }
+      ```
+      * To apply a margin of a certain width to the top and bottom of an element and automatic margins to the left and right:
+      ```css
+      h4{
+        margin: 30px auto;
+      }
+      ```
+      * To apply a margin of one width to the top of an element, automatic margins to the left and right, and a margin of a different width to the bottom:
+      ```css
+      ol{
+        margin: 20px auto 0;
+      }
+      ```
+      * To apply a margin to each side of an element individually such that the left and right margins are automatic:
+        ```css
+        div{
+          margin-top: 5%;
+          margin-right: auto;
+          margin-bottom: 15%;
+          margin-left: auto;
+        }
+        ```
+* **Vertical Margin Collapse**
+  * Let's use the following code as an example:
+  ```html
+  <body>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+  </body>
+  ```
+  ```css
+  p{
+    margin: 30px auto 10px;
+  }
+  ```
+    * If we display this code in a browser and inspect the paragraph elements, we may notice that the 10-pixel bottom margin of Paragraph 1 overlaps with the 30-pixel top margin of Paragraph 2!
+      * As a result, the margin between the two paragraphs is 30 pixels in width, not 40. How come?
+  * In CSS, there is a feature called the *vertical margin collapse*.
+    * In the case of two, consecutive block-level elements, the margin between them will be the greater of either the bottom margin of the first element or the top margin of the second element.
+      * The margin between them is *not* necessarily the sum of the bottom margin of the first element and the top margin of the second element.
+      * In essence, these two vertcial margins collapse into a single vertical margin.
+* **Display Type**
+  * The display type of an element helps to controls how and where it appears on your webpage. We are already acquainted with two display types:
+    * Block
+      * Certain elements, such as paragraphs and divisions, have a display type of `block` by default.
+        * We call these elements *block-level elements*.
+    * Inline
+      * Certain elements, such as links and images, have a display type of `inline` by default.
+        * We call these elements *in-line elements*.
+  * We can change the display type of an element using the `display` property.
+   * The value of the property is the desired display type.
+   * For example:
+     * To change the display type of images to `block`:
+       ```css
+       img{
+         display: block;
+       ```
+     * To change the display type of elements with a class of `inline-class` to `inline`:
+     ```css
+     .inline-class{
+       display: inline;
+     }
+     ```
+* **Inline-Block Elements**
+  * Paragraphs are block-level elements, and so they stack vertically. But what if we wanted to have two paragraphs next to each other, one on the left and one on the right? Likewise, links are inline elements, and they occupy whatever the width of their content displayed inline. But what if we want to give them a fixed width?
+  * The display type of `inline-block` combines the features of the block display type and the inline display type.
+    * Elements with a display type of `inline-block` *follow the box model*, like block-level elements.
+    * Elements with a display type of `inline-block` *stack horizontally*, like inline elements.
+  * For example:
+    * To position two paragraphs next to each other:
+    ```css
+    p.my-class{
+      display: inline-block;
+      width: 30%;
+      margin: 10%;
+    }
+    ```
+    * To style links with a fixed with:
+    ```css
+    a{
+      display: inline-block;
+      width: 100px;
+    }
+    ```
 * **Combining Selectors**
   * We have learned how to target elements of a certain tag type, ID, or class. But what if we want to target elements that fit two or more such criteria?
     * For example:
