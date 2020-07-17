@@ -1487,13 +1487,13 @@ Make sure that they are simple enough to pursue!
       * lists and list items (`ol`, `ul`, `li`, `dl`, `dt`, and `dd`)
       * horizontal rules (`hr`)
       * preformatted text (`pre`)
-  * By default, in-line elements *stack horizontally*.
+  * By default, inline elements *stack horizontally*.
     * This means that, if you have one inline element after another, the latter will be displayed to the right of the former on the webpage.
       * Also, if you nest an inline element inside of another element, it may be displayed on the same line as preceding and/or subsequent content of its parent element.
         * Therefore, inline elements can be placed within sentences.
       * In other words, when you open an inline element, it continues on the same line on the webpage.
       * However, once an row of inline elements fills up the width of their parent element, the next one will spill onto a new line below.
-    * By default, an inline element occupies only enough width to display its content (text, image, etc.).
+    * An inline element occupies (only) enough width to display its content (text, image, etc.) on a single line.
     * Here are some examples of inline elements:
       * links (`a`)
       * images (`img`)
